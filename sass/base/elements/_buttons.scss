@@ -1,21 +1,29 @@
+.btn,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
+	padding: 12px 41px;
+	background: #5E95BF;
 	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 15px;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	color: #FEFEFE;
+	margin: 0px 10px;
+	border: none;
+	cursor: pointer;
+	transition: .3s;
 
 	&:hover {
-		border-color: $color__border-button-hover;
+		background: #69A9DB;
+		box-shadow: 5px 5px 30px rgba(94, 149, 191, 0.3);
 	}
 
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
+	&:active {
+		background: #4E81A9;
+		outline: none;
 	}
 }
