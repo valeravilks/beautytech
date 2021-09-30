@@ -1,3 +1,10 @@
-/* Grid bootstrap
---------------------------------------------- */
-@import "./../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+.container {
+  max-width: 1174px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include respond-to('s') {
+    max-width: 300px;
+  }
+}
