@@ -5,3 +5,118 @@ $font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+.h1 {
+	font-weight: normal;
+	font-size: 58px;
+	line-height: 71px;
+	text-transform: uppercase;
+
+    @include respond-to('s') {
+        max-width: 300px;
+    }
+}
+
+.h2 {
+	font-weight: 500;
+	font-size: 50px;
+	line-height: 61px;
+	text-transform: uppercase;
+}
+
+.h3 {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 37px;
+	text-transform: uppercase;
+}
+
+.h4 {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 0.005em;
+	text-transform: uppercase;
+}
+
+.h5 {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.h6 {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.display-1 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 73px;
+    color: #000000;
+}
+
+.body {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.body-small {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.foovernav {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.text-small {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0.005em;
+    color: #000000;
+}
+
+.text-btn-large {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #000000;    
+}
+
+.text-btn-small {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.text-form-label {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.text-form-placeholder {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+}
