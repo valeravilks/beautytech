@@ -19,6 +19,7 @@
   "devDependencies": {
     "@wordpress/scripts": "^12.1.0",
     "bootstrap": "^5.1.1",
+    "browser-sync": "^2.27.5",
     "dir-archiver": "^1.1.1",
     "node-sass": "^4.14.1",
     "rtlcss": "^2.5.0"
@@ -37,6 +38,7 @@
     "map": false
   },
   "scripts": {
+    "server": "browser-sync start --proxy 'http://beautytech.com/' --files='**/*'",
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
