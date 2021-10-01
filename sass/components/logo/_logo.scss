@@ -1,3 +1,7 @@
 .logo {
     display: flex;
+
+    @include respond-to('s'){
+        width: 127px;
+    }
 }
