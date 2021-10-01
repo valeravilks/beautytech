@@ -22,7 +22,8 @@
     "browser-sync": "^2.27.5",
     "dir-archiver": "^1.1.1",
     "node-sass": "^4.14.1",
-    "rtlcss": "^2.5.0"
+    "rtlcss": "^2.5.0",
+    "smart-grid": "^2.1.2"
   },
   "rtlcssConfig": {
     "options": {

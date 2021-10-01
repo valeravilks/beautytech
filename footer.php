@@ -11,22 +11,18 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'beautytech' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'beautytech' ), 'WordPress' );
-				?>
+	<footer id="colophon" class="site-footer footer">
+		<div class="footer__top footer-top">
+			
+			<a href="<?php bloginfo('url'); ?>" class="footer-top__logo logo">
+				<img src="<?php the_field('logo', 'option'); ?>" srcset="<?php the_field('logo-retina', 'option'); ?> 2x" alt="logo" class="logo__img">	
 			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'beautytech' ), 'beautytech', '<a href="http://underscores.me/">valeravilks</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+		</div>
+		<div class="footer__bottom footer-bottom">
+
+		</div>
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 
