@@ -76,4 +76,38 @@
 			text-decoration-color: $color__btn-click;
 		}
 	}
+
+	&.link-primary.link-fill {
+		background: $color__white;
+		color: $color__blue-btn-accent;
+		padding: 16px 20px;
+
+		&:hover {
+			background: $color__white;
+			box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.3);
+		}
+	
+		&:active {
+			color: $color__blue-btn-accent;
+		}
+	}
+
+	&.link-outline.link-fill {
+		color: $color__white;
+		border: 1px solid $color__white;
+		padding: 16px 20px;
+
+		&:hover,
+		&:active {
+			background: $color__white;
+			color: $color__blue-btn-accent;
+		}
+	}
+
+	&.link-download {
+		&::after {
+			content: url(./img/svg/icon-download.svg);
+			margin-left: 3px;
+		}
+	}
 }
