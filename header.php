@@ -27,9 +27,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-header__container">
-			<a href="<?php bloginfo('url'); ?>" class="site-header__logo logo">
-				<img src="<?php the_field('logo', 'option'); ?>" srcset="<?php the_field('logo-retina', 'option'); ?> 2x" alt="logo" class="logo__img">	
-			</a>
+			<?php get_template_part('template-parts/logo', '', array('class' => 'site-header__logo'))?>
 
 			<nav id="site-navigation" class="site-header__menu main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'beautytech' ); ?></button>
