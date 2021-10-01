@@ -107,16 +107,29 @@
      }
 }
 
-.foovernav {
+.text-footernav-uppercase {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color__gray-body-text;
+
+    @include media-breakpoint-only("s") {
+        font-size: 12px;
+    }
+}
+
+.footernav {
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
     color: #000000;
     
-     @include media-breakpoint-only("s") {
-         font-size: 13px;
-         line-height: 20px;
-     }
+    @include media-breakpoint-only("s") {
+        font-size: 13px;
+        line-height: 20px;
+    }
 }
 
 .text-small {

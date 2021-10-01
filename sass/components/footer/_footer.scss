@@ -18,7 +18,17 @@
         padding-top: 60px;
         padding-bottom: 60px;
     }
-   &__logo {
-       margin-bottom: 30px;
-   }
+
+    &__logo {
+        margin-bottom: 30px;
+    }
+
+    &__header {
+        @extend .text-footernav-uppercase;
+        margin-bottom: 30px;
+
+        @include media-breakpoint-only('s') {
+            margin-bottom: 20px;
+        }
+    }
 }

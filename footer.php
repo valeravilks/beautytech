@@ -20,10 +20,14 @@
 					<?php get_template_part('template-parts/soc-link', '', array('class' => 'footer-top__soc')); ?>
 				</div>
 				<div class="col-12 col-l-4">
-					ss
+					<div class="footer-top__header">
+						Products
+					</div>
 				</div>
 				<div class="col-12 col-l-2">
-					ss
+					<div class="footer-top__header">
+						Company
+					</div>
 				</div>
 				<div class="col-12 col-l-3">
 					ss
