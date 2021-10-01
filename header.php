@@ -31,7 +31,7 @@
 				<img src="<?php the_field('logo', 'option'); ?>" srcset="<?php the_field('logo-retina', 'option'); ?> 2x" alt="logo" class="logo__img">	
 			</a>
 
-			<nav id="site-navigation" class="main-navigation">
+			<nav id="site-navigation" class="site-header__menu main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'beautytech' ); ?></button>
 				<?php
 				wp_nav_menu(
@@ -48,17 +48,13 @@
 			if($link): ?>
 			<a 
 				href="<?php echo esc_url($link['url']) ?>" 
-				class="link link-primary"
+				class="site-header__contact link link-outline"
 			>
 				<?php echo esc_html($link['title'])?>
-			</a>
-			<a href="#" class="link link-outline">
-				Link Outline
-			</a>
-			<a href="#" class="link link-plus">
-				learn more
-			</a>
+			</a>	
 			<?php endif; ?>
+			<img class="site-header__mobile-menu"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-menu.svg" alt="icon-menu">
+			<img class="site-header__mobile-contact"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-mobile-menu.svg" alt="icon-menu">
 		</div>
 
 	</header><!-- #masthead -->

@@ -50,16 +50,24 @@
 	}
 
 	li {
+		
+
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
 		position: relative;
 
-		&:hover > a,
-		&.focus > a {
+		&:hover > a{
+			color: $color__blue-lighter;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		@extend .text-navbar;
+		color: $color__gray-darker-text;
+		transition: .3s;
 	}
 
 	.current_page_item > a,
