@@ -120,10 +120,9 @@
     }
 }
 
-.footernav {
+.text-footernav {
     font-weight: normal;
     font-size: 13px;
-    line-height: 20px;
     color: #000000;
     
     @include media-breakpoint-only("s") {
@@ -138,6 +137,14 @@
     line-height: 23px;
     letter-spacing: 0.005em;
     color: #000000;
+}
+
+.text-mobile-body-small {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: $color__gray-body-text;
 }
 
 .text-btn-large {

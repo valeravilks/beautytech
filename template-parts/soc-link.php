@@ -1,9 +1,10 @@
 <?php 
   $facebookLink = get_field('facebook-link', 'option');
   $instagramLink = get_field('instagtam-link', 'option');
+  $additionalClass = $args['class'];
 ?>
 
-<div class="soc-link">
+<div class="<?php echo $additionalClass; ?> soc-link">
   <a href="<?php echo $facebookLink; ?>" class="soc-link__link">
     <img src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-facebook.svg" alt="social link facebook">
   </a>

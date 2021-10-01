@@ -1,5 +1,5 @@
 .footer {
-    @extend .container;
+    background: $color__gray-navigation;
 
     &__hr {
         display: none;
@@ -15,8 +15,8 @@
     padding-bottom: 60px;
 
     @include media-breakpoint-only('s') {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 30px;
+        padding-bottom: 20px;
     }
 
     &__logo {
@@ -28,6 +28,109 @@
         margin-bottom: 30px;
 
         @include media-breakpoint-only('s') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__soc {
+        @include media-breakpoint-only('s') {
+            display: none!important;
+        }
+    }
+
+    &__menu {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-bottom: -16px;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            li {
+                margin-bottom: 16px;
+                a {
+                    @extend .text-footernav;
+                    color: $color__gray-body-text;
+                    transition: .3s;
+                    text-decoration-color: rgba(0,0,0,0);
+
+                    &:hover {
+                        text-decoration-color: $color__gray-body-text;
+                    }
+                }
+            }
+        }
+
+        &-products {
+            @include media-breakpoint-only('s') {
+                margin-bottom: 40px;
+            }
+
+            ul {
+                height: 200px;
+
+                @include media-breakpoint-only('s') {
+                    height: 220px;
+                }
+            }
+        }
+
+        &-company {
+            @include media-breakpoint-only('s') {
+                margin-bottom: 40px;
+            }
+
+            ul {
+                @include media-breakpoint-only('s') {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+    &__hr-1 {
+        display: none;
+
+        @include media-breakpoint-only('s') {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.f-contact {
+    &__header {
+        @extend .text-mobile-body-small;
+        margin-bottom: 10px;
+
+        @include media-breakpoint-only('s') {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__text {
+        @extend .text-footernav;
+        color: $color__gray-body-text;
+        margin-bottom: 15px;
+
+        @include media-breakpoint-only('s') {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__hr {
+        margin-bottom: 10px;
+    }
+
+    &__soc {
+        display: none!important;
+
+        @include media-breakpoint-only('s') {
+            display: flex!important;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
     }

@@ -51,6 +51,8 @@ if ( ! function_exists( 'beautytech_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'beautytech' ),
+				'footer-products' => esc_html__( 'Footer Products', 'beautytech' ),
+				'footer-company' => esc_html__( 'Footer Company', 'beautytech' ),
 			)
 		);
 
