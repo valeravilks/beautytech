@@ -1,53 +1,55 @@
 .site-header {
     &__container {
         @extend .container;
-        padding: 30px 0;
+        
+        padding-top: 30px;
+        padding-bottom: 30px;
         display: flex;
         align-items: center;
 
-        @include respond-to('s') {
-            padding: 20px 0;
-            justify-content: space-between;
-        }
+        // @include respond-to('s') {
+        //     padding: 20px 0;
+        //     justify-content: space-between;
+        // }
     }
 
     &__contact {
-        @include respond-to('s') {
-            display: none!important;
-        }
+        // @include respond-to('s') {
+        //     display: none!important;
+        // }
     }
 
     &__menu {
         padding-left: 90px;
 
-        @include respond-to('s') {
-            display: none;
-        }
+        // @include respond-to('s') {
+        //     display: none;
+        // }
     }
 
     &__logo {
         flex: 0 0 auto;
 
-        @include respond-to('s') {
-            order: 1
-        }
+        // @include respond-to('s') {
+        //     order: 1
+        // }
     }
 
     &__mobile-menu {
         display: none;
 
-        @include respond-to('s') {
-            display: block;
-            order: 0;
-        }
+        // @include respond-to('s') {
+        //     display: block;
+        //     order: 0;
+        // }
     }
 
     &__mobile-contact {
         display: none;
 
-        @include respond-to('s') {
-            display: block;
-            order: 2;
-        }
+        // @include respond-to('s') {
+        //     display: block;
+        //     order: 2;
+        // }
     }
 }

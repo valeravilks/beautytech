@@ -1,4 +1,15 @@
-/** BreakPoints */
-$breakpoints: (
-  "s":  1174px, // smalls
-) !default;
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+$grid-breakpoints: (
+  s: 0,
+  l: 1174px,
+) ;
+
+$container-max-widths: (
+  s: 328px,
+  l: 1134px,
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid";

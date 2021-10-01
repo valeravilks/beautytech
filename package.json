@@ -22,8 +22,7 @@
     "browser-sync": "^2.27.5",
     "dir-archiver": "^1.1.1",
     "node-sass": "^4.14.1",
-    "rtlcss": "^2.5.0",
-    "smart-grid": "^2.1.2"
+    "rtlcss": "^2.5.0"
   },
   "rtlcssConfig": {
     "options": {
@@ -39,7 +38,7 @@
     "map": false
   },
   "scripts": {
-    "server": "browser-sync start --proxy 'http://beautytech.com/' --files='**/*'",
+    "server": "browser-sync start --proxy 'https://beautytech.com/' --files='**/*'",
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",

@@ -1,11 +1,9 @@
-@import "fonts";
+@import "variables/fonts";
 @import "variables/colors";
 @import "variables/structure";
 @import "variables/columns";
 @import "variables/grid";
-@import "mixins/breakpoints";
 @import "mixins/mixins";
-@import "mixins/smart-grid";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "variables/effects";
 @import "variables/typography";
-@import "grid-system";

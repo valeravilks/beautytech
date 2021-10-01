@@ -1,0 +1,167 @@
+.h1 {
+	font-weight: normal;
+	font-size: 58px;
+	line-height: 71px;
+	text-transform: uppercase;
+
+    @include media-breakpoint-only("s") {
+         font-size: 32px;
+         line-height: 39px;
+    }
+}
+
+.h2 {
+	font-weight: 500;
+	font-size: 50px;
+	line-height: 61px;
+	text-transform: uppercase;
+
+  @include media-breakpoint-only('s') {
+      font-size: 26px;
+      line-height: 32px;
+  }
+}
+
+.h3 {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 37px;
+	text-transform: uppercase;
+
+     @include media-breakpoint-only("s") {
+         font-size: 20px;
+         line-height: 24px;
+     }
+}
+
+.h4 {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 0.005em;
+	text-transform: uppercase;
+
+     @include media-breakpoint-only("s") {
+         font-size: 16px;
+         line-height: 20px;
+     }
+}
+
+.h5 {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+
+     @include media-breakpoint-only("s") {
+         line-height: 20px;
+         font-size: 12px;        
+     }
+}
+
+.h6 {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+
+     @include media-breakpoint-only("s") {
+         font-size: 17px;
+         line-height: 26px;
+     }
+}
+
+.display-1 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 73px;
+    color: #000000;
+
+     @include media-breakpoint-only("s") {
+         line-height: 26px;
+         font-size: 30px;
+     }
+}
+
+.body {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    color: #000000;
+    
+     @include media-breakpoint-only("s") {
+         font-size: 17px;
+         line-height: 27px;
+     }
+}
+
+.body-small {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 27px;
+    color: #000000;
+
+     @include media-breakpoint-only("s") {
+         font-size: 13px;
+         line-height: 20px;
+     }
+}
+
+.foovernav {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+    
+     @include media-breakpoint-only("s") {
+         font-size: 13px;
+         line-height: 20px;
+     }
+}
+
+.text-small {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0.005em;
+    color: #000000;
+}
+
+.text-btn-large {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #000000;    
+}
+
+.text-btn-small {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.text-form-label {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.text-form-placeholder {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.text-navbar {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+}
