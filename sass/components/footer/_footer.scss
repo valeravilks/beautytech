@@ -1,5 +1,24 @@
 .footer {
     @extend .container;
 
+    &__hr {
+        display: none;
 
+        @include media-breakpoint-only('s') {
+            display: block;
+        }
+    }
+}
+
+.footer-top {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include media-breakpoint-only('s') {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+   &__logo {
+       margin-bottom: 30px;
+   }
 }

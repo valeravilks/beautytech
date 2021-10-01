@@ -24,11 +24,9 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'beautytech' ); ?></a>
-
 	<header id="masthead" class="site-header">
 		<div class="site-header__container">
 			<?php get_template_part('template-parts/logo', '', array('class' => 'site-header__logo'))?>
-
 			<nav id="site-navigation" class="site-header__menu main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'beautytech' ); ?></button>
 				<?php
