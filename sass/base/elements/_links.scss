@@ -2,54 +2,78 @@
 	cursor: pointer;
 	transition: .3s;
 
+	&:active {
+		outline: none;
+	}
+
 	&.link-primary {
+		@extend .text-btn-large;
+
 		display: inline-block;
 		text-decoration: none;
-		padding: 12px 41px;
-		background: #5E95BF;
+		padding: 16px 53px;
+		background: $color__blue-btn-accent;
 		border-radius: 3px;
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 15px;
-		letter-spacing: 0.01em;
-		text-transform: uppercase;
-		color: #FEFEFE;
+		color: $color__white;
 		border: none;
 
 		&:hover {
-			background: #69A9DB;
-			box-shadow: 5px 5px 30px rgba(94, 149, 191, 0.3);
+			background: $color__btn-hover;
+			@extend .effect-btn-hover;
 		}
 	
 		&:active {
-			background: #4E81A9;
-			outline: none;
+			background: $color__btn-click;
 		}
 	}
 
 	&.link-outline {
+		@extend .text-btn-large;
+
 		display: inline-block;
 		text-decoration: none;
 		padding: 13px 32px;
 		background: none;
 		border-radius: 3px;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 600;
-		line-height: 17px;
-		letter-spacing: 0.01em;
-		text-transform: uppercase;
-		color: #5E95BF;
-		border: 1px solid #5E95BF;
+		color: $color__blue-btn-accent;
+		border: 1px solid $color__blue-btn-accent;
 
 		&:hover {
-			background: #5E95BF;
-			color: #ffffff;
+			background: $color__blue-btn-accent;
+			color: $color__white;
 		}
 	
 		&:active {
-			background: #4E81A9;
-			outline: none;
+			background: $color__btn-click;
+		}
+	}
+
+	&.link-plus {
+		@extend .text-btn-large;
+
+		display: inline-block;
+		position: relative;
+		color: $color__blue-btn-accent;
+		vertical-align: baseline;
+		padding-right: 20px;
+		text-decoration: underline;
+		text-decoration-color: rgba(255, 255, 255, 0);
+
+		&::after {
+			content: '+';
+			position: absolute;
+			font-weight: 500;
+			font-size: 27px;
+			right: 0;
+		}
+
+		&:hover {
+			text-decoration-color: $color__blue-btn-accent;
+		}
+	
+		&:active {
+			color: $color__btn-click;
+			text-decoration-color: $color__btn-click;
 		}
 	}
 }

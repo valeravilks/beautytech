@@ -52,6 +52,12 @@
 			>
 				<?php echo esc_html($link['title'])?>
 			</a>
+			<a href="#" class="link link-outline">
+				Link Outline
+			</a>
+			<a href="#" class="link link-plus">
+				learn more
+			</a>
 			<?php endif; ?>
 		</div>
 
