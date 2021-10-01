@@ -1,0 +1,29 @@
+.company-list {
+  background: $color__gray-lightest;
+  border-top: 1px solid $color__gray-line;
+  padding: 20px 0;
+
+  &__hr-1 {
+    @include media-breakpoint-only("s") {
+      display: none;
+    }
+  }
+
+  &__hr-2 {
+    display: none;
+    @include media-breakpoint-only("s") {
+      display: block;
+    }
+  }
+
+  &__img {
+    padding: 30px 0;
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+
+    @include media-breakpoint-only("s") {
+      padding: 25px 0;
+    }
+  }
+}

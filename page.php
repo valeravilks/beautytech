@@ -16,6 +16,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<?php get_template_part('template-parts/company-list'); ?>
 		<div class="container">
 			<?php
 			while ( have_posts() ) :
@@ -31,6 +32,7 @@ get_header();
 			endwhile; // End of the loop.
 			?>
 		</div>
+		
 	</main><!-- #main -->
 
 <?php
