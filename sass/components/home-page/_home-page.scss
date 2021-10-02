@@ -40,6 +40,11 @@
 
 .home-slider {
   position: relative;
+  margin-bottom: 100px;
+
+  @include media-breakpoint-only('s') {
+    margin-bottom: 50px;
+  }
 
   &__container {
     box-sizing: border-box;
@@ -175,5 +180,103 @@
   &__hr1,
   &__hr2 {
     width: 1px;
+  }
+}
+
+.home-about-us {
+  margin-bottom: 200px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 100px;
+  }
+
+  &__text {
+    @extend .text-body;
+    color: $color__gray-body-text;
+
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__block-1 {
+    margin-bottom: 85px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text-2 {
+    @extend .h6;
+    color: $color__gray-darker-text;
+  }
+
+  &__block-2 {
+    margin-bottom: 20px;
+  }
+
+  &__text-3 {
+    @extend .h4;
+    color: $color__gray-darker-text;
+    color: $color__gray-body-text;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text-4 {
+    @extend .text-body;
+    color: $color__gray-body-text;
+  }
+
+  &__block-4 {
+    align-items: center;
+
+    @include media-breakpoint-only("s") {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__block-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__hr {
+    @include media-breakpoint-only("s") {
+      &:first-child,
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    @include media-breakpoint-only("s") {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__link {
+    display: none!important;
+
+    @include media-breakpoint-only("s") {
+      display: block!important;
+      margin: 0 auto;
+    }
+  }
+
+  &__block-6 {
+    display: flex;
+    justify-content: center;
   }
 }

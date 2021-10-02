@@ -127,12 +127,7 @@ get_header();
 			</div>
 		</div>
 		
-		<?php get_template_part('template-parts/h2-block', '', array(
-			'description' => 'About us',
-			'h2' => 'Welcome to our website',
-			// 'color' => 'white',
-			'link' => '',
-		));?>
+		<?php get_template_part('template-parts/home', 'about-us');?>
 		<?php get_template_part('template-parts/contact-us-block'); ?>
 		<?php get_template_part('template-parts/company-list'); ?>
 	</main><!-- #main -->
