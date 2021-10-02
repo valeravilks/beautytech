@@ -142,11 +142,15 @@ add_action( 'widgets_init', 'beautytech_widgets_init' );
  * Enqueue scripts and styles.
  */
 function beautytech_scripts() {
+	wp_enqueue_style( 'beautytech-swiper', 'https://unpkg.com/swiper@7/swiper-bundle.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'beautytech-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'beautytech-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'beautytech-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
+	wp_enqueue_script( 'beautytech-swiper', 'https://unpkg.com/swiper@7/swiper-bundle.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'beautytech-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'beautytech-script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

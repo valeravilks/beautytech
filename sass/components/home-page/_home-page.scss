@@ -38,6 +38,83 @@
   }
 }
 
-.home-img {
+.home-slider {
+  &__container {
+    box-sizing: border-box;
+  }
+
+  &__slide {
+    padding: 346px 0 92px;
+
+    @include media-breakpoint-only("s") {
+      padding: 109px 0 33px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  &__header {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: $color__white;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 10px;
+      font-size: 25px;
+      line-height: 30px;
+      max-width: 250px;
+    }
+  }
+
+  &__text {
+    @extend .text-body;
+    color: $color__white;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    position: relative;
+    top: 26px;
+    z-index: 10;
+  }
   
+  &__t-o {
+    @include media-breakpoint-only("s") {
+      order: -1;
+    }
+  }
+}
+
+.sl {
+  &__container {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &__dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: $color__white;
+    margin-left: auto;
+
+    &-none {
+      @include media-breakpoint-only("s") {
+        display: none;
+      }
+    }
+  }
+
+  &__element-2 {
+    position: relative;
+    top: -5px;
+  }
 }
