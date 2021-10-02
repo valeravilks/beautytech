@@ -1,0 +1,38 @@
+.contact-us-block {
+  padding: 100px 0;
+
+  @include media-breakpoint-only('s') {
+    padding: 50px 0;
+  }
+
+  &__h2 {
+    @extend .h2;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-only('s') {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__back {
+    background: $color__gray-lightest;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: $color__gray-darker-text;
+    padding: 10px 20px;
+    max-width: 360px;
+
+    @include media-breakpoint-only('s') {
+      font-size: 15px;
+      line-height: auto;
+      padding: 10px;
+    }
+  }
+}
