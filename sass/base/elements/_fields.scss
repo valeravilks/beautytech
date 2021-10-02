@@ -14,13 +14,29 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
+	color: $color__gray-darker-text;
+	border: 1px solid $color__gray-line;
+	border-radius: 5px;
+	padding: 12px 15px;
+	@extend .text-form-placeholder;
+	transition: .3s;
+
+	::placeholder {
+		color: $color__gray-gray;
+	}
+
+	&:hover {
+		color: $color__gray-body-text;
+		outline: 1px solid $color__gray-body-text;
+
+		&::placeholder {
+			color: $color__gray-body-text;
+		}
+	}
 
 	&:focus {
-		color: $color__text-input-focus;
+		color: $color__gray-body-text;
+		outline: 1px solid $color__gray-body-text;
 	}
 }
 
@@ -31,3 +47,47 @@ select {
 textarea {
 	width: 100%;
 }
+
+/* Option */
+
+.option {
+	display: block;
+}
+
+/* Check */
+
+.check {
+	padding-left: 30px;
+	display: flex;
+	align-items: center;
+	@extend .text-form-label;
+	color: $color__gray-body-text;
+
+	@include media-breakpoint-only('s') {
+		font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+	}
+}
+
+.check__input {
+	position: absolute;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.check__box {
+	position: absolute;
+	margin-left: -30px;
+	width: 14px;
+	height: 14px;
+	background-image: url(./img/svg/icon-check-off.svg)
+}
+
+/* Checked */
+
+.check__input:checked + .check__box {
+	background-image: url(./img/svg/icon-check-on.svg);
+}
+

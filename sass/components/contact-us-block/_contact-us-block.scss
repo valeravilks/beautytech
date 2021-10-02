@@ -36,3 +36,52 @@
     }
   }
 }
+
+.contact-form {
+  &__text {
+    @extend .text-form-label;
+    color: $color__gray-darker-text;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-only('s') {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__textarea {
+    min-height: 162px;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__check {
+    margin-left: 15px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__recaptcha {
+    @include media-breakpoint-only('s') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__submit {
+    @include media-breakpoint-only('s') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
