@@ -5,8 +5,8 @@ const swiper = new Swiper('.home-slider', {
   autoHeight: true,
   // Navigation arrows
   navigation: {
-    nextEl: '.home-slider-next',
-    prevEl: '.home-slider-prev',
+    nextEl: '.home-slider__next',
+    prevEl: '.home-slider__prev',
   },
 });
 
@@ -34,9 +34,10 @@ const swiper = new Swiper('.home-slider', {
     hr1.css('width', hr1Width);
     hr2.css('width', hr2Width);
     hr2.css('margin-left', hr2MarginLeft);
+
+    console.log(windowWidth);
   }
 
-  setValue();
-
+  window.onload = setValue;
   window.onresize = setValue;
 }( jQuery ) );
