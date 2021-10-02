@@ -1,0 +1,87 @@
+.h2-block {
+  overflow-y: hidden;
+
+  &-white {
+    color: white;
+  }
+
+  &__description {
+    @extend .h5;
+    margin-bottom: 30px;
+    color: $color__gray-gray;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    }
+
+    &-white {
+      color: $color__white;
+    }
+  }
+
+  &__h2 {
+    @extend .h2;
+    color: $color__blue-heading;
+    margin: 0 0 15px;
+
+    @include media-breakpoint-only("s") {
+      margin: 0 0 10px;
+    }
+
+    &-white {
+      color: $color__white;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    @include media-breakpoint-only("s") {
+      display: none!important;
+    }
+  }
+
+  &__hr {
+    margin: 0 0 80px 0;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 1px;
+      background: $color__gray-line;
+      width: 100vw;
+    }
+
+    &.white {
+      &:after {
+        background: $color__white;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 7px;
+      width: 7px;
+      border-radius: 100%;
+      background: $color__blue-btn-accent;
+      top: -3px;
+    }
+
+    &.white {
+      &:before {
+        background: $color__white;
+      }
+    }
+
+    @include media-breakpoint-only("s") {
+      margin: 0 0 40px 0;
+    }
+  }
+}

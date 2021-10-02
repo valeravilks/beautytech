@@ -16,10 +16,10 @@
 	line-height: 61px;
 	text-transform: uppercase;
 
-  @include media-breakpoint-only('s') {
-      font-size: 26px;
-      line-height: 32px;
-  }
+    @include media-breakpoint-only('s') {
+        font-size: 26px;
+        line-height: 32px;
+    }
 }
 
 .h3 {
