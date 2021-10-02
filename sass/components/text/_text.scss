@@ -87,7 +87,6 @@
     font-weight: normal;
     font-size: 17px;
     line-height: 27px;
-    color: #000000;
     
      @include media-breakpoint-only("s") {
          font-size: 17px;
@@ -99,7 +98,6 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 27px;
-    color: #000000;
 
      @include media-breakpoint-only("s") {
          font-size: 13px;
@@ -123,7 +121,6 @@
 .text-footernav {
     font-weight: normal;
     font-size: 13px;
-    color: #000000;
     
     @include media-breakpoint-only("s") {
         font-size: 13px;
@@ -136,7 +133,6 @@
     font-size: 15px;
     line-height: 23px;
     letter-spacing: 0.005em;
-    color: #000000;
 }
 
 .text-mobile-body-small {
@@ -153,7 +149,6 @@
     line-height: 17px;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: #000000;    
 }
 
 .text-btn-small {
@@ -162,21 +157,18 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
-    color: #000000;
 }
 
 .text-form-label {
     font-weight: 500;
     font-size: 13px;
     line-height: 27px;
-    color: #000000;
 }
 
 .text-form-placeholder {
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
-    color: #000000;
 }
 
 .text-navbar {

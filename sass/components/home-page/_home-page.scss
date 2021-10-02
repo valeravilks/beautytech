@@ -1,0 +1,43 @@
+.home-main {
+  padding: 50px 0 40px;
+
+  @include media-breakpoint-only('s') {
+    padding: 0 0 30px;
+  }
+
+  &__title {
+    @extend .h1;
+    margin: 0 0 20px;
+
+    @include media-breakpoint-only('s') {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__color {
+    color: $color__blue-btn-accent;
+  }
+
+  &__text {
+    color: $color__blue-heading;
+  }
+
+  &__hr {
+    margin-bottom: 40px;
+
+    @include media-breakpoint-only('s') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    @include media-breakpoint-only('s') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.home-img {
+  
+}
