@@ -1,7 +1,17 @@
 <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="42" cy="42" r="41" stroke="#FEFEFE" stroke-width="2"/>
-<circle cx="25" cy="43" r="3" fill="#FEFEFE"/>
-<circle cx="35" cy="43" r="3" fill="#FEFEFE"/>
-<circle cx="45" cy="43" r="3" fill="#FEFEFE"/>
-<path d="M62 43L54.5 47.3301L54.5 38.6699L62 43Z" fill="#FEFEFE"/>
+  <defs>
+      <style>
+          #v, #q, #i {
+              transition: 0.3s;
+          }
+          svg:hover #main{
+              stroke: #000000;
+          }
+      </style>
+  </defs>
+  <circle id='main' cx="42" cy="42" r="41" stroke="#FEFEFE" stroke-width="2"/>
+  <circle cx="25" cy="43" r="3" fill="#FEFEFE"/>
+  <circle cx="35" cy="43" r="3" fill="#FEFEFE"/>
+  <circle cx="45" cy="43" r="3" fill="#FEFEFE"/>
+  <path d="M62 43L54.5 47.3301L54.5 38.6699L62 43Z" fill="#FEFEFE"/>
 </svg>
