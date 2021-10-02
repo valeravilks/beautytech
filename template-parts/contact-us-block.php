@@ -19,41 +19,33 @@
             <div class="col-12">
               <label class="contact-form__label">
                 <div class="contact-form__text">
-                  Name*
+                  Name *
                 </div>
-                <input class="contact-form__input" type="text" placeholder="Name">
+                <input class="contact-form__input" type="text" placeholder="Type your name">
               </label>
             </div>
             <div class="col-12 col-l-6">
               <label class="contact-form__label">
                   <div class="contact-form__text">
-                    Name*
+                    Email﹡
                   </div>
-                  <input class="contact-form__input" type="text" placeholder="Name">
+                  <input class="contact-form__input" type="email" placeholder="Type your email">
                 </label>
             </div>
             <div class="col-12 col-l-6">
               <label class="contact-form__label">
                   <div class="contact-form__text">
-                    Name*
+                    Phone﹡
                   </div>
-                  <input class="contact-form__input" type="text" placeholder="Name">
+                  <input class="contact-form__input" type="tel" placeholder="Type your phone">
                 </label>
             </div>
             <div class="col-12">
               <label class="contact-form__label">
                 <div class="contact-form__text">
-                  Name*
+                  Message
                 </div>
-                <input class="contact-form__input" type="text" placeholder="Name">
-              </label>
-            </div>
-            <div class="col-12">
-              <label class="contact-form__label">
-                <div class="contact-form__text">
-                  Name*
-                </div>
-                <textarea class="contact-form__input contact-form__textarea" placeholder="Name"></textarea>
+                <textarea class="contact-form__input contact-form__textarea" placeholder="Type your message here..."></textarea>
               </label>
             </div>
             <div class="col-12">
@@ -74,6 +66,32 @@
             <input class="contact-form__submit" type="submit" value="SEND">
           </div>
         </form>
+      </div>
+      <div class="col-12 offset-l-1 col-l-5">
+        <div class="contact-us-block__info c-info">
+          <div class="c-info__header">
+            Address
+          </div>
+          <div class="c-info__text">
+            Schwitterberg 111
+            58708 Menden
+            Germany
+          </div>
+          <hr class="c-info__hr">
+          <div class="c-info__header">
+            Phone
+          </div>
+          <div class="c-info__text">
+            +49 (0) 2373 395 30 21
+          </div>
+          <hr class="c-info__hr">
+          <div class="c-info__header">
+            Email
+          </div>
+          <div class="c-info__text">
+            info@beauty-tech.de
+          </div>
+        </div>
       </div>
     </div>
   </div>
