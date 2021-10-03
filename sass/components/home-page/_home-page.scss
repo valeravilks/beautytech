@@ -664,3 +664,150 @@
     }
   }
 }
+
+.home-pr {
+  &__description {
+    @extend .h5;
+    margin-bottom: 152px;
+    color: $color__gray-gray;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    }
+
+    &-white {
+      color: $color__white;
+    }
+  }
+
+  &__h2 {
+    @extend .h2;
+    color: $color__blue-heading;
+    margin: 0 0 15px;
+
+    @include media-breakpoint-only("s") {
+      margin: 0 0 10px;
+    }
+
+    &-white {
+      color: $color__white;
+    }
+  }
+
+  &__link {
+    @include media-breakpoint-only("s") {
+      display: none!important;
+    }
+  }
+
+  &__hr {
+    margin: 0 0 32px 0;
+    position: relative;
+    
+    &.white {
+      &:after {
+        background: $color__white;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 7px;
+      width: 7px;
+      border-radius: 100%;
+      background: $color__blue-btn-accent;
+      top: -3px;
+    }
+
+    @include media-breakpoint-only("s") {
+      margin: 0 0 40px 0;
+    }
+  }
+}
+
+.home-pr-1 {
+  padding: 30px;
+  background: $color__gray-lightest;
+  position: relative;
+  height: 552px;
+  display: flex; 
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-only("s") {
+    padding: 20px;
+    height: auto;
+  } 
+
+  &__block {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include media-breakpoint-only("s") {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $color__gray-darker-text;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-only("s") {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+
+    @include media-breakpoint-only("s") {
+      position: initial;
+      line-height: 20px;
+      margin-bottom: 0;
+      align-self: center;
+      width: 150px;
+    }
+  }
+
+  &__hr {
+    display: none;
+    @include media-breakpoint-only("s") {
+      display: block;
+    }
+  }
+
+  &__text {
+    @extend .text-body;
+    margin-bottom: auto;
+    max-width: 330px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    padding: 10px!important;
+    align-self: flex-start;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: initial;
+
+    @include media-breakpoint-only("s") {
+      text-align: center;
+      align-self: stretch;
+
+    }
+  }
+}
