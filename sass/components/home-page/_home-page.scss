@@ -582,3 +582,85 @@
     } 
   }
 }
+
+.home-s {
+  background: $color__liner-liner;
+  padding: 100px 0;
+
+  @include media-breakpoint-only("s") {
+    padding: 50px 0;
+  } 
+
+  &__block {
+    padding: 40px 40px 67px 67px;
+    border: 1px solid $color__white;
+
+    @include media-breakpoint-only("s") {
+      padding: 20px;
+    } 
+  }
+
+  &__mob {
+    @include media-breakpoint-only("s") {
+      margin-bottom: 30px;
+    } 
+  }
+
+  &__block-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 12px;
+    } 
+  }
+
+  &__link {
+    &-svg {
+      width: 46px;
+      height: 46px;
+
+      @include media-breakpoint-only("s") {
+        width: 22px;
+        height: 22px;
+      } 
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $color__white;
+
+    @include media-breakpoint-only("s") {
+      font-size: 16px;
+      line-height: 20px;
+    } 
+  }
+
+  &__text {
+    @extend .text-body;
+    color: $color__white;
+    padding-right: 27px;
+
+    p {
+      margin: 0 0 30px;
+
+      @include media-breakpoint-only("s") {
+        margin: 0 0 15px;
+      } 
+    }
+  }
+
+  &__link {
+    color: $color__white!important;
+
+    &:hover {
+      text-decoration-color: $color__white!important;
+    }
+  }
+}
