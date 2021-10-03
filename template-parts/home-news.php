@@ -11,3 +11,27 @@
       'linkText' => 'Go to blog',
 		));
 ?>
+<div class="home-news">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-l-8">
+          <div class="news-1" style="background-image: url(https://beautytech.com/wp-content/uploads/2021/10/article-large.jpg)">
+            <div class="news-1__overlay">
+              <div class="news-1__tag">
+                Skin treatments
+              </div>
+              <div class="news-1__date">
+                Feb 03, 2020
+              </div>
+              <div class="news-1__title">
+                Ultracel q+ system
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-l-4">
+        </div>
+      </div>
+
+    </div>
+</div>

@@ -280,3 +280,47 @@
     justify-content: center;
   }
 }
+
+.home-news {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 50px;
+  }
+
+}
+
+.news-1 {
+  background-size: cover;
+  background-position: center center;
+
+  &__overlay {
+    background: $color__liner-video;
+    padding: 30px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include media-breakpoint-only("s") {
+      padding: 10px 20px;
+      height: 360px;
+    }
+  }
+
+  &__tag {
+    @extend .tag;
+  }
+
+  &__date {
+    @extend .h4;
+    color: $color__white;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @extend .h2;
+    color: $color__white;
+    max-width: 415px;
+  }
+}
