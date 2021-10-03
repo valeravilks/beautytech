@@ -126,8 +126,12 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<?php get_template_part('template-parts/home', 'news');?>
 		<?php get_template_part('template-parts/home', 'about-us');?>
+		<?php get_template_part('template-parts/home', 'testimonials');?>
+		<div class="home-decor">
+			<div class="home-decor__content container"></div>
+			<?php get_template_part('template-parts/home', 'news');?>
+		</div>
 		<?php get_template_part('template-parts/home', 'support');?>
 		<?php get_template_part('template-parts/contact-us-block'); ?>
 		<?php get_template_part('template-parts/company-list'); ?>

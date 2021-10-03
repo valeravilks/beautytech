@@ -10,6 +10,32 @@ const swiper = new Swiper('.home-slider', {
   },
 });
 
+const swiperRev = new Swiper('.home-rev__slider', {
+  autoHeight: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.home-rev__next',
+    prevEl: '.home-rev__prev',
+  },
+  pagination: {
+    el: ".home-rev__pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<div class="home-rev__bullet swiper-pagination-bullet"></div>';
+    },
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    1157: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      slidesPerGroup: 2
+    },
+  }
+});
+
 // Line in slider
 
 ( function( $ ) {

@@ -78,6 +78,18 @@
     text-transform: uppercase;
 }
 
+.h8 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0.005em;
+
+    @include media-breakpoint-only("s") {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
 .display-1 {
     font-weight: 500;
     font-size: 60px;
@@ -96,7 +108,7 @@
     line-height: 27px;
     
      @include media-breakpoint-only("s") {
-         font-size: 17px;
+         font-size: 15px;
          line-height: 27px;
      }
 }

@@ -288,6 +288,29 @@
     margin-bottom: 50px;
   }
 
+  &__block-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 35px;
+      margin-top: 20px;
+    }
+  }
+
+  &__link {
+    display: none!important;
+
+    @include media-breakpoint-only("s") {
+      display: block!important;
+    }
+  }
+
+  &__block-link {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .news-1 {
@@ -322,5 +345,240 @@
     @extend .h2;
     color: $color__white;
     max-width: 415px;
+  }
+}
+
+.news-2 {
+  &__hr {
+    margin-bottom: 25px;
+  }
+
+  &__tag {
+    @extend .tag;
+  }
+
+  &__date {
+    @extend .text-footernav;
+    color: $color__gray-gray;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    @extend .h4;
+    color: $color__gray-darker-text; 
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__overlay {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: $color__liner-video;
+      z-index: 1;
+    }
+    
+  }
+}
+
+.event-1 {
+  border: 1px solid $color__gray-line;
+  padding: 20px;
+  transition: .3s;
+
+  &:hover {
+    border: 1px solid $color__gray-gray;
+  }
+
+  &__tag {
+    @extend .tag;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 15px;
+    }  
+  }
+
+  &__title {
+    @extend .h7;
+    color: $color__gray-darker-text;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 15px;
+    }  
+  }
+
+  &__img {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 15px;
+    } 
+  }
+
+  &__text-1 {
+    @extend .h8;
+    color: $color__gray-body-text;
+  }
+
+  &__text-2 {
+    @extend .h8;
+    color: $color__gray-body-text;
+    max-width: 150px;
+    text-align: right;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__hr {
+    margin: 10px;
+  }
+}
+
+.home-events {
+  margin-bottom: 170px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 100px;
+  }  
+
+  &__event {
+    margin-bottom: 30px;
+  }
+}
+
+.home-products {
+
+}
+
+.home-decor {
+  .conetent {
+    position: relative;
+    &::before {
+      content: '0';
+
+      
+    }
+  }
+}
+
+.review-1 {
+  border: 1px solid $color__gray-line;
+  position: relative;
+  margin-top: 64px;
+
+  @include media-breakpoint-only("s") {
+    margin-top: 45px;
+  } 
+
+  &__image {
+    width: 127px;
+    position: absolute;
+    transform: translateY(-50%) translateX(60px);
+    height: 127px;
+    border: 1px solid $color__gray-line;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color__white;
+
+    @include media-breakpoint-only("s") {
+      width: 90px;
+      height: 90px;
+      transform: translateY(-50%) translateX(28px);
+    }  
+  }
+
+  &__img {
+    border-radius: 100%;
+    width: 117px;
+
+    @include media-breakpoint-only("s") {
+      width: 80px;
+    }  
+  }
+
+  &__text {
+    padding: 84px 30px 20px;
+    @extend .text-body;
+    color: $color__gray-body-text;
+
+    @include media-breakpoint-only("s") {
+      padding: 55px 20px 10px;
+    }  
+  }
+
+  &__author {
+    @extend .h8;
+    color: $color__gray-darker-text;
+    padding: 0 30px 20px;
+    text-align: right;
+
+    @include media-breakpoint-only("s") {
+      padding: 0 20px 20px;
+    }  
+  }
+}
+
+.home-rev {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 40px;
+  }  
+
+  &__nav {
+    max-width: 664px;
+    margin: 40px auto 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__pagination {
+    display: flex;
+    background: $color__gray-line;
+    height: 1px;
+    margin: 0 25px;
+
+    @include media-breakpoint-only("s") {
+      margin: 0;
+    }  
+  }
+
+  &__bullet {
+    position: relative;
+    top: -2px;
+    height: 5px;
+    flex-grow: 1;
+    background: $color__gray-line;
+    border-radius: 5px;
+  }
+
+  &__prev,
+  &__next {
+    @include media-breakpoint-only("s") {
+      display: none;
+    } 
   }
 }

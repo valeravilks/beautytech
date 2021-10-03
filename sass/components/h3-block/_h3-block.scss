@@ -9,6 +9,10 @@
 
     margin-bottom: 51px;
     position: relative;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 25px;
+    }
   
     &::before {
       content: '';
