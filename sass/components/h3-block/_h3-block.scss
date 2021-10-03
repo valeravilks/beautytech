@@ -1,0 +1,51 @@
+.h3-block {
+  @include media-breakpoint-only("s") {
+    margin-bottom: 25px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 51px;
+    position: relative;
+  
+    &::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      background: $color__blue-btn-accent;
+      position: absolute;
+      left: -17px;
+      top: 15px;
+
+      @include media-breakpoint-only("s") {
+        left: -7px;
+        top: 9px;
+      }
+    }
+  }
+
+  &__h3 {
+    @extend .h3;
+    color: $color__blue-heading;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    @include media-breakpoint-only("s") {
+      display: none!important;
+    }
+  }
+
+  &__hr {
+    flex-grow: 1;
+    margin: 0 15px;
+
+    @include media-breakpoint-only("s") {
+      display: none!important;
+    }
+  }
+}

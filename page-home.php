@@ -126,7 +126,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		
+		<?php get_template_part('template-parts/home', 'news');?>
 		<?php get_template_part('template-parts/home', 'about-us');?>
 		<?php get_template_part('template-parts/home', 'support');?>
 		<?php get_template_part('template-parts/contact-us-block'); ?>
