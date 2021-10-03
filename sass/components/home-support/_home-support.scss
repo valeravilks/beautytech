@@ -1,0 +1,43 @@
+.home-support {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 50px;
+  }
+
+  &__block-1 {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    @extend .h7;
+    color: $color__gray-darker-text;
+    background: none;
+    border-radius: 0;
+    border: 1px solid $color__gray-line;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 30px 5px;
+
+    @include media-breakpoint-only("s") {
+      font-size: 13px;
+      margin-bottom: 20px;
+      padding: 10px 5px;
+      min-height: 75px;
+    }
+
+    &:hover {
+      color: $color__white;
+    }
+  }
+
+  &__clear {
+    @include media-breakpoint-only("s") {
+      display: none;
+    }
+  }
+}
