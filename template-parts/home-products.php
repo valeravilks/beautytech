@@ -62,5 +62,28 @@
         </div>
       </div>
     </div>
+    <div class="home-pr-2">
+      <div class="home-pr-2__row row g-0">
+        <div class="col-12 col-l-9">
+          <div class="home-pr-2__right">
+            sdf
+          </div>
+        </div>
+        <div class="col-12 col-l-3">
+          <div class="home-pr-2__left">
+            The flexible setting of the spot sizes
+          </div>
+          <div class="home-pr-2__left">
+            Excellent results in skin rejuvenation
+          </div>
+          <div class="home-pr-2__left">
+            Advanced concept laser treatment
+          </div>
+          <div class="home-pr-2__left">
+            The depth of penetration limits thermal damage to the surrounding tissue to a minimum.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

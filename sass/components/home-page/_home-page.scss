@@ -467,10 +467,6 @@
   }
 }
 
-.home-products {
-
-}
-
 .home-decor {
   .conetent {
     position: relative;
@@ -809,5 +805,33 @@
       align-self: stretch;
 
     }
+  }
+}
+
+.home-pr-2 {
+  &__row {
+    height: 583px;
+  
+    @include media-breakpoint-only("s") {
+      height: auto;
+    } 
+  }
+
+  &__left {
+    @extend .h8;
+    color: $color__gray-body-text;
+    border: 1px solid $color__gray-lightest;
+    height: 25%;
+    padding: 25px;
+  }
+
+  &__right {
+    background: $color__gray-lightest;
+    height: 100%;
+    padding: 30px;
+
+    @include media-breakpoint-only("s") {
+      padding: 20px;
+    } 
   }
 }
