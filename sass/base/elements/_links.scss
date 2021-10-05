@@ -78,6 +78,42 @@
 		}
 	}
 
+	&.link-plus-2 {
+		display: inline-block;
+		position: relative;
+		color: $color__white;
+		vertical-align: baseline;
+		text-decoration: underline;
+		text-decoration-color: rgba(255, 255, 255, 0);
+		background: $color__blue-btn-accent;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 16px;
+		padding: 14px 20px;
+		border-radius: 3px;
+
+
+		&::after {
+			content: '+';
+			font-weight: normal;
+			font-size: 21px;
+			line-height: 0px;
+			position: relative;
+			right: 0;
+			top: 3px;
+			margin-left: 5px;
+		}
+
+		&:hover {
+			background: $color__btn-hover;
+			@extend .effect-btn-hover;
+		}
+	
+		&:active {
+			background: $color__btn-click;
+		}
+	}
+
 	&.link-primary.link-fill {
 		background: $color__white;
 		color: $color__blue-btn-accent;

@@ -794,7 +794,6 @@
   }
 
   &__link {
-    padding: 10px!important;
     align-self: flex-start;
     font-size: 13px;
     line-height: 16px;
@@ -823,15 +822,87 @@
     border: 1px solid $color__gray-lightest;
     height: 25%;
     padding: 25px;
+
+    @include media-breakpoint-only("s") {
+      display: none;
+    } 
   }
 
   &__right {
     background: $color__gray-lightest;
     height: 100%;
     padding: 30px;
+    display: grid;
+    overflow: hidden;
+    position: relative;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 160px 261px 1fr;
+    grid-template-areas: "text . link"
+                         ". . title"
+                         "logo . desc";
 
     @include media-breakpoint-only("s") {
       padding: 20px;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+      grid-template-areas: "title" "logo" "text . link"
+                           ". . 
+                            . desc";
     } 
+
+    & > *:not(.home-pr-2__img) {
+      z-index: 11;
+    }
+  }
+
+  &__text {
+    @extend .h8;
+    color: $color__gray-body-text;
+    grid-area: text;
+
+    @include media-breakpoint-only("s") {
+      display: none;
+    } 
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $color__gray-darker-text;
+    grid-area: title;
+    margin-top: auto;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-only("s") {
+      font-size: 16px;
+      line-height: 20px;
+    } 
+  }
+
+  &__desc {
+    grid-area: desc;
+    @extend .text-body;
+    color: $color__gray-body-text;
+  }
+
+  &__logo {
+    grid-area: logo;
+    margin-top: auto;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 480px;
+    left: 40px;
+    
+  }
+
+  &__blink {
+    grid-area: link;
+    margin-left: auto;
   }
 }
