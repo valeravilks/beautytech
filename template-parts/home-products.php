@@ -15,6 +15,34 @@
           </a>
         </div>
       </div>
+      <?php
+      // Check value exists.
+      if( have_rows('home-setting-products-list', 'option') ):
+
+          // Loop through rows.
+          while ( have_rows('home-setting-products-list', 'option') ) : the_row();
+
+              // Case: Paragraph layout.
+              if( get_row_layout() == 'card' ): 
+                  $productPostData = get_sub_field('card');  ?>
+                <div class="col-12 col-l-6">
+                  <?php get_template_part('template-parts/product', 'card-1', array('postData' => $productPostData));?>
+                </div>
+
+              
+              <?php elseif( get_row_layout() == 'full-card' ): 
+                  $file = get_sub_field('file');
+
+              endif;
+
+          // End loop.
+          endwhile;
+
+      // No value.
+      else :
+          // Do something...
+      endif;    
+      ?>
       <div class="col-12 col-l-6">
         <div class="home-pr-1">
           <div class="home-pr-1__block">

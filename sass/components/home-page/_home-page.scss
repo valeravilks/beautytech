@@ -730,6 +730,7 @@
   display: flex; 
   flex-direction: column;
   margin-bottom: 20px;
+  overflow: hidden;
 
   @include media-breakpoint-only("s") {
     padding: 20px;
@@ -754,6 +755,7 @@
     text-transform: uppercase;
     color: $color__gray-darker-text;
     margin-bottom: 10px;
+    max-width: 328px;
 
     @include media-breakpoint-only("s") {
       font-size: 16px;
@@ -765,7 +767,6 @@
   &__img {
     position: absolute;
     bottom: 0;
-    right: 10px;
 
     @include media-breakpoint-only("s") {
       position: initial;
@@ -805,6 +806,11 @@
       align-self: stretch;
 
     }
+  }
+
+  &__logo {
+    right: 10px;
+    max-height: 20px;
   }
 }
 
