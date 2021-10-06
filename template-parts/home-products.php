@@ -50,7 +50,7 @@
               <?php elseif( get_row_layout() == 'space' ): ?>
                 <div class="col-12 space-product" style="height:<?php echo get_sub_field('space_height');?>px"></div>
               <?php elseif( get_row_layout() == 'link' ): ?>
-                <div class="col-12">
+                <div class="col-12 d-l-none">
                   <div class="home-pr__link-block">
                     <a href="<?php echo get_sub_field('link'); ?>" class="home-pr__link-block-2 link link-plus">
                       <?php echo get_sub_field('link-text'); ?>
