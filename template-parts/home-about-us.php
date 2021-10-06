@@ -70,7 +70,7 @@ get_template_part('template-parts/h2-block', '', array(
         <?php endif;?>
     </div>
     <div class="home-about-us__block-6">
-      <a href="#" class="home-about-us__link link link-plus">Learn more</a>
+      <a href="<?php echo get_field('home-setting-about-link', 'option')?>" class="home-about-us__link link link-plus">Learn more</a>
     </div>
   </div>
 </div>

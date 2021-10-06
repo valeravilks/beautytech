@@ -1,6 +1,6 @@
 <?php get_template_part('template-parts/h2-block', '', array(
 			// 'description' => 'Blog & events',
-			'h2' => "testimonials",
+			'h2' => get_field('home-setting-testimonials-title', 'option'),
 			// 'color' => 'white',
 			// 'link' => 'https://link',
 		));
@@ -10,84 +10,22 @@
   <div class="container">
     <div class="swiper home-rev__slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="review-1">
-            <div class="review-1__image">
-              <img src="https://beautytech.com/wp-content/uploads/2021/10/image-62.jpg" alt="review" class="review-1__img">
+        <?php if(have_rows('home-setting-testimonials-list', 'option')) :
+            while(have_rows('home-setting-testimonials-list', 'option')) : the_row(); ?>
+            <div class="swiper-slide">
+              <div class="review-1">
+                <div class="review-1__image">
+                  <img src="<?php the_sub_field('image'); ?>" alt="review" class="review-1__img">
+                </div>
+                <div class="review-1__text">
+                  <?php the_sub_field('text'); ?>
+                </div>
+                <div class="review-1__author">
+                  <?php the_sub_field('author'); ?>
+                </div>
+              </div>
             </div>
-            <div class="review-1__text">
-              I'm always looking for therapies with a high intersection of safety and efficacy, and INRTAcel is panning out to be just that. It delivers multimodality therapy in one device. As we treat more patients the power og RF microneedling with and without topically applied cellular therapies becomes more evident.
-            </div>
-            <div class="review-1__author">
-              Dr. Gregory Chernoff, MD USA
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-1">
-            <div class="review-1__image">
-              <img src="https://beautytech.com/wp-content/uploads/2021/10/image-62.jpg" alt="review" class="review-1__img">
-            </div>
-            <div class="review-1__text">
-              I'm always looking for therapies with a high intersection of safety and efficacy, and INRTAcel is panning out to be just that. It delivers multimodality therapy in one device. As we treat more patients the power og RF microneedling with and without topically applied cellular therapies becomes more evident. It delivers multimodality therapy in one device. As we treat more patients the power og RF microneedling with and without topically applied cellular therapies becomes more evident. It delivers multimodality therapy in one device. As we treat more patients the power og RF microneedling with and without topically applied cellular therapies becomes more evident.
-            </div>
-            <div class="review-1__author">
-              Dr. Gregory Chernoff, MD USA
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-1">
-            <div class="review-1__image">
-              <img src="https://beautytech.com/wp-content/uploads/2021/10/image-62.jpg" alt="review" class="review-1__img">
-            </div>
-            <div class="review-1__text">
-              I'm always looking for therapies with a high intersection of safety and efficacy, and INRTAcel is panning out to be just that. 
-            </div>
-            <div class="review-1__author">
-              Dr. Gregory Chernoff, MD USA
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-1">
-            <div class="review-1__image">
-              <img src="https://beautytech.com/wp-content/uploads/2021/10/image-62.jpg" alt="review" class="review-1__img">
-            </div>
-            <div class="review-1__text">
-              I'm always looking for therapies with a high intersection of safety and efficacy, and INRTAcel is panning out to be just that. It delivers multimodality therapy in one device. As we treat more patients the power og RF microneedling with and without topically applied cellular therapies becomes more evident. It delivers multimodality therapy in one device. As we treat more patients the power og RF microneedling with and without topically applied cellular therapies becomes more evident.
-            </div>
-            <div class="review-1__author">
-              Dr. Gregory Chernoff, MD USA
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-1">
-            <div class="review-1__image">
-              <img src="https://beautytech.com/wp-content/uploads/2021/10/image-62.jpg" alt="review" class="review-1__img">
-            </div>
-            <div class="review-1__text">
-              I'm always looking for therapies with a 
-            </div>
-            <div class="review-1__author">
-              Dr. Gregory Chernoff, MD USA
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-1">
-            <div class="review-1__image">
-              <img src="https://beautytech.com/wp-content/uploads/2021/10/image-62.jpg" alt="review" class="review-1__img">
-            </div>
-            <div class="review-1__text">
-              I'm always looking for therapies with a high intersection of safety and efficacy, and INRTAcel is panning out to be just that. 
-            </div>
-            <div class="review-1__author">
-              Dr. Gregory Chernoff, MD USA
-            </div>
-          </div>
-        </div>
+        <?php endwhile; endif;?>
       </div>
       <div class="home-rev__nav">
         <div class="home-rev__prev">

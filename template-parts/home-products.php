@@ -48,19 +48,27 @@
                     
                   </div>
               <?php elseif( get_row_layout() == 'space' ): ?>
-                <div class="col-12" style="height:<?php echo get_sub_field('space_height');?>px"></div>
+                <div class="col-12 space-product" style="height:<?php echo get_sub_field('space_height');?>px"></div>
+              <?php elseif( get_row_layout() == 'link' ): ?>
+                <div class="col-12">
+                  <div class="home-pr__link-block">
+                    <a href="<?php echo get_sub_field('link'); ?>" class="home-pr__link-block-2 link link-plus">
+                      <?php echo get_sub_field('link-text'); ?>
+                    </a>
+                  </div>
+                </div>
               <?php elseif( get_row_layout() == 'title-2' ): ?>
                 <div class="col-12 col-l-6">
                   <div class="home-pr home-pr-right">
                     <div class="home-pr__description">
-                      <?php the_field('home-setting-products-subtitle', 'option')?>
+                      <?php echo get_sub_field('subtitle'); ?>
                     </div>  
                     <h2 class="home-pr__h2">
-                      <?php the_field('home-setting-products-title', 'option')?>
+                      <?php echo get_sub_field('title'); ?>
                     </h2>
                     <hr class="home-pr__hr">
-                    <a href="<?php the_field('home-setting-products-link', 'option');?>" class="home-pr__link link link-plus">
-                      <?php the_field('home-setting-products-link-text', 'option');?>
+                    <a href="<?php echo get_sub_field('link'); ?>" class="home-pr__link link link-plus">
+                      <?php echo get_sub_field('link-text'); ?>
                     </a>
                   </div>
                 </div>
