@@ -18,21 +18,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<div class="home-main">
-			<div class="container">
-				<h1 class="home-main__title">
-					<?php $title = get_field('home-setting-title', 'option'); 
-					if($title) :?>
-						<span class="home-main__color"><?php echo $title['title-color-part']?></span>
-						<span class="home-main__text"><?php echo $title['title-second-part']?></span>
-					<?php endif;?>
-				</h1>
-				<hr class="home-main__hr">
-				<a href="<?php echo esc_url(get_field('home-setting-product-link', 'option'))?>" class="home-main__link link link-primary">
-					<?php the_field('home-setting-product-link-text', 'option')?>
-				</a>
-			</div>
-		</div>
+		<?php get_template_part('template-parts/home', 'first-screen')?>
 		<div class="swiper home-slider">
 			<div class="home-slider__nav-button">
 				<div class="container">
@@ -57,49 +43,6 @@ get_header();
 								<div class="col-12 col-l-6 home-slider__t-o">
 									<div class="home-slider__header">
 										tri-beam premium
-									</div>
-									<div class="home-slider__text">
-										An effective technology that allows you to treat age spots and small wrinkles. With three wavelengths, you can do most types and process pigments in tattoos effectively.
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="home-slider__element sl__element">
-									<hr class="sl__hr-1">
-									<hr class="sl__hr-2">
-								</div>
-								<div class="home-slider__element sl__element-2">
-									<div class="sl__container container">
-										<div class="sl__row row">
-											<div class="col-3">
-												<div class="sl__dot sl__dot-none"></div>	
-											</div>
-											<div class="col-3">
-												<div class="sl__dot sl__dot-none"></div>	
-											</div>
-											<div class="col-3">
-												<div class="sl__dot"></div>	
-											</div>
-											<div class="col-3">
-												<div class="sl__dot"></div>	
-											</div>
-										</div>
-									</div>
-								</div>
-					</div>
-				</div>
-				<div class="home-slider__slide swiper-slide" style="background-image: url('https://beautytech.com/wp-content/uploads/2021/10/Liner.jpg')">
-					<div class="home-slider__gradient">
-						<div class="container home-slider__container">
-							<div class="row g-0">
-								<div class="col-12 col-l-6 home-slider__btn">
-									<a href="#" class="home-slider__link link link-outline link-fill">
-										Learn more
-									</a>	
-								</div>
-								<div class="col-12 col-l-6 home-slider__t-o">
-									<div class="home-slider__header">
-										tri-beam premium2
 									</div>
 									<div class="home-slider__text">
 										An effective technology that allows you to treat age spots and small wrinkles. With three wavelengths, you can do most types and process pigments in tattoos effectively.
