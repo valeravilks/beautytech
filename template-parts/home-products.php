@@ -66,22 +66,23 @@
       <div class="home-pr-2__row row g-0">
         <div class="col-12 col-l-9">
           <div class="home-pr-2__right">
+            <div class="home-pr-2__title">
+              EDGE ONE
+            </div>
+            <img src="https://beautytech.com/wp-content/uploads/2021/10/Tribeam-Logo.png" alt="" class="home-pr-2__logo"> 
+            <img src="https://beautytech.com/wp-content/uploads/2021/10/Слой-3-1.png" alt="" class="home-pr-2__img">  
+            <hr class="home-pr-2__hr">
             <div class="home-pr-2__text">
               Exceptional clinical performance with excellent results
             </div>
-            <img src="https://beautytech.com/wp-content/uploads/2021/10/Tribeam-Logo.png" alt="" class="home-pr-2__logo"> 
+            <div class="home-pr-2__desc">
+              As a high-performance system with numerous treatment options, Edge ONE is suitable for modern dermatology, aesthetics and surgery.
+            </div>
             <div class="home-pr-2__blink">
               <a href="#" class="home-pr-2__link link link-plus-2">
                 Explore about product
               </a> 
             </div>  
-            <div class="home-pr-2__title">
-              EDGE ONE
-            </div>
-            <img src="https://beautytech.com/wp-content/uploads/2021/10/Слой-3-1.png" alt="" class="home-pr-2__img">  
-            <div class="home-pr-2__desc">
-              As a high-performance system with numerous treatment options, Edge ONE is suitable for modern dermatology, aesthetics and surgery.
-            </div>
           </div>
         </div>
         <div class="col-12 col-l-3">
