@@ -4,13 +4,15 @@
       <div class="col-12 col-l-6">
         <div class="home-pr">
           <div class="home-pr__description">
-          Choose your product
+            <?php the_field('home-setting-products-subtitle', 'option')?>
           </div>  
           <h2 class="home-pr__h2">
-            Medical aesthetik devices
+            <?php the_field('home-setting-products-title', 'option')?>
           </h2>
           <hr class="home-pr__hr">
-          <a href="<?php echo $args['link']?>" class="home-pr__link link link-plus">See all products</a>
+          <a href="<?php the_field('home-setting-products-link', 'option');?>" class="home-pr__link link link-plus">
+            <?php the_field('home-setting-products-link-text', 'option');?>
+          </a>
         </div>
       </div>
       <div class="col-12 col-l-6">
