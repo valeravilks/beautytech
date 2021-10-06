@@ -184,3 +184,33 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Create post type - elements
+ */
+
+add_action( 'init', 'true_register_taxonomy' );
+ 
+function true_register_taxonomy() {
+ 
+	$args = array(
+		'labels' => array(
+			'menu_name' => 'Type'
+		),
+		'public' => true,
+	);
+	register_taxonomy( 'type', 'elements', $args );
+}
+
+add_action( 'init', 'true_register_cpt' );
+ 
+function true_register_cpt() {
+ 
+	$args = array(
+		'labels' => array(
+			'menu_name' => 'Products'
+		),
+		'public' => true,
+		'menu_icon' => 'dashicons-cart',
+	);
+	register_post_type( 'elements', $args );
+}
