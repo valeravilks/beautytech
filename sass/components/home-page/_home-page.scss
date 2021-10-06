@@ -720,6 +720,15 @@
       margin: 0 0 40px 0;
     }
   }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      text-align: right;
+    }
+  }
 }
 
 .home-pr-1 {
@@ -815,6 +824,8 @@
 }
 
 .home-pr-2 {
+  margin-bottom: 30px;
+
   &__row {
     height: 583px;
   

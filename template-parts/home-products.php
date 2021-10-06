@@ -24,16 +24,47 @@
 
               // Case: Paragraph layout.
               if( get_row_layout() == 'card' ): 
-                  $productPostData = get_sub_field('card');  ?>
+                $productPostData = get_sub_field('card');  ?>
                 <div class="col-12 col-l-6">
                   <?php get_template_part('template-parts/product', 'card-1', array('postData' => $productPostData));?>
                 </div>
 
               
               <?php elseif( get_row_layout() == 'full-card' ): 
-                  $file = get_sub_field('file');
-
-              endif;
+                $productPostData = get_sub_field('card');  ?>
+                  <div class="col-12">
+                    <?php get_template_part('template-parts/product', 'card-2', array(
+                      'postData' => $productPostData,
+                      'text-1' => get_sub_field('text-1'),
+                      'text-2' => get_sub_field('text-2'),
+                      'text-3' => get_sub_field('text-3'),
+                      'text-4' => get_sub_field('text-4'),
+                      'additional-text' => get_sub_field('additional-text'),
+                      'image' => get_sub_field('image'),
+                      'scale' => get_sub_field('scale'),
+                      'positionx' => get_sub_field('positionx'),
+                      'positiony' => get_sub_field('positiony'),
+                      ));?>
+                    
+                  </div>
+              <?php elseif( get_row_layout() == 'space' ): ?>
+                <div class="col-12" style="height:<?php echo get_sub_field('space_height');?>px"></div>
+              <?php elseif( get_row_layout() == 'title-2' ): ?>
+                <div class="col-12 col-l-6">
+                  <div class="home-pr home-pr-right">
+                    <div class="home-pr__description">
+                      <?php the_field('home-setting-products-subtitle', 'option')?>
+                    </div>  
+                    <h2 class="home-pr__h2">
+                      <?php the_field('home-setting-products-title', 'option')?>
+                    </h2>
+                    <hr class="home-pr__hr">
+                    <a href="<?php the_field('home-setting-products-link', 'option');?>" class="home-pr__link link link-plus">
+                      <?php the_field('home-setting-products-link-text', 'option');?>
+                    </a>
+                  </div>
+                </div>
+              <?php endif;
 
           // End loop.
           endwhile;
@@ -43,93 +74,6 @@
           // Do something...
       endif;    
       ?>
-      <div class="col-12 col-l-6">
-        <div class="home-pr-1">
-          <div class="home-pr-1__block">
-            <div class="home-pr-1__title">
-              tri-beam premium
-            </div>
-            <img src="https://beautytech.com/wp-content/uploads/2021/10/Tribeam-Logo.png" class="home-pr-1__logo">
-          </div>
-          <img src="https://beautytech.com/wp-content/uploads/2021/10/Tri-beam_1.png" alt="" class="home-pr-1__img">
-          <hr class="home-pr-1__hr">
-          <div class="home-pr-1__text">
-            An effective technology that allows you to treat age spots and small wrinkles. With three wavelengths, you can do most types and process pigments in tattoos effectively.
-          </div>
-          <a href="#" class="home-pr-1__link link link-plus-2">Explore about product</a>
-        </div>
-      </div>
-      <div class="col-12 col-l-6">
-        <div class="home-pr-1">
-          <div class="home-pr-1__block">
-            <div class="home-pr-1__title">
-              tri-beam premium
-            </div>
-            <img src="https://beautytech.com/wp-content/uploads/2021/10/Tribeam-Logo.png" class="home-pr-1__logo">
-          </div>
-          <img src="https://beautytech.com/wp-content/uploads/2021/10/Tri-beam_1.png" alt="" class="home-pr-1__img">
-          <hr class="home-pr-1__hr">
-          <div class="home-pr-1__text">
-            An effective technology that allows you to treat age spots and small wrinkles. With three wavelengths, you can do most types and process pigments in tattoos effectively.
-          </div>
-          <a href="#" class="home-pr-1__link link link-plus-2">Explore about product</a>
-        </div>
-      </div>
-      <div class="col-12 col-l-6">
-        <div class="home-pr-1">
-          <div class="home-pr-1__block">
-            <div class="home-pr-1__title">
-              tri-beam premium
-            </div>
-            <img src="https://beautytech.com/wp-content/uploads/2021/10/Tribeam-Logo.png" class="home-pr-1__logo">
-          </div>
-          <img src="https://beautytech.com/wp-content/uploads/2021/10/Tri-beam_1.png" alt="" class="home-pr-1__img">
-          <hr class="home-pr-1__hr">
-          <div class="home-pr-1__text">
-            An effective technology that allows you to treat age spots and small wrinkles. With three wavelengths, you can do most types and process pigments in tattoos effectively.
-          </div>
-          <a href="#" class="home-pr-1__link link link-plus-2">Explore about product</a>
-        </div>
-      </div>
-    </div>
-    <div class="home-pr-2">
-      <div class="home-pr-2__row row g-0">
-        <div class="col-12 col-l-9">
-          <div class="home-pr-2__right">
-            <div class="home-pr-2__title">
-              EDGE ONE
-            </div>
-            <img src="https://beautytech.com/wp-content/uploads/2021/10/Tribeam-Logo.png" alt="" class="home-pr-2__logo"> 
-            <img src="https://beautytech.com/wp-content/uploads/2021/10/Слой-3-1.png" alt="" class="home-pr-2__img">  
-            <hr class="home-pr-2__hr">
-            <div class="home-pr-2__text">
-              Exceptional clinical performance with excellent results
-            </div>
-            <div class="home-pr-2__desc">
-              As a high-performance system with numerous treatment options, Edge ONE is suitable for modern dermatology, aesthetics and surgery.
-            </div>
-            <div class="home-pr-2__blink">
-              <a href="#" class="home-pr-2__link link link-plus-2">
-                Explore about product
-              </a> 
-            </div>  
-          </div>
-        </div>
-        <div class="col-12 col-l-3">
-          <div class="home-pr-2__left">
-            The flexible setting of the spot sizes
-          </div>
-          <div class="home-pr-2__left">
-            Excellent results in skin rejuvenation
-          </div>
-          <div class="home-pr-2__left">
-            Advanced concept laser treatment
-          </div>
-          <div class="home-pr-2__left">
-            The depth of penetration limits thermal damage to the surrounding tissue to a minimum.
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
