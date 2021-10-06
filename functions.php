@@ -194,23 +194,60 @@ function true_register_taxonomy() {
  
 	$args = array(
 		'labels' => array(
-			'menu_name' => 'Type'
+			'menu_name' => 'Categories'
 		),
 		'public' => true,
+		'show_in_rest' => true,
+		'show_admin_column' => true,
+		'hierarchical' => true,
+		'has_archive' => true,
+		'rewrite' => array( 'slug' => 'product-categories' ),
 	);
-	register_taxonomy( 'type', 'elements', $args );
+	register_taxonomy( 'product-categories', array('products'), $args );
 }
 
 add_action( 'init', 'true_register_cpt' );
  
-function true_register_cpt() {
+// function true_register_cpt() {
  
-	$args = array(
-		'labels' => array(
+// 	$args = array(
+// 		'labels' => array(
+// 			'menu_name' => 'Products'
+// 		),
+// 		'public' => true,
+// 		'menu_icon' => 'dashicons-cart',
+// 	);
+// 	register_post_type( 'products', $args );
+// }
+
+add_action( 'init', 'register_post_types' );
+function register_post_types(){
+	register_post_type( 'products', [
+		'label'  => null,
+		'labels' => [
 			'menu_name' => 'Products'
-		),
-		'public' => true,
+		],
 		'menu_icon' => 'dashicons-cart',
-	);
-	register_post_type( 'elements', $args );
+		'description'         => '',
+		'public'              => true,
+		// 'publicly_queryable'  => null, // зависит от public
+		// 'exclude_from_search' => null, // зависит от public
+		// 'show_ui'             => null, // зависит от public
+		// 'show_in_nav_menus'   => null, // зависит от public
+		'show_in_menu'        => null, // показывать ли в меню адмнки
+		// 'show_in_admin_bar'   => null, // зависит от show_in_menu
+		'show_in_rest'        => null, // добавить в REST API. C WP 4.7
+		'rest_base'           => null, // $post_type. C WP 4.7
+		'menu_position'       => null,
+		'menu_icon'           => null,
+		//'capability_type'   => 'post',
+		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+		'hierarchical'        => false,
+		'supports'            => [ 'title', 'editor' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'taxonomies'          => ['product-categories'],
+		'has_archive'         => false,
+		'rewrite'             => true,
+		'query_var'           => true,
+	] );
 }
