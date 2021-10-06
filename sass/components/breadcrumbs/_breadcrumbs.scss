@@ -1,0 +1,32 @@
+.breadcrumbs {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 50px;
+  }
+
+  a {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: $color__blue-btn-accent;
+    text-decoration: none;
+    padding: 0 5px;
+    transition: .3s;
+
+    &:hover {
+      color: $color__btn-click;
+    }
+  }
+
+  span {
+    color: $color__gray-line;
+    font-size: 13px;
+  }
+
+  .breadcrumb_last {
+    color: $color__gray-gray;
+  }
+
+
+}
