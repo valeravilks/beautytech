@@ -13,17 +13,24 @@
  */
 
 get_header();
+
+
 ?>
 
 	<main id="primary" class="site-main">
 		<div class="home-main">
 			<div class="container">
 				<h1 class="home-main__title">
-					<span class="home-main__color">Beauty tech</span>
-					<span class="home-main__text">supports and supplies customers worldwide</span>
+					<?php $title = get_field('home-setting-title', 'option'); 
+					if($title) :?>
+						<span class="home-main__color"><?php echo $title['title-color-part']?></span>
+						<span class="home-main__text"><?php echo $title['title-second-part']?></span>
+					<?php endif;?>
 				</h1>
 				<hr class="home-main__hr">
-				<a href="#" class="home-main__link link link-primary">products</a>
+				<a href="<?php echo esc_url(get_field('home-setting-product-link', 'option'))?>" class="home-main__link link link-primary">
+					<?php the_field('home-setting-product-link-text', 'option')?>
+				</a>
 			</div>
 		</div>
 		<div class="swiper home-slider">

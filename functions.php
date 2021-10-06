@@ -163,6 +163,11 @@ add_action( 'wp_enqueue_scripts', 'beautytech_scripts' );
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * ACF setting
+ */
+require get_template_directory() . '/inc/acf-setting.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
