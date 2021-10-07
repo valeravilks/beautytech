@@ -1,8 +1,8 @@
 .breadcrumbs {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   @include media-breakpoint-only("s") {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   a {
