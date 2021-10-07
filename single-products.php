@@ -15,7 +15,9 @@
 get_header();
 ?>
 	<main id="primary" class="site-main">
+
 		<?php get_template_part('template-parts/breadcrumbs'); ?>
+		<?php get_template_part('template-parts/product', 'cover'); ?>
     <h1><?php the_title()?></h1>
 		<?php get_template_part('template-parts/home', 'support');?>
 		<?php get_template_part('template-parts/contact-us-block'); ?>
