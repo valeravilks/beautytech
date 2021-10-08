@@ -15,7 +15,11 @@ switch($templateName) {
       'items' => get_field('product-content-indication-template-2')['items']
     ));
   case 'Treatment zones 1':
-
+    get_template_part('template-parts/product/indications/template-3', '', array(
+      'title' => $title,
+      'items' => get_field('product-content-indication-template-3')['list'],
+      'text' => get_field('product-content-indication-template-3')['text']
+    ));
   case 'Treatment zones 2':
 }
 

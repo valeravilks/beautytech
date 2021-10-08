@@ -89,5 +89,58 @@
   &__hr-2 {
     margin-bottom: 20px;
   }
+
+  &__col-3 {
+    @extend .col-12;
+    @extend .col-l-6;
+  }
+
+  &__col-3-2 {
+    @extend .col-6;
+    @extend .col-l-4;
+  }
+
+  &__item-3 {
+    position: relative;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-only('s') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-3 {
+    position: absolute;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FEFEFE;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    display: block;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+
+    @include media-breakpoint-only('s') {
+      font-size: 13px;
+      line-height: 23px;
+    }
+  }
+
+  &__text-3-2 {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    color: #383838;
+
+    @include media-breakpoint-only('s') {
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
 }
 
