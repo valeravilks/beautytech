@@ -9,7 +9,7 @@ if($args['color'] == 'white'){
 
 <div class="h2-block">
   <div class="container">
-    <?php if(args['description']) :?>
+    <?php if($args['description']) :?>
     <div class="h2-block__description <?php echo $descClass?>">
       <?php echo $args['description']?>
     </div>  
