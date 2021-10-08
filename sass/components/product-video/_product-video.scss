@@ -1,0 +1,15 @@
+.product-video {
+  margin-bottom: 200px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 100px;
+  }
+
+  &__container {
+    @extend .container;
+  }
+
+  &__video {
+    width: 100%;
+  }
+}
