@@ -1,0 +1,116 @@
+.product-faq {
+  margin-bottom: 200px;
+
+  @include media-breakpoint-only('s') {
+    margin-bottom: 100px;
+  }
+
+  &__container {
+    @extend .container;
+  }
+
+  &__block {
+    padding: 20px 45px 20px 30px;
+    background: $color__gray-lightest;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+
+    @include media-breakpoint-only('s') {
+      padding: 20px 10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__question {
+    color: $color__gray-darker-text;
+    display: flex;
+    align-items: center;
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   width: 22px;
+    //   height: 3px;
+    //   right: 45px;
+    //   top: 50%;
+    //   background: $color__blue-btn-accent;
+    // }
+
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   height: 22px;
+    //   width: 3px;
+    //   right: 56px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   background: $color__blue-btn-accent;
+    // }
+  }
+
+  &__q-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 1000px;
+
+    @include media-breakpoint-only('s') {
+      font-size: 17px;
+      line-height: 26px;
+      max-width: 278px;
+    }
+  }
+
+  &__answer {
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    color: $color__gray-darker-text;
+    padding-left: 67px;
+    max-width: 746px;
+    display: none;
+
+    @include media-breakpoint-only('s') {
+      font-size: 15px;
+      line-height: 23px;
+      padding-left: 0;
+      border-top: 1px solid $color__gray-line;
+    }
+  }
+
+  &__plus {
+    width: 22px;
+    height: 3px;
+    top: 50%;
+    background: $color__blue-btn-accent;
+    position: relative;
+
+    @include media-breakpoint-only('s') {
+      align-self: flex-start;
+      margin-top: 11px;
+    }
+
+     &:before {
+      content: '';
+      position: absolute;
+      height: 22px;
+      width: 3px;
+      right: 9px;
+      top: -9px;
+      background: $color__blue-btn-accent;
+      transition: .3s;
+    }
+
+    &.active:before {
+      background: none
+    }
+  }
+}
+
+

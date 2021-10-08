@@ -101,3 +101,16 @@ const swiperResult = new Swiper('.product-result__slider', {
   })
 
 }( jQuery ) );
+
+
+// Faq
+
+( function( $ ) {
+  $('.js-faq-quest').on('click' ,function(){
+    console.log($(this).next('.js-faq-ans'));
+    $(this).find('.js-faq-ans').slideToggle();
+    $(this).find('.js-faq-plus').toggleClass('active');
+  });
+  
+
+}( jQuery ) );
