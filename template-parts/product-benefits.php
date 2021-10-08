@@ -30,8 +30,3 @@
     </div>
   </div>
 </div>
-
-product-content-benefits-title
-product-content-benefits-items
-  number
-  text
