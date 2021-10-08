@@ -4,14 +4,18 @@
       ));
   ?>
 
+  <?php 
+  $templateName = get_field('product-content-indication-content-list'); // Indication 1 | Indication 2 | Treatment-zones
+  ?>
+
   <div class="product-indications__container">
     <div class="product-indications__row">
-      <?php if(have_rows('product-content-indications-items')) : 
-          while(have_rows('product-content-indications-items')) : the_row(); ?>
+      <?php if(have_rows('product-content-indication-template-1')) : 
+          while(have_rows('product-content-indication-template-1')) : the_row(); ?>
             <div class="product-indications__col">
               <div class="product-indications__item">
                 <div class="product-indications__text">
-                  <?php the_sub_field('item'); ?>
+                  <?php the_sub_field('product-content-indications-1-items'); ?>1
                 </div>
               </div>
             </div>
