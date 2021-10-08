@@ -67,3 +67,27 @@ const swiperRev = new Swiper('.home-rev__slider', {
   window.onload = setValue;
   window.onresize = setValue;
 }( jQuery ) );
+
+
+// Product menu
+
+( function( $ ) {
+
+  let h2Content = $('h2');
+  let linkItems = $('.product-menu__link');
+
+  linkItems.each(function(index){
+    let link = '#';
+    let linkCurrent = linkItems.eq(index);
+    let dataLinkCurrent = linkCurrent.attr('data-link').toUpperCase();
+
+    h2Content.each(function(i){
+      let h2Current = h2Content.eq(i);
+      let h2CurrentText = h2Current.text().replace(/\s+/g, " ").trim().toUpperCase();
+      if(dataLinkCurrent == h2CurrentText) {
+        h2Current.attr('id', linkCurrent.attr('href').substring(1))
+      }
+    })
+  })
+
+}( jQuery ) );
