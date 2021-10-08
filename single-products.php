@@ -20,6 +20,7 @@ get_header();
 		<?php get_template_part('template-parts/product', 'cover'); ?>
 		<?php get_template_part('template-parts/product', 'menu'); ?>
 		<?php get_template_part('template-parts/product', 'content-1'); ?>
+		<?php get_template_part('template-parts/product', 'indications'); ?>
     <h1><?php the_title()?></h1>
 		<?php get_template_part('template-parts/home', 'support');?>
 		<?php get_template_part('template-parts/contact-us-block'); ?>
