@@ -21,6 +21,7 @@ get_header();
 		<?php get_template_part('template-parts/product', 'menu'); ?>
 		<?php get_template_part('template-parts/product', 'content-1'); ?>
 		<?php get_template_part('template-parts/product/indications/indications'); ?>
+		<?php get_template_part('template-parts/product/technology/technology'); ?>
 		<?php get_template_part('template-parts/product', 'benefits'); ?>
 		<?php get_template_part('template-parts/product', 'spec'); ?>
 		<?php get_template_part('template-parts/product', 'result'); ?>
