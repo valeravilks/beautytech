@@ -142,5 +142,46 @@
       line-height: 23px;
     }
   }
+
+  &__bottom-bl {
+    background: $color__liner-liner;
+    padding: 100px 0;
+    margin-top: 90px;
+
+    @include media-breakpoint-only('s') {
+      margin-top: 50px;
+      padding: 50px 0;
+    }
+  }
+
+  &__text-4-2 {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    color: #FEFEFE;
+
+    @include media-breakpoint-only('s') {
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 23px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-4-3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+    color: #FEFEFE;
+    padding: 20px 0;
+
+    @include media-breakpoint-only('s') {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 15px 0;
+    }
+  }
 }
 

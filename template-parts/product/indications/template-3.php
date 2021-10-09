@@ -3,7 +3,6 @@
         'h2' => $args['title'],
       ));
   ?>
-
   <div class="product-indications__container">
     <div class="product-indications__row">
         <div class="product-indications__col-3">
