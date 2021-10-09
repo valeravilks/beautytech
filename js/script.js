@@ -36,14 +36,24 @@ const swiperRev = new Swiper('.home-rev__slider', {
   }
 });
 
+const swiperT2 = new Swiper('.t-2-slider', {
+  autoHeight: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+
+  breakpoints: {
+    1157: {
+      slidesPerView: 3,
+      slidesPerGroup: 3
+    },
+  }
+});
+
 const swiperResult = new Swiper('.product-result__slider', {
   // effect: "fade",
   autoHeight: true,
   // Navigation arrows
-  navigation: {
-    nextEl: '.product-result__next',
-    prevEl: '.product-result__prev',
-  },
+
 });
 
 // Line in slider
