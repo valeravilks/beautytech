@@ -24,6 +24,11 @@ switch($templateName) {
       'title' => $title,
       'data' => get_field('t4')
     ));
+  case 'Template 5':
+    get_template_part('template-parts/product/technology/template-5', '', array(
+      'title' => $title,
+      'data' => get_field('t5')
+    ));
 }
 
 ?>
