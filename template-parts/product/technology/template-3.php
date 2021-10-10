@@ -23,13 +23,3 @@ $field = $args['data'];
     </div>
   </div>
 </div>
-
-1
-Title
-titleText
-2
-Text
-textWysiwyg Editor
-3
-Image
-img
