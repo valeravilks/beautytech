@@ -14,13 +14,14 @@
 
 get_header();
 ?>
+
 	<main id="primary" class="site-main produc">
     <?php get_template_part('template-parts/breadcrumbs'); ?>
     <?php get_template_part('template-parts/page-title', '', array('title' => 'Products')); ?>
     <?php get_template_part('template-parts/cat-menu', '', array(
       'taxonomy' => 'product-categories',
       'type' => 'products',
-      'active' => 'tax'
+      'active' => 'all'
       )); ?>
     <div class="container">
       <?php

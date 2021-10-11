@@ -1,0 +1,25 @@
+.page-title {
+  &__title {
+    font-weight: normal;
+    font-size: 58px;
+    line-height: 71px;
+    text-transform: uppercase;
+    color: #505050;
+    margin: 0;
+    padding: 0 0 10px 0;
+
+    @include media-breakpoint-only('s') {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  &__hr {
+    background: #ECECEC;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-only('s') {
+      margin-bottom: 20px;
+    }
+  }
+}

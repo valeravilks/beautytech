@@ -1,0 +1,49 @@
+.category-menu {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    @include media-breakpoint-only("s") {
+      display: none;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid #ECECEC;
+    }
+  }
+
+  &__link {
+    @extend .h7;
+    color: #5E95BF;
+    transition: .3s;
+    text-decoration: none;
+
+    &:hover {
+      color: #69A9DB;
+    }
+
+    &-active {
+      color: #A9A9AC;
+    }
+  }
+
+  &__select {
+    display: none;
+    border-radius: 5px;
+    border: 1px solid #ECECEC;
+    padding: 5px 10px;
+    @extend .h7;
+    color: #5E95BF;
+    background: none;
+
+    @include media-breakpoint-only("s") {
+      display: block;
+    }
+  }
+}

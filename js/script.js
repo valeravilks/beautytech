@@ -124,3 +124,16 @@ const swiperResult = new Swiper('.product-result__slider', {
   
 
 }( jQuery ) );
+
+// Cat menu mobile select 
+
+( function( $ ) {
+  $('.js-cat-menu-select').on('change' ,function(e){
+
+    e.preventDefault();
+    let link = $(this).find('option:selected').attr('data-link');
+    window.location.href = link;
+  });
+  
+
+}( jQuery ) );

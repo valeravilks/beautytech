@@ -252,7 +252,10 @@ function register_post_types(){
 		'supports'            => [ 'title', 'editor' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 		'taxonomies'          => ['product-categories'],
 		'has_archive'         => true,
-		'rewrite'             => true,
+		'rewrite'	      	=> array( 
+			'slug' => 'products',
+			'with_front' => false
+		),
 		'query_var'           => true,
 	] );
 }
