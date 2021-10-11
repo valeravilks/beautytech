@@ -1,0 +1,22 @@
+.cat-btn {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 50px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    text-decoration: none;
+    @extend .h7;
+    color: #5E95BF;
+
+    &:hover {
+      color: $color__blue-btn-accent;
+    }
+  }
+}

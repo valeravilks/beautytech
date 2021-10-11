@@ -21,7 +21,7 @@ get_header();
     <?php get_template_part('template-parts/cat-menu', '', array(
       'taxonomy' => 'product-categories',
       'type' => 'products',
-      'active' => 'all'
+      'active' => 'cat'
       )); ?>
     <div class="container">
       <div class="row">
@@ -48,7 +48,101 @@ get_header();
 
       </div>
 		</div>
-		
+		<?php 
+
+      
+
+    ?>
+
+<?php
+
+    $categories = get_categories( [
+      'taxonomy'     => 'product-categories',
+      'type'         => 'products',
+      'child_of'     => 0,
+      'parent'       => '',
+      'orderby'      => 'name',
+      'order'        => 'ASC',
+      'hide_empty'   => 0,
+      'hierarchical' => 1,
+      'exclude'      => '',
+      'include'      => '',
+      'number'       => 0,
+      'pad_counts'   => false,
+    ] );
+
+    $currentTaxanomyId = get_queried_object()->term_taxonomy_id;
+    $prevBtn;
+    $nextBtn;
+    ?>
+
+  
+      <div class="cat-btn">
+        <div class="container">
+            <div class="cat-btn__box">
+            <?php 
+            if( $categories ) :
+
+              $index = 1;
+
+              foreach( $categories as $cat ) : 
+                if($currentTaxanomyId == $cat->term_taxonomy_id and $index == 1 ) :?>
+                  <div class="cat-btn__prev">
+                    <a href="<?php echo get_post_type_archive_link('products')?>" class="cat-btn__link">
+                      < All
+                    </a>
+                  </div>
+                  <div class="cat-btn__next">
+                    <a href="<?php echo get_category_link($categories[$index]->cat_ID)?>" class="cat-btn__link">
+                      <?php echo $categories[$index]->cat_name;?> >
+                    </a>
+                  </div>
+                <?php elseif($currentTaxanomyId == $cat->term_taxonomy_id and $index == count($categories)) :?>
+                  <div class="cat-btn__prev">
+                    <a href="<?php echo get_category_link($categories[$index - 2]->cat_ID)?>" class="cat-btn__link">
+                      < <?php echo $categories[$index - 2 ]->cat_name;?>
+                    </a>
+                  </div>
+                  <div class="cat-btn__next">
+                    <a href="<?php echo get_post_type_archive_link('products')?>" class="cat-btn__link">
+                      All >
+                    </a>
+                  </div>
+                <?php elseif($currentTaxanomyId == $cat->term_taxonomy_id) :?>
+                  <div class="cat-btn__prev">
+                    <a href="<?php echo get_category_link($categories[$index - 2]->cat_ID)?>" class="cat-btn__link">
+                      < <?php echo $categories[$index - 2 ]->cat_name;?>
+                    </a>
+                  </div>
+                  <div class="cat-btn__next">
+                    <a href="<?php echo get_category_link($categories[$index]->cat_ID)?>" class="cat-btn__link">
+                      <?php echo $categories[$index]->cat_name;?> >
+                    </a>
+                  </div>
+                <?php endif; $selected = '';
+
+                if(get_queried_object()->term_id == $cat->term_taxonomy_id) {
+                  $selected = 'selected';
+                }
+              $index++;
+              endforeach;
+            endif; ?>
+
+              <!-- <div class="cat-btn__prev">
+                <a href="<?php echo get_category_link($categories[count($categories)-1]->cat_ID)?>" class="cat-btn__link">
+                  < <?php echo $categories[count($categories)-1]->cat_name;?>
+                </a>
+              </div>
+              <div class="cat-btn__next">
+                <a href="<?php echo get_category_link($categories[0]->cat_ID)?>" class="cat-btn__link">
+                  <?php echo $categories[0]->cat_name;?> >
+                </a>
+              </div> -->
+            </div>
+          </div>
+         </div>
+      </div>
+       
     <?php get_template_part('template-parts/company-list'); ?>
     <?php get_template_part('template-parts/contact-us-block'); ?>
 	</main><!-- #main -->
