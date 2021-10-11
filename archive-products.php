@@ -24,19 +24,28 @@ get_header();
       'active' => 'all'
       )); ?>
     <div class="container">
-      <?php
-			while ( have_posts() ) :
-				the_post();
-        
-				get_template_part( 'template-parts/content', 'page' );
-        
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-        
-			endwhile; // End of the loop.
-			?>
+      <div class="row">
+        <?php
+        $args = array(  
+          'post_type' => 'products',
+          'post_status' => 'publish',
+          'posts_per_page' => 50, 
+          'orderby' => 'title',
+          'order' => 'ASC', 
+        );
+
+        $loop = new WP_Query( $args ); 
+          
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <div class="col-12 col-l-6">
+            <?php get_template_part('template-parts/product', 'card-1', array('postData' => $productPostData));?>
+          </div>
+        <?php endwhile;
+
+          wp_reset_postdata(); 
+        ?>
+
+      </div>
 		</div>
 		
     <?php get_template_part('template-parts/company-list'); ?>
@@ -44,5 +53,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
