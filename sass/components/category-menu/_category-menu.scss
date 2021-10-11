@@ -1,4 +1,10 @@
 .category-menu {
+  margin-bottom: 50px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 20px;
+  }
+
   &__list {
     margin: 0;
     padding: 0;
