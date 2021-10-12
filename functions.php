@@ -12,6 +12,9 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+add_image_size( 'event-thumbnail', 400, 200, true );
+
+
 if ( ! function_exists( 'beautytech_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -331,3 +334,4 @@ function register_post_types2(){
 		'query_var'           => true,
 	] );
 }
+

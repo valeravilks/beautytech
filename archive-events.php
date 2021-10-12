@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main produc">
+	<main id="primary" class="site-main events-page">
     <?php get_template_part('template-parts/breadcrumbs'); ?>
     <?php get_template_part('template-parts/page-title', '', array('title' => 'Products')); ?>
     <?php get_template_part('template-parts/cat-menu', '', array(
@@ -35,10 +35,9 @@ get_header();
         );
 
         $loop = new WP_Query( $args ); 
-          
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
-          <div class="col-12 col-l-6">
-            <?php get_template_part('template-parts/product', 'card-1', array('postData' => $productPostData));?>
+          <div class="col-12 col-l-4">
+            <?php get_template_part('template-parts/event', 'card-1', array('postData' => $productPostData));?>
           </div>
         <?php endwhile;
 

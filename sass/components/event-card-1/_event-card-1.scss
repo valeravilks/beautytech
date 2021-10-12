@@ -1,0 +1,66 @@
+.event-card-1 {
+  text-decoration: none;
+  display: block;
+  border: 1px solid $color__gray-line;
+  padding: 20px;
+  transition: .3s;
+
+  &:hover {
+    border: 1px solid $color__gray-gray;
+  }
+
+  &__header {
+    display: flex;
+    height: 34px;
+
+  }
+
+  &__tag {
+    @extend .tag;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__title {
+    @extend .h7;
+    color: $color__gray-darker-text;
+    padding: 0;
+    margin: 0 0 20px 0;
+    height: 46px;
+
+    @include media-breakpoint-only("s") {
+      margin: 0 0 15px 0;
+      height: auto;
+    }  
+  }
+
+  &__img {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 15px;
+    } 
+  }
+
+  &__text-1 {
+    @extend .h8;
+    color: $color__gray-body-text;
+  }
+
+  &__text-2 {
+    @extend .h8;
+    color: $color__gray-body-text;
+    max-width: 150px;
+    text-align: right;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__hr {
+    margin: 10px;
+  }
+}
