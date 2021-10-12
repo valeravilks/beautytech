@@ -259,3 +259,75 @@ function register_post_types(){
 		'query_var'           => true,
 	] );
 }
+
+/**
+ * Create post type - elements
+ */
+
+add_action( 'init', 'true_register_taxonomy2' );
+ 
+function true_register_taxonomy2() {
+ 
+	$args2 = array(
+		'labels' => array(
+			'menu_name' => 'Categories'
+		),
+		'public' => true,
+		'show_in_rest' => true,
+		'show_admin_column' => true,
+		'hierarchical' => true,
+		'has_archive' => true,
+		'rewrite' => array( 'slug' => 'events-categories' ),
+	);
+
+	register_taxonomy( 'events-categories', array('events'), $args2 );
+}
+
+// add_action( 'init', 'true_register_cpt2' );
+ 
+// function true_register_cpt() {
+ 
+// 	$args = array(
+// 		'labels' => array(
+// 			'menu_name' => 'Products'
+// 		),
+// 		'public' => true,
+// 		'menu_icon' => 'dashicons-cart',
+// 	);
+// 	register_post_type( 'products', $args );
+// }
+
+add_action( 'init', 'register_post_types2' );
+function register_post_types2(){
+	register_post_type( 'events', [
+		'label'  => null,
+		'labels' => [
+			'menu_name' => 'Events'
+		],
+		'menu_icon' => 'dashicons-cart',
+		'description'         => '',
+		'public'              => true,
+		// 'publicly_queryable'  => null, // зависит от public
+		// 'exclude_from_search' => null, // зависит от public
+		// 'show_ui'             => null, // зависит от public
+		// 'show_in_nav_menus'   => null, // зависит от public
+		'show_in_menu'        => null, // показывать ли в меню адмнки
+		// 'show_in_admin_bar'   => null, // зависит от show_in_menu
+		'show_in_rest'        => null, // добавить в REST API. C WP 4.7
+		'rest_base'           => null, // $post_type. C WP 4.7
+		'menu_position'       => null,
+		'menu_icon'           => null,
+		//'capability_type'   => 'post',
+		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+		'hierarchical'        => false,
+		'supports'            => [ 'title', 'editor' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'taxonomies'          => ['events-categories'],
+		'has_archive'         => true,
+		'rewrite'	      	=> array( 
+			'slug' => 'events',
+			'with_front' => false
+		),
+		'query_var'           => true,
+	] );
+}
