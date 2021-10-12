@@ -1,0 +1,25 @@
+.events-page {
+  &__full {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-only("s") {
+      display: none;
+    } 
+  }
+
+  &__entry {
+    display: none;
+
+    @include media-breakpoint-only("s") {
+      display: block;
+    } 
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    & > * {
+      height: 100%;
+    }
+  }
+}

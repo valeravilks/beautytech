@@ -1,0 +1,34 @@
+.pagination {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 50px;
+  } 
+
+  .page-numbers {
+    padding: 11px 21px;font-weight: 500;
+    font-size: 13px;
+    line-height: 27px;
+    color: #383838;
+    text-decoration: none;
+    border: 1px solid #ECECEC;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .current {
+    color: #ECECEC;
+  }
+
+  .prev, .next {
+    border: none;
+    color: #505050;
+
+    @include media-breakpoint-only("s") {
+      display: none;
+    } 
+  }
+}

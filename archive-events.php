@@ -17,84 +17,46 @@ get_header();
 
 	<main id="primary" class="site-main events-page">
     <?php get_template_part('template-parts/breadcrumbs'); ?>
-    <?php get_template_part('template-parts/page-title', '', array('title' => 'Products')); ?>
+    <?php get_template_part('template-parts/page-title', '', array('title' => 'Events')); ?>
     <?php get_template_part('template-parts/cat-menu', '', array(
       'taxonomy' => 'events-categories',
       'type' => 'events',
       'active' => 'all'
       )); ?>
+      
     <div class="container">
       <div class="row">
-        <?php
-        $args = array(  
-          'post_type' => 'events',
-          'post_status' => 'publish',
-          'posts_per_page' => 50, 
-          'orderby' => 'title',
-          'order' => 'ASC', 
-        );
+       <?php  $index = 1; ?>
+      <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
 
-        $loop = new WP_Query( $args ); 
-        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-          <div class="col-12 col-l-4">
-            <?php get_template_part('template-parts/event', 'card-1', array('postData' => $productPostData));?>
-          </div>
-        <?php endwhile;
+      <?php if($index == 1) :?>
+                <div class="col-12 events-page__full">
+                  <?php get_template_part('template-parts/event', 'card-2');?>
+                </div>
+              <?php endif;?>
 
-          wp_reset_postdata(); 
-        ?>
+              <div class="col-12 col-l-4 events-page__item <?php if($index == 1){ echo 'events-page__entry'; }?>">
+                <?php get_template_part('template-parts/event', 'card-1');?>
+              </div>
+
+        <?php $index++;} } else { ?>
+        <p>Записей нет.</p>
+        <?php }   
+      ?>
 
       </div>
 		</div>
 		
-    <?php
-    $categories = get_categories( [
-      'taxonomy'     => 'events-categories',
-      'type'         => 'events',
-      'child_of'     => 0,
-      'parent'       => '',
-      'orderby'      => 'name',
-      'order'        => 'ASC',
-      'hide_empty'   => 0,
-      'hierarchical' => 1,
-      'exclude'      => '',
-      'include'      => '',
-      'number'       => 0,
-      'pad_counts'   => false,
-    ] );
+<?php get_template_part('template-parts/pagination');?>
 
-    
-      if( $categories ) :
-      //  echo $categories[0]->cat_name;
-      //  echo get_category_link($categories[0]->cat_ID);
-      //  echo $categories[count($categories)-1]->cat_name;
-      //  echo get_category_link($categories[count($categories)-1]->cat_ID);
-       
-       ?>
-      <div class="cat-btn">
-        <div class="container">
-            <div class="cat-btn__box">
-              <div class="cat-btn__prev">
-                <a href="<?php echo get_category_link($categories[count($categories)-1]->cat_ID)?>" class="cat-btn__link">
-                  < <?php echo $categories[count($categories)-1]->cat_name;?>
-                </a>
-              </div>
-              <div class="cat-btn__next">
-                <a href="<?php echo get_category_link($categories[0]->cat_ID)?>" class="cat-btn__link">
-                  <?php echo $categories[0]->cat_name;?> >
-                </a>
-              </div>
-            </div>
-          </div>
-         </div>
-      </div>
-       <?php
-      endif; ?>
+   
+
+
+
     
 
 
 
-    <?php get_template_part('template-parts/company-list'); ?>
     <?php get_template_part('template-parts/contact-us-block'); ?>
 	</main><!-- #main -->
 

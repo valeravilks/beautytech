@@ -52,7 +52,6 @@ get_header();
       
 
     ?>
-
 <?php
 
     $categories = get_categories( [
