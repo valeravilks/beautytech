@@ -1,8 +1,14 @@
-<div class="contact-us-block">
+<php 
+
+?>
+
+<div class="contact-us-block" style="padding: <?php if($args['isTitle'] == 'no') { echo '20px 0 200px'; } ?>">
   <div class="container">
+    <?php if($args['isTitle'] !== 'no'):?>
     <h2 class="contact-us-block__h2">
       Contact us
     </h2>
+    <?php endif; ?>
     <div class="row">
       <div class="col-12 col-l-6">
         <div class="contact-us-block__back">
