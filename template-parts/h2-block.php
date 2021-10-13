@@ -5,6 +5,12 @@ if($args['color'] == 'white'){
   $lineClass = 'white';
   $cyrcleClass = 'white';
 }
+
+$linkText = 'learn more';
+
+if($args['linkText']) {
+  $linkText = $args['linkText'];
+}
 ?>
 
 <div class="h2-block">
@@ -20,7 +26,7 @@ if($args['color'] == 'white'){
         <?php echo $args['h2']?>
       </h2>
       <?php if($args['link']) :?>
-        <a href="<?php echo $args['link']?>" class="h2-block__link link link-plus">learn more</a>
+        <a href="<?php echo $args['link']?>" class="h2-block__link link link-plus"><?php echo $linkText; ?></a>
       <?php endif; ?>
     </div> 
     <?php endif; ?>
