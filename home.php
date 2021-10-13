@@ -39,55 +39,13 @@ get_header();
               </div>
 
         <?php $index++;} } else { ?>
-        <p>Записей нет.</p>
+        <p>No posts</p>
         <?php }   
       ?>
 
       </div>
 		</div>
-    <?php
-    $categories = get_categories( [
-      'taxonomy'     => 'product-categories',
-      'type'         => 'products',
-      'child_of'     => 0,
-      'parent'       => '',
-      'orderby'      => 'name',
-      'order'        => 'ASC',
-      'hide_empty'   => 0,
-      'hierarchical' => 1,
-      'exclude'      => '',
-      'include'      => '',
-      'number'       => 0,
-      'pad_counts'   => false,
-    ] );
-
-    
-      if( $categories ) :
-      //  echo $categories[0]->cat_name;
-      //  echo get_category_link($categories[0]->cat_ID);
-      //  echo $categories[count($categories)-1]->cat_name;
-      //  echo get_category_link($categories[count($categories)-1]->cat_ID);
-       
-       ?>
-      <div class="cat-btn">
-        <div class="container">
-            <div class="cat-btn__box">
-              <div class="cat-btn__prev">
-                <a href="<?php echo get_category_link($categories[count($categories)-1]->cat_ID)?>" class="cat-btn__link">
-                  < <?php echo $categories[count($categories)-1]->cat_name;?>
-                </a>
-              </div>
-              <div class="cat-btn__next">
-                <a href="<?php echo get_category_link($categories[0]->cat_ID)?>" class="cat-btn__link">
-                  <?php echo $categories[0]->cat_name;?> >
-                </a>
-              </div>
-            </div>
-          </div>
-         </div>
-      </div>
-       <?php
-      endif; ?>
+    <?php get_template_part('template-parts/pagination');?>
     
 
 

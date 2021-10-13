@@ -40,7 +40,7 @@ get_header();
               </div>
 
         <?php $index++;} } else { ?>
-        <p>Записей нет.</p>
+        <p>No events</p>
         <?php }   
       ?>
 
