@@ -23,19 +23,19 @@ get_header();
       'type' => 'post',
       'active' => 'all'
       )); ?>
-   <div class="container">
+    <div class="container">
       <div class="row">
        <?php  $index = 1; ?>
       <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
 
       <?php if($index == 1) :?>
                 <div class="col-12 events-page__full">
-                  <?php get_template_part('template-parts/event', 'card-2');?>
+                  <?php get_template_part('template-parts/post', 'card-full');?>
                 </div>
               <?php endif;?>
 
               <div class="col-12 col-l-4 events-page__item <?php if($index == 1){ echo 'events-page__entry'; }?>">
-                <?php get_template_part('template-parts/event', 'card-1');?>
+                <?php get_template_part('template-parts/post', 'card');?>
               </div>
 
         <?php $index++;} } else { ?>
@@ -45,7 +45,6 @@ get_header();
 
       </div>
 		</div>
-		
     <?php
     $categories = get_categories( [
       'taxonomy'     => 'product-categories',

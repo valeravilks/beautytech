@@ -35,7 +35,7 @@ get_header();
               <?php endif;?>
 
               <div class="col-12 col-l-4 events-page__item <?php if($index == 1){ echo 'events-page__entry'; }?>">
-                <?php get_template_part('template-parts/blog', 'card-full');?>
+                <?php get_template_part('template-parts/post', 'card');?>
               </div>
 
         <?php $index++;} } else { ?>
