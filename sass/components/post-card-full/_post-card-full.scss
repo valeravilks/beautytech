@@ -1,0 +1,66 @@
+.post-card-full {
+  padding-bottom: 100px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #383838;
+    padding: 4px 20px;
+    background: #F8F8F8;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0.005em;
+    color: #A9A9AC;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #505050;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 17px;
+    line-height: 27px;
+    color: #383838;
+
+    p {
+      margin: 0;
+      padding: 0;
+
+      &:last-child {
+        border-top: 1px solid #ECECEC;
+        margin-top: 15px;
+      }
+    }
+
+
+
+    .more-link {
+      @extend .link;
+      @extend .link-plus;
+      padding-top: 15px;
+    }
+  }
+}
