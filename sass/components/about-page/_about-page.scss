@@ -1,0 +1,142 @@
+.about-page {
+  &__subtitle {
+    @extend .h2;
+    color: #153C58;
+    
+    @include media-breakpoint-only("s") {
+      margin-bottom: 30px;
+    } 
+  }
+  
+  &__text {
+    @extend .text-body;
+    color: #383838;
+    margin-bottom: 50px;
+    
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    } 
+  }
+  
+  &__box1{
+    margin-top: 50px;
+
+    @include media-breakpoint-only("s") {
+      margin-top: 40px;
+    } 
+  }
+  
+  &__box2 {
+    background: #F8F8F8;
+    margin-bottom: 50px;
+    padding: 100px 0;
+    text-align: center;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+      padding: 60px 0;
+    } 
+  }
+
+  &__img {
+    @include media-breakpoint-only("s") {
+      max-width: 242px;
+    } 
+  }
+
+  &__text2 {
+    @extend .text-body;
+    color: #383838;
+    margin-bottom: 200px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 100px;
+    } 
+  }
+
+  &__text3 {
+    @extend .text-body;
+    color: #383838;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    } 
+  }
+
+  &__text4 {
+    @extend .text-body;
+    color: #383838;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__bl {
+    background: #1E496B;
+    padding: 35px 25px;
+    height: 100%;
+  }
+
+  &__title2 {
+    @extend .h2;
+    color: $color__white;
+  }
+
+  &__bl2 {
+    border: 1px solid #ECECEC;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-only("s") {
+      padding: 15px 0;
+    }
+  }
+
+  &__logo {
+    width: 154px;
+
+    @include media-breakpoint-only("s") {
+      width: 120px;
+    }
+  }
+
+  &__box5 {
+    margin-bottom: 200px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__text5 {
+    @extend .text-body;
+    color: #383838;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__card {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__gradient {
+    background: linear-gradient(359.32deg, rgba(39, 39, 39, 0.3) 0.56%, rgba(39, 39, 39, 0.18) 49.14%, rgba(39, 39, 39, 0.15) 99.39%);
+    padding: 20px 30px;
+    height: 668px;
+
+    @include media-breakpoint-only("s") {
+      padding: 10px;
+      height: 396px;
+    }
+  }
+
+}
