@@ -138,29 +138,50 @@ get_header();
 						setup_postdata($post);
 							if($index == 1):?>
 								<div class="col-12 col-l-6">
-									<div class="about-page__card" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
+									<a href="<?php echo get_the_permalink(); ?>" class="about-page__card" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
 										<div class="about-page__gradient">
-											<div class="about-text__cdate">
+											<div class="about-page__cdate">
 												<?php the_date(); ?>
 											</div>
+											<hr class="about-page__hr2">
+											<div class="about-page__title4">
+												<?php the_title();?>
+											</div>
+											<hr class="about-page__hr3">
+											<div class="about-page__text6">
+												<?php echo mb_substr(get_the_content(), 0 , 150) . '...'?>
+											</div>
 										</div>
-									</div>
+										</a>
 								</div>
 							<?php endif; ?>
-
-					<div class="col-12 col-l-6">
 						<?php 
 						$index++;
 						endforeach;
 
 						$index = 1;
-
+						?>
+						<div class="col-12 col-l-6 about-page__bl3">
+						
+						<?php
 						foreach( $posts as $post ) :
 							setup_postdata($post);
 								if($index == 2 || $index == 3):?>
-									<div class="col-12">
-										<?php echo $index;?>
-									</div>
+									<a href="<?php echo get_the_permalink(); ?>" class="about-page__card" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
+										<div class="about-page__gradient2">
+											<div class="about-page__cdate">
+												<?php echo get_the_date(); ?>
+											</div>
+											<hr class="about-page__hr2">
+											<div class="about-page__title4">
+												<?php the_title();?>
+											</div>
+											<hr class="about-page__hr3">
+											<div class="about-page__text6">
+												<?php echo mb_substr(get_the_content(), 0 , 150) . '...'?>
+											</div>
+										</div>
+									</a>
 								<?php endif; ?>
 							<?php 
 							$index++;
@@ -168,14 +189,38 @@ get_header();
 							wp_reset_postdata(); // сброс
 						?>
 					</div>
-					
+				</div>
+				<div class="about-page__links">
+					<a href="<?php echo get_field('intensive_development')['link']['url']; ?>" class="link link-plus">
+						Learn more
+					</a>
 				</div>
 			</div>
 		</div>
-		
-		<?php get_template_part('template-parts/about-us-block', '', array('isTitle' => 'no')); ?>
-		<?php get_template_part('template-parts/home', 'support');?>
-		<?php get_template_part('template-parts/about-us-block'); ?>
+		<div class="about-page__box8">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-l-3">
+						<div class="about-page__bl">
+							<div class="about-page__title2">
+								<?php echo get_field('intensive_development')['brand']; ?>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-l-9">
+						<div class="about-page__block4">
+							<div class="about-page__text7">
+								<?php echo get_field('intensive_development')['text_2']; ?>
+							</div>
+							<img src="<?php echo get_field('intensive_development')['logo']['url']; ?>" alt="logo" class="about-page__logo4">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php get_template_part('template-parts/about', 'about-us'); ?>
+		<?php get_template_part('template-parts/contact-us-block'); ?>
+		<?php get_template_part('template-parts/company-list'); ?>
 	</main><!-- #main -->
 <?php
 get_footer();

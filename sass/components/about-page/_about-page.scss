@@ -83,6 +83,12 @@
   &__title2 {
     @extend .h2;
     color: $color__white;
+    font-size: 40px;
+
+    @include media-breakpoint-only("s") {
+      font-size: 26px;
+      line-height: 32px;
+    }
   }
 
   &__bl2 {
@@ -126,9 +132,17 @@
   &__card {
     background-size: cover;
     background-position: center center;
+    text-decoration: none;
+    display: block;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    }
   }
 
   &__gradient {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(359.32deg, rgba(39, 39, 39, 0.3) 0.56%, rgba(39, 39, 39, 0.18) 49.14%, rgba(39, 39, 39, 0.15) 99.39%);
     padding: 20px 30px;
     height: 668px;
@@ -139,4 +153,109 @@
     }
   }
 
+  &__cdate {
+    @extend .h8;
+    color: #FEFEFE;
+    margin-bottom: 10px;
+  }
+
+  &__hr2 {
+    background: $color__white;
+    margin-bottom: auto;
+  }
+
+  &__title4 {
+    @extend .h3;
+    color: $color__white;
+    margin-bottom: 10px;
+  }
+
+  &__hr3 {
+    margin-bottom: 10px;
+  }
+
+  &__text6 {
+    @extend .text-body;
+    color: $color__white;
+  }
+
+  &__gradient2 {
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(359.32deg, rgba(39, 39, 39, 0.3) 0.56%, rgba(39, 39, 39, 0.18) 49.14%, rgba(39, 39, 39, 0.15) 99.39%);
+    padding: 20px 30px;
+
+    @include media-breakpoint-only("s") {
+      padding: 10px;
+      height: 396px;
+    }
+  }
+
+  &__bl3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__box7 {
+    margin-bottom: 200px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @include media-breakpoint-only("s") {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+  }
+
+  &__text7 {
+    @extend .text-body;
+    color: #383838;
+    flex: 0 0 60%;
+
+    @include media-breakpoint-only("s") {
+      flex: 0 0 100%;
+      margin-bottom: 30px;
+      padding: 0 10px; 
+    }
+  }
+
+  &__logo4 {
+    flex: 0 0 30%;
+    
+    @include media-breakpoint-only("s") {
+      flex: 0 0 100%;
+      padding: 0 36px;
+    }
+  }
+
+  &__block4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 40px;
+    background: #F8F8F8;
+
+    @include media-breakpoint-only("s") {
+      padding: 20px 0 30px;
+    }
+  }
+
+  &__box8 {
+    margin-bottom: 100px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 50px;
+    }
+  }
 }
