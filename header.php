@@ -52,9 +52,12 @@
 			>
 				<?php echo esc_html($link['title'])?>
 			</a>	
-			<?php endif; ?>
+			
 			<img class="site-header__mobile-menu js-menu-open"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-menu.svg" alt="icon-menu">
-			<img class="site-header__mobile-contact"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-mobile-menu.svg" alt="icon-menu">
+			<a href="<?php echo esc_url($link['url']) ?>" class="site-header__mobile-contact">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-mobile-menu.svg" alt="icon-menu">
+			</a>
+			<?php endif; ?>
 		</div>
 
 	</header><!-- #masthead -->
