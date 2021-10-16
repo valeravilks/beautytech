@@ -27,8 +27,12 @@
 	<header id="masthead" class="site-header">
 		<div class="site-header__container">
 			<?php get_template_part('template-parts/logo', '', array('class' => 'site-header__logo'))?>
-			<nav id="site-navigation" class="site-header__menu main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'beautytech' ); ?></button>
+			<nav id="site-navigation" class="site-header__menu main-navigation js-main-menu">
+			<div class="menu-close__close menu-close-close js-menu-close">
+				<div class="menu-close__bt">
+
+				</div>
+			</div>
 				<?php
 				wp_nav_menu(
 					array(
@@ -49,7 +53,7 @@
 				<?php echo esc_html($link['title'])?>
 			</a>	
 			<?php endif; ?>
-			<img class="site-header__mobile-menu"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-menu.svg" alt="icon-menu">
+			<img class="site-header__mobile-menu js-menu-open"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-menu.svg" alt="icon-menu">
 			<img class="site-header__mobile-contact"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-mobile-menu.svg" alt="icon-menu">
 		</div>
 

@@ -81,7 +81,6 @@ const swiperResult = new Swiper('.product-result__slider', {
     hr2.css('width', hr2Width);
     hr2.css('margin-left', hr2MarginLeft);
 
-    console.log(windowWidth);
   }
 
   window.onload = setValue;
@@ -153,6 +152,28 @@ const swiperResult = new Swiper('.product-result__slider', {
     $('body').css('overflow',  'auto');
   })
 
+
+}( jQuery ) );
+
+// Mobile menu
+
+( function( $ ) {
+  $('.js-menu-open').on('click' ,function(e){
+    $('.js-main-menu').fadeIn();
+  })
+  
+  $('.js-menu-close').on('click', function() {
+    $('.js-main-menu').fadeOut();
+  })
+
+  let windowWidth = $(window).width();
+
+  $(window).on('resize', function() {
+    console.log('res');
+      if($(window).width() !== windowWidth) {
+          // $('.js-main-menu').fadeOut();
+      }
+  })
 
 }( jQuery ) );
 

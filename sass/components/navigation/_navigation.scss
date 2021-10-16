@@ -2,11 +2,27 @@
 	display: block;
 	width: 100%;
 
+	
+	@include media-breakpoint-only('s'){
+		position: absolute;
+		background: #F8F8F8;
+		width: 265px;
+		padding: 86px 25px 15px 25px;
+		top: 0;
+		z-index: 100;
+		display: none;
+	}	
+
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+
+		@include media-breakpoint-only('s'){
+			display: flex;
+			flex-direction: column;
+		}	
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -60,6 +76,16 @@
 		&:hover > a{
 			color: $color__blue-lighter;
 		}
+
+		@include media-breakpoint-only('s'){
+			padding: 15px 0;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid #ECECEC;
+			}
+		}	
+
+
 	}
 
 	a {
@@ -114,4 +140,90 @@
 		text-align: end;
 		flex: 1 0 50%;
 	}
+
+	.close-menu {
+		&__bt {
+			position: relative;
+			cursor: pointer;
+			transition: .3s;
+			padding: 20px;
+	
+			&:hover {
+				&:after, &:before {
+					background:  #303030;
+				}
+			}
+	
+			&:before {
+				position: absolute;
+				content: '';
+				height: 20px;
+				width: 2px;
+				// border-radius: 100%;
+				background:  #505050;
+				transform: rotate(45deg);
+			}
+	
+			&:after {
+				content: '';
+				position: absolute;
+				height: 20px;
+				width: 2px;
+				// border-radius: 100%;
+				background:  #505050;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+.menu-close {
+
+
+	&__close {
+    position: absolute;
+    top: 31px;
+    right: 41px;
+		display: none;
+		cursor: pointer;
+
+    @include media-breakpoint-only("s") {
+      top: 20px;
+      left: 13px;
+			display: block;
+    } 
+  }
+
+  &__bt {
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+    padding: 20px;
+
+    &:hover {
+      &:after, &:before {
+        background:  #303030;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 2px;
+      // border-radius: 100%;
+      background:  #505050;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 2px;
+      // border-radius: 100%;
+      background:  #505050;
+      transform: rotate(-45deg);
+    }
+  }
 }

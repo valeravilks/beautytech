@@ -6,6 +6,7 @@
         padding-bottom: 30px;
         display: flex;
         align-items: center;
+        position: relative;
 
         @include media-breakpoint-only('s'){
             padding-top: 20px;
@@ -24,7 +25,8 @@
         padding-left: 90px;
 
         @include media-breakpoint-only('s'){
-            display: none;
+            
+            padding-left: 25px;
         }
     }
 
