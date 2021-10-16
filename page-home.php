@@ -18,6 +18,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<?php get_template_part('template-parts/pop-up'); ?>
 		<?php get_template_part('template-parts/home', 'first-screen')?>
 		<?php get_template_part('template-parts/home', 'slider')?>
 		<?php get_template_part('template-parts/home', 'about-us');?>
@@ -31,6 +32,7 @@ get_header();
 		<?php get_template_part('template-parts/home', 'support');?>
 		<?php get_template_part('template-parts/contact-us-block'); ?>
 		<?php get_template_part('template-parts/company-list'); ?>
+
 	</main><!-- #main -->
 <?php
 get_footer();
