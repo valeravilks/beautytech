@@ -163,17 +163,22 @@ const swiperResult = new Swiper('.product-result__slider', {
   })
   
   $('.js-menu-close').on('click', function() {
-    $('.js-main-menu').fadeOut();
+    // if($(window).width() < 1173.98) {
+      $('.js-main-menu').fadeOut(function(){
+        $('.js-main-menu').css('display', '');
+      });
+    // }
   })
 
   let windowWidth = $(window).width();
 
   $(window).on('resize', function() {
     console.log('res');
-      if($(window).width() !== windowWidth) {
-          // $('.js-main-menu').fadeOut();
+      if($(window).width() !== windowWidth ) {
+          $('.js-main-menu').fadeOut(function(){
+            $('.js-main-menu').css('display', '');
+          });
       }
   })
 
 }( jQuery ) );
-
