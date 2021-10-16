@@ -147,20 +147,14 @@ get_header();
                                   <div class="fl__t2">
                                     <?php the_sub_field('title_left')?>
                                   </div>
-                                </div>
-                                <div class="col-12 col-l-6">
-                                  <div class="fl__t2">
-                                    <?php the_sub_field('title_right')?>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12 col-l-6">
                                   <div class="fl__tx2">
                                     <?php the_sub_field('content_left')?>
                                   </div>
                                 </div>
                                 <div class="col-12 col-l-6">
+                                  <div class="fl__t2">
+                                    <?php the_sub_field('title_right')?>
+                                  </div>
                                   <div class="fl__tx2">
                                     <?php the_sub_field('content_right')?>
                                   </div>
@@ -192,6 +186,94 @@ get_header();
 
                     <?php endif;?>
                   </div>
+                <?php elseif(get_row_layout() == 'title+content+contact'): ?>
+                  <div class="fl__tc">
+                    <?php if(get_sub_field('title')):?>
+                     
+                        <?php $title = get_sub_field('title');?>
+                        <?php $title2 = get_sub_field('title_2');?>
+                     
+          
+                      
+                      <?php if(have_rows('conent')) : ?>
+                        <?php while(have_rows('conent')): the_row(); ?>
+                          <?php if(get_row_layout() == 'title_content_contact') :?>
+                            <div class="fl__bl2">
+                              <div class="row">
+                                <div class="col-12 col-l-6">
+                                  <div class="fl__title">
+                                    <?php echo $title;?>
+                                  </div>
+                                  <hr class="fl__hr">
+                                  <div class="fl__tx2 fl__tx22">
+                                    <?php the_sub_field('content_left')?>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12 col-l-4">
+                                      <div class="fl__tx3">
+                                        <?php echo get_sub_field('contact')[0]['name']; ?>
+                                      </div>
+                                      <div class="fl__tx4">
+                                        <?php echo get_sub_field('contact')[0]['value']; ?>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 offset-l-2 col-l-6">
+                                      <div class="fl__tx3">
+                                        <?php echo get_sub_field('contact')[1]['name']; ?><?php echo get_sub_field('contact')[1]['value']; ?>
+                                      </div>
+                                      <div class="fl__tx3">
+                                        <?php echo get_sub_field('contact')[2]['name']; ?><?php echo get_sub_field('contact')[2]['value']; ?>
+                                      </div>
+                                      <div class="fl__tx3">
+                                        <?php echo get_sub_field('contact')[3]['name']; ?><?php echo get_sub_field('contact')[3]['value']; ?>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-l-6">
+                                  <div class="fl__title">
+                                    <?php echo $title2;?>
+                                  </div>
+                                  <hr class="fl__hr">
+                                  <div class="fl__tx2 fl__tx22">
+                                    <?php the_sub_field('content_right')?>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12 col-l-4">
+                                      <div class="fl__tx3">
+                                        <?php echo get_sub_field('contact')[0]['name']; ?>
+                                      </div>
+                                      <div class="fl__tx4">
+                                        <?php echo get_sub_field('contact')[0]['value']; ?>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 offset-l-2 col-l-6">
+                                      <div class="fl__tx3">
+                                        <?php echo get_sub_field('contact')[1]['name']; ?><?php echo get_sub_field('contact')[1]['value']; ?>
+                                      </div>
+                                      <div class="fl__tx3">
+                                        <?php echo get_sub_field('contact')[2]['name']; ?><?php echo get_sub_field('contact')[2]['value']; ?>
+                                      </div>
+                                      <div class="fl__tx3">
+                                        <?php echo get_sub_field('contact')[3]['name']; ?><?php echo get_sub_field('contact')[3]['value']; ?>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      
+                          <?php endif; ?>
+                      
+                      
+                        <?php endwhile; ?>
+                      <?php endif; ?>
+
+
+
+                    <?php endif;?>
+                  </div>
+                
                 <?php endif;?>
               <?php endwhile; ?>
             <?php endif; ?>
