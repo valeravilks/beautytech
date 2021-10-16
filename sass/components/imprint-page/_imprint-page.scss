@@ -1,0 +1,156 @@
+.ip-page {
+  &__title {
+    @extend .h1;
+    margin-bottom: 10px;
+  }
+
+  &__color {
+    color: #5E95BF;
+  }
+
+  &__hr {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 40px;
+    } 
+  }
+
+  &__title2 {
+    @extend .h3;
+    color: #505050;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @extend .h6;
+    color: #383838;
+    margin-bottom: 40px;
+  }
+
+  &__title3 {
+    @extend .h3;
+    color: #505050;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    @extend .h8;
+    color: #505050;
+    margin-bottom: 10px;
+  }
+
+  &__value {
+    @extend .text-body;
+    color: #383838;
+    margin-bottom: auto;
+
+    @include media-breakpoint-only("s") {
+      font-size: 14px;
+    } 
+  }
+
+  &__hr2 {
+    margin: 10px 0;
+  }
+
+  &__bl1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__bl2 {
+    margin-bottom: 40px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 40px;
+    } 
+  }
+
+  &__text4 {
+    @extend .h6;
+    color: #505050;
+    margin-bottom: 20px;
+  }
+
+  &__text5 {
+    @extend .h6;
+    color: #505050;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    } 
+  }
+
+  &__text6 {
+    @extend .text-body;
+    color: #383838;
+  }
+
+  &__bl3 {
+    margin-bottom: 50px;
+    p {
+      margin: 0;
+    }
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 40px;
+    } 
+  }
+
+  &__text7 {
+    @extend .h6;
+    color: #383838;
+    margin-bottom: 10px;
+  }
+
+  &__text8 {
+    @extend .h8;
+    color: #383838;
+    margin-bottom: 20px;
+  }
+
+  &__bl5 {
+    width: 400px;
+
+    @include media-breakpoint-only("s") {
+      width: auto;
+    } 
+  }
+
+  &__el {
+    @extend .text-body;
+    color: #383838;
+    margin-bottom: 25px;
+  }
+
+  &__bl4 {
+    margin-bottom: 70px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    } 
+  }
+
+  &__title5 {
+    @extend .h3;
+    color: #505050;
+    margin-bottom: 10px;
+  }
+
+  &__hr5 {
+    position: relative;
+    margin-bottom: 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 1px;
+      background: #ECECEC;
+      width: 100vw;
+  }
+  }
+}
+
