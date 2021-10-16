@@ -122,12 +122,79 @@ get_header();
     <?php if( have_rows('imprint__main') ): ?>
         <?php while( have_rows('imprint__main') ): the_row(); 
             ?>
-        <div class="ip-page__flexible">
+        <div class="ip-page__flexible fl">
           <div class="container">
             <div class="ip-page__title5">
               <?php the_sub_field('title'); ?>
             </div>
             <hr class="ip-page__hr5">
+            <?php if(have_rows('container')):?>
+              <?php while(have_rows('container')): the_row(); ?>
+                <?php if(get_row_layout() == 'title+content'): ?>
+                  <div class="fl__tc">
+                    <?php if(get_sub_field('title')):?>
+                      <div class="fl__title">
+                        <?php the_sub_field('title');?>
+                      </div>
+                      <hr class="fl__hr">
+                      
+                      <?php if(have_rows('conent')) : ?>
+                        <?php while(have_rows('conent')): the_row(); ?>
+                          <?php if(get_row_layout() == 'title_content') :?>
+                            <div class="fl__bl2">
+                              <div class="row">
+                                <div class="col-12 col-l-6">
+                                  <div class="fl__t2">
+                                    <?php the_sub_field('title_left')?>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-l-6">
+                                  <div class="fl__t2">
+                                    <?php the_sub_field('title_right')?>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12 col-l-6">
+                                  <div class="fl__tx2">
+                                    <?php the_sub_field('content_left')?>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-l-6">
+                                  <div class="fl__tx2">
+                                    <?php the_sub_field('content_right')?>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          <?php elseif(get_row_layout() == 'content') :?>
+                            <div class="fl__bl2">
+                              <div class="row">
+                                <div class="col-12 col-l-6">
+                                  <div class="fl__tx2">
+                                    <?php the_sub_field('content_left')?>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-l-6">
+                                  <div class="fl__tx2">
+                                    <?php the_sub_field('content_right')?>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          <?php endif; ?>
+                      
+                      
+                        <?php endwhile; ?>
+                      <?php endif; ?>
+
+
+
+                    <?php endif;?>
+                  </div>
+                <?php endif;?>
+              <?php endwhile; ?>
+            <?php endif; ?>
           </div>
         </div>
         <?php endwhile; ?>
