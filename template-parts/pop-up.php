@@ -1,4 +1,4 @@
-<div class="pop-up">
+<div class="pop-up js-pop-up">
   <div class="pop-up__block">
     <div class="pop-up__title">
       Consultation request
@@ -6,9 +6,9 @@
     <div class="pop-up__text">
       Please fill out the form and we will contsct you shortly 
     </div>
-    <div class="pop-up__close">
+    <div class="pop-up__close js-pop-up-close">
       <div class="pop-up__bt">
-        
+
       </div>
     </div>
     <form action="" class="contact-form">

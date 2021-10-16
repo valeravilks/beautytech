@@ -31,6 +31,8 @@ get_header();
 		<?php get_template_part('template-parts/home', 'support');?>
 		<?php get_template_part('template-parts/contact-us-block'); ?>
 		<?php get_template_part('template-parts/company-list'); ?>
+
+		<?php get_template_part('template-parts/pop-up'); ?>
 	</main><!-- #main -->
 <?php
 get_footer();

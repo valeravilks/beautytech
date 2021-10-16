@@ -137,3 +137,22 @@ const swiperResult = new Swiper('.product-result__slider', {
   
 
 }( jQuery ) );
+
+// Pop up
+
+( function( $ ) {
+  $('.js-consultation').on('click' ,function(e){
+    e.preventDefault();
+
+    $('.js-pop-up').fadeIn();
+    $('body').css('overflow',  'hidden');
+  });
+  
+  $('.js-pop-up-close').on('click', function(){
+    $('.js-pop-up').fadeOut();
+    $('body').css('overflow',  'auto');
+  })
+
+
+}( jQuery ) );
+
