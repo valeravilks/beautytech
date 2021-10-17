@@ -1,0 +1,4 @@
+gmail smtp
+
+login beautytechsmtp@gmail.com
+pass: ?z~4=m"s$]68+&S'
