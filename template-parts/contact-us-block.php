@@ -20,14 +20,14 @@
     </div>
     <div class="row">
       <div class="col-12 col-l-6">
-        <form action="" class="contact-form">
+        <form action="" class="contact-form <?php echo $args['class']?>">
           <div class="row">
             <div class="col-12">
               <label class="contact-form__label">
                 <div class="contact-form__text">
                   Name *
                 </div>
-                <input class="contact-form__input" type="text" placeholder="Type your name">
+                <input class="contact-form__input" name="name" type="text" placeholder="Type your name">
               </label>
             </div>
             <div class="col-12 col-l-6">
@@ -35,7 +35,7 @@
                   <div class="contact-form__text">
                     Email﹡
                   </div>
-                  <input class="contact-form__input" type="email" placeholder="Type your email">
+                  <input class="contact-form__input" name="email" type="email" placeholder="Type your email">
                 </label>
             </div>
             <div class="col-12 col-l-6">
@@ -43,7 +43,7 @@
                   <div class="contact-form__text">
                     Phone﹡
                   </div>
-                  <input class="contact-form__input" type="tel" placeholder="Type your phone">
+                  <input class="contact-form__input" type="tel" name="phone" placeholder="Type your phone">
                 </label>
             </div>
             <div class="col-12">
@@ -51,14 +51,14 @@
                 <div class="contact-form__text">
                   Message
                 </div>
-                <textarea class="contact-form__input contact-form__textarea" placeholder="Type your message here..."></textarea>
+                <textarea class="contact-form__input contact-form__textarea" name="messege" placeholder="Type your message here..."></textarea>
               </label>
             </div>
             <div class="col-12">
               <div class="contact-form__checkbox">
                 <img src="<?php echo get_template_directory_uri();?>/img/svg/icon-whatsapp.svg" alt=""> 
                 <label class="contact-form__check check option">
-                  <input class="check__input" type="checkbox">
+                  <input class="check__input" name="whatsapp" type="checkbox">
                   <span class="check__box"></span>
                   Please contact me by Whatsapp
               </label>

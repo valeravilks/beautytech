@@ -182,3 +182,31 @@ const swiperResult = new Swiper('.product-result__slider', {
   })
 
 }( jQuery ) );
+
+// Send form in contact page
+
+( function( $ ) {
+  $('.js-contact-page-form').on('submit', function(e) {
+    e.preventDefault();
+
+    let form = $('.js-contact-page-form')[0];
+    
+    let formData = new FormData(form);
+    formData.append('action', 'cform');
+    
+   $.ajax({
+     type: 'POST',
+     data: formData,
+     url: myajax.url,
+     processData: false,
+     contentType: false,
+     success: function(r){
+       console.log(r);
+     },
+     error: function(r){
+       console.log(r);
+     }
+   });
+  })
+
+}( jQuery ) );

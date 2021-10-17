@@ -348,3 +348,14 @@ function myajax_data(){
 	);
 
 }
+
+add_action( 'wp_ajax_contact_cform', 'cform_callback' );
+add_action( 'wp_ajax_nopriv_cform', 'cform_callback' );
+function cform_callback() {
+	
+
+	var_dump($_POST);
+
+	// выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	wp_die();
+}

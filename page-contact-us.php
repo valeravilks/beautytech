@@ -20,9 +20,7 @@ get_header();
 	<main id="primary" class="site-main contact-page">
   <?php get_template_part('template-parts/breadcrumbs'); ?>
     <?php get_template_part('template-parts/page-title', '', array('title' => 'Contact')); ?>
-		<?php get_template_part('template-parts/contact-us-block', '', array('isTitle' => 'no')); ?>
-		<?php get_template_part('template-parts/home', 'support');?>
-		<?php get_template_part('template-parts/contact-us-block'); ?>
+		<?php get_template_part('template-parts/contact-us-block', '', array('isTitle' => 'no', 'class' => 'js-contact-page-form')); ?>
 	</main><!-- #main -->
 <?php
 get_footer();
