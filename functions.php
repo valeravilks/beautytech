@@ -335,3 +335,16 @@ function register_post_types2(){
 	] );
 }
 
+add_action( 'wp_enqueue_scripts', 'myajax_data', 99 );
+function myajax_data(){
+
+	// Первый параметр 'twentyfifteen-script' означает, что код будет прикреплен к скрипту с ID 'twentyfifteen-script'
+	// 'twentyfifteen-script' должен быть добавлен в очередь на вывод, иначе WP не поймет куда вставлять код локализации
+	// Заметка: обычно этот код нужно добавлять в functions.php в том месте где подключаются скрипты, после указанного скрипта
+	wp_localize_script( 'beautytech-script', 'myajax',
+		array(
+			'url' => admin_url('admin-ajax.php')
+		)
+	);
+
+}
