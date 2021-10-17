@@ -90,16 +90,21 @@
           'product-categories'  => get_queried_object()->slug
         );
 
-        $loop = new WP_Query( $args ); 
+        $loop = new WP_Query( $args ); ?>
           
-        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-          <div class="col-12 col-l-4 home-events__event">
-            <?php get_template_part('template-parts/event', 'card-1');?>
-          </div>
-        <?php endwhile;
+
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+            <div class="col-12 col-l-4 home-events__event">
+              <?php get_template_part('template-parts/event', 'card-1');?>
+            </div>
+            <?php endwhile;
 
           wp_reset_postdata(); 
-        ?>
-    </div>
+          ?>
+
+      </div>
+      <div class="home-events__block-link">
+        <a href="<?php echo get_post_type_archive_link('events')?>" class="home-events__link link link-plus">See all</a>
+      </div>
   </div>
 </div>
