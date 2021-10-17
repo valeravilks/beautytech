@@ -27,7 +27,7 @@
                 <div class="contact-form__text">
                   Name *
                 </div>
-                <input class="contact-form__input" name="name" type="text" placeholder="Type your name">
+                <input class="contact-form__input"  required name="name" type="text" placeholder="Type your name">
               </label>
             </div>
             <div class="col-12 col-l-6">
@@ -35,7 +35,7 @@
                   <div class="contact-form__text">
                     Email﹡
                   </div>
-                  <input class="contact-form__input" name="email" type="email" placeholder="Type your email">
+                  <input class="contact-form__input" required name="email" type="email" placeholder="Type your email">
                 </label>
             </div>
             <div class="col-12 col-l-6">
@@ -43,7 +43,7 @@
                   <div class="contact-form__text">
                     Phone﹡
                   </div>
-                  <input class="contact-form__input" type="tel" name="phone" placeholder="Type your phone">
+                  <input class="contact-form__input" required type="tel" name="phone" placeholder="Type your phone">
                 </label>
             </div>
             <div class="col-12">
@@ -66,8 +66,8 @@
             </div>
           </div>
           <div class="contact-form__bottom">
-            <div class="contact-form__recaptcha">
-              recaptcha
+            <div class="contact-form__recaptcha" id="js-recaptcha">
+              
             </div>
             <input class="contact-form__submit" type="submit" value="SEND">
           </div>

@@ -1,5 +1,5 @@
 <div class="pop-up js-pop-up">
-  <div class="pop-up__block">
+  <div class="pop-up__block1 js-pop-up-bl-1">
     <div class="pop-up__title">
       Consultation request
     </div>
@@ -96,5 +96,28 @@
           <input class="contact-form__submit" type="submit" value="SEND">
         </div>
       </form>
+  </div>
+  <div class="pop-up__block2 js-pop-up-bl-2">
+    <div class="pop-up__close js-pop-up-close">
+      <div class="pop-up__bt">
+
+      </div>
+    </div>
+    <div class="pop-up__title5">
+      Thank you for your request
+    </div>
+    <div class="pop-up__text5">
+      Thank you for your request
+    </div>
+  </div>
+  <div class="pop-up__block3 js-pop-up-bl-3">
+    <div class="pop-up__close js-pop-up-close">
+      <div class="pop-up__bt">
+
+      </div>
+    </div>
+    <div class="pop-up__title5">
+      Failed to submit the form. Email us.
+    </div>
   </div>
 </div>

@@ -144,11 +144,13 @@ const swiperResult = new Swiper('.product-result__slider', {
     e.preventDefault();
 
     $('.js-pop-up').fadeIn();
+    $('.js-pop-up-bl-1').fadeIn();
     $('body').css('overflow',  'hidden');
   });
   
   $('.js-pop-up-close').on('click', function(){
     $('.js-pop-up').fadeOut();
+    $('.js-pop-up-bl-1').fadeOut();
     $('body').css('overflow',  'auto');
   })
 
@@ -185,28 +187,58 @@ const swiperResult = new Swiper('.product-result__slider', {
 
 // Send form in contact page
 
-( function( $ ) {
+
+  var widgetId1;
+  var onloadCallback = function() {
+    widgetId1 = grecaptcha.render('js-recaptcha', {
+      'sitekey' : '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
+      'theme' : 'light'
+    });
+  }
+
   $('.js-contact-page-form').on('submit', function(e) {
     e.preventDefault();
 
     let form = $('.js-contact-page-form')[0];
-    
+    let submitButton = $(form).find('input[type="submit"]')[0];
+    $(submitButton).prop('disabled', true);
+
     let formData = new FormData(form);
     formData.append('action', 'cform');
-    
-   $.ajax({
-     type: 'POST',
-     data: formData,
-     url: myajax.url,
-     processData: false,
-     contentType: false,
-     success: function(r){
-       console.log(r);
-     },
-     error: function(r){
-       console.log(r);
-     }
-   });
-  })
+    formData.append('id', 1);
 
-}( jQuery ) );
+    let rez = grecaptcha.getResponse(widgetId1);
+    
+    if(rez) {
+      $.ajax({
+        type: 'POST',
+        data: formData,
+        url: myajax.url,
+        processData: false,
+        contentType: false,
+        success: function(r){
+         $('.js-pop-up').fadeIn();
+         $('.js-pop-up-bl-2').fadeIn();
+         setTimeout(function(){
+           $('.js-pop-up').fadeOut();
+           $('.js-pop-up-bl-2').fadeOut();
+           $(submitButton).prop('disabled', false);
+           form.reset();
+         }, 7000);
+        },
+        error: function(r){
+         $('.js-pop-up').fadeIn();
+         $('.js-pop-up-bl-3').fadeIn();
+         setTimeout(function(){
+           $('.js-pop-up').fadeOut();
+           $('.js-pop-up-bl-3').fadeOut();
+           $(submitButton).prop('disabled', false);
+         }, 7000);
+        }
+      });
+    } else {
+      alert('Enter the captcha.');
+      $(submitButton).prop('disabled', false);
+    }
+  }
+)
