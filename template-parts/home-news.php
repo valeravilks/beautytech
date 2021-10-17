@@ -73,235 +73,33 @@
 </div>
 <?php get_template_part('template-parts/h3-block', '', array(
 			'h3' => "Events",
-      'link' => 'https://link',
+      'link' => get_post_type_archive_link('events'),
       'linkText' => 'See all',
 		));
 ?>
 <div class="home-events">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-l-4">
-        <div class="event-1 home-events__event">
-          <div class="event-1__tag">
-            Congresses
+        <?php
+        $args = array(  
+          'post_type' => 'events',
+          'post_status' => 'publish',
+          'posts_per_page' => 6, 
+          'orderby' => 'title',
+          'order' => 'ASC', 
+          'product-categories'  => get_queried_object()->slug
+        );
+
+        $loop = new WP_Query( $args ); 
+          
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <div class="col-12 col-l-4 home-events__event">
+            <?php get_template_part('template-parts/event', 'card-1');?>
           </div>
-          <div class="event-1__title">
-            Aesthetic & anti-aging medicine world congress
-          </div>
-          <img class="event-1__img" src="https://beautytech.com/wp-content/uploads/2021/10/Mask-Group.jpg" alt="" class="event-1__img">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Date:
-            </div>
-            <div class="event-1__text-2">
-              09 March 2018
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Location:
-            </div>
-            <div class="event-1__text-2">
-              France, Paris / Palais des Congres
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Stand:
-            </div>
-            <div class="event-1__text-2">
-              Hall 10, Stand F76
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-l-4">
-        <div class="event-1 home-events__event">
-          <div class="event-1__tag">
-            Congresses
-          </div>
-          <div class="event-1__title">
-            Aesthetic & anti-aging medicine world congress
-          </div>
-          <img class="event-1__img" src="https://beautytech.com/wp-content/uploads/2021/10/Mask-Group.jpg" alt="" class="event-1__img">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Date:
-            </div>
-            <div class="event-1__text-2">
-              09 March 2018
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Location:
-            </div>
-            <div class="event-1__text-2">
-              France, Paris / Palais des Congres
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Stand:
-            </div>
-            <div class="event-1__text-2">
-              Hall 10, Stand F76
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-l-4">
-        <div class="event-1 home-events__event">
-          <div class="event-1__tag">
-            Congresses
-          </div>
-          <div class="event-1__title">
-            Aesthetic & anti-aging medicine world congress
-          </div>
-          <img class="event-1__img" src="https://beautytech.com/wp-content/uploads/2021/10/Mask-Group.jpg" alt="" class="event-1__img">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Date:
-            </div>
-            <div class="event-1__text-2">
-              09 March 2018
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Location:
-            </div>
-            <div class="event-1__text-2">
-              France, Paris / Palais des Congres
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Stand:
-            </div>
-            <div class="event-1__text-2">
-              Hall 10, Stand F76
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-l-4">
-        <div class="event-1 home-events__event">
-          <div class="event-1__tag">
-            Congresses
-          </div>
-          <div class="event-1__title">
-            Aesthetic & anti-aging medicine world congress
-          </div>
-          <img class="event-1__img" src="https://beautytech.com/wp-content/uploads/2021/10/Mask-Group.jpg" alt="" class="event-1__img">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Date:
-            </div>
-            <div class="event-1__text-2">
-              09 March 2018
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Location:
-            </div>
-            <div class="event-1__text-2">
-              France, Paris / Palais des Congres
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Stand:
-            </div>
-            <div class="event-1__text-2">
-              Hall 10, Stand F76
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-l-4">
-        <div class="event-1 home-events__event">
-          <div class="event-1__tag">
-            Congresses
-          </div>
-          <div class="event-1__title">
-            Aesthetic & anti-aging medicine world congress
-          </div>
-          <img class="event-1__img" src="https://beautytech.com/wp-content/uploads/2021/10/Mask-Group.jpg" alt="" class="event-1__img">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Date:
-            </div>
-            <div class="event-1__text-2">
-              09 March 2018
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Location:
-            </div>
-            <div class="event-1__text-2">
-              France, Paris / Palais des Congres
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Stand:
-            </div>
-            <div class="event-1__text-2">
-              Hall 10, Stand F76
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-l-4">
-        <div class="event-1 home-events__event">
-          <div class="event-1__tag">
-            Congresses
-          </div>
-          <div class="event-1__title">
-            Aesthetic & anti-aging medicine world congress
-          </div>
-          <img class="event-1__img" src="https://beautytech.com/wp-content/uploads/2021/10/Mask-Group.jpg" alt="" class="event-1__img">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Date:
-            </div>
-            <div class="event-1__text-2">
-              09 March 2018
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Location:
-            </div>
-            <div class="event-1__text-2">
-              France, Paris / Palais des Congres
-            </div>
-          </div>
-          <hr class="event-1__hr">
-          <div class="event-1__block">
-            <div class="event-1__text-1">
-              Stand:
-            </div>
-            <div class="event-1__text-2">
-              Hall 10, Stand F76
-            </div>
-          </div>
-        </div>
-      </div>
+        <?php endwhile;
+
+          wp_reset_postdata(); 
+        ?>
     </div>
   </div>
 </div>
