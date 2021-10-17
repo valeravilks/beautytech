@@ -242,3 +242,59 @@ const swiperResult = new Swiper('.product-result__slider', {
     }
   }
 )
+
+// Pop up forms send
+
+var widgetId1;
+var onloadCallback = function() {
+  widgetId2 = grecaptcha.render('js-recaptcha-2', {
+    'sitekey' : '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
+    'theme' : 'light'
+  });
+}
+
+$('.js-pop-up-forms').on('submit', function(e) {
+  e.preventDefault();
+
+  let form = $('.js-pop-up-forms')[0];
+  let submitButton = $(form).find('input[type="submit"]')[0];
+  $(submitButton).prop('disabled', true);
+
+  let formData = new FormData(form);
+  formData.append('action', 'cform');
+  formData.append('id', 1);
+
+  let rez = grecaptcha.getResponse(widgetId2);
+  
+  if(rez) {
+    $.ajax({
+      type: 'POST',
+      data: formData,
+      url: myajax.url,
+      processData: false,
+      contentType: false,
+      success: function(r){
+       $('.js-pop-up-bl-1').fadeOut();
+       $('.js-pop-up-bl-2').fadeIn();
+       setTimeout(function(){
+         $('.js-pop-up').fadeOut();
+         $('.js-pop-up-bl-2').fadeOut();
+         $(submitButton).prop('disabled', false);
+         form.reset();
+       }, 7000);
+      },
+      error: function(r){
+       $('.js-pop-up-bl-1').fadeOut();
+       $('.js-pop-up-bl-3').fadeIn();
+       setTimeout(function(){
+         $('.js-pop-up').fadeOut();
+         $('.js-pop-up-bl-3').fadeOut();
+         $(submitButton).prop('disabled', false);
+       }, 7000);
+      }
+    });
+  } else {
+    alert('Enter the captcha.');
+    $(submitButton).prop('disabled', false);
+  }
+})

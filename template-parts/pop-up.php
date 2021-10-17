@@ -11,14 +11,14 @@
 
       </div>
     </div>
-    <form action="" class="contact-form">
+    <form action="" class="contact-form js-pop-up-forms">
         <div class="row">
           <div class="col-12">
             <label class="contact-form__label">
               <div class="contact-form__text">
                 Name *
               </div>
-              <input class="contact-form__input" type="text" placeholder="Type your name">
+              <input class="contact-form__input" required type="text" placeholder="Type your name">
             </label>
           </div>
           <div class="col-12 col-l-6">
@@ -26,7 +26,7 @@
                 <div class="contact-form__text">
                   Email﹡
                 </div>
-                <input class="contact-form__input" type="email" placeholder="Type your email">
+                <input class="contact-form__input" required type="email" placeholder="Type your email">
               </label>
           </div>
           <div class="col-12 col-l-6">
@@ -34,7 +34,7 @@
                 <div class="contact-form__text">
                   Phone﹡
                 </div>
-                <input class="contact-form__input" type="tel" placeholder="Type your phone">
+                <input class="contact-form__input" required type="tel" placeholder="Type your phone">
               </label>
           </div>
           <div class="col-12">
@@ -90,8 +90,8 @@
           </div>
         </div>
         <div class="contact-form__bottom">
-          <div class="contact-form__recaptcha">
-            recaptcha
+          <div class="contact-form__recaptcha" id="js-recaptcha-2">
+           
           </div>
           <input class="contact-form__submit" type="submit" value="SEND">
         </div>
