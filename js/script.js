@@ -189,8 +189,14 @@ const swiperResult = new Swiper('.product-result__slider', {
 
 
   var widgetId1;
+  var widgetId2;
   var onloadCallback = function() {
     widgetId1 = grecaptcha.render('js-recaptcha', {
+      'sitekey' : '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
+      'theme' : 'light'
+    });
+
+    widgetId2 = grecaptcha.render('js-recaptcha-2', {
       'sitekey' : '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
       'theme' : 'light'
     });
@@ -243,15 +249,7 @@ const swiperResult = new Swiper('.product-result__slider', {
   }
 )
 
-// Pop up forms send
 
-var widgetId1;
-var onloadCallback = function() {
-  widgetId2 = grecaptcha.render('js-recaptcha-2', {
-    'sitekey' : '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
-    'theme' : 'light'
-  });
-}
 
 $('.js-pop-up-forms').on('submit', function(e) {
   e.preventDefault();
