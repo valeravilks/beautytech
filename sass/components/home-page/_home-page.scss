@@ -677,6 +677,11 @@
 }
 
 .home-pr {
+  margin-bottom: 80px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 0;
+  }
   &__description {
     @extend .h5;
     margin-bottom: 152px;
@@ -742,6 +747,10 @@
 
     & > * {
       text-align: right;
+
+      @include media-breakpoint-only("s") {
+        text-align: left;
+      }
     }
   }
 
@@ -751,6 +760,7 @@
     @include media-breakpoint-only("s") {
       display: flex;
       justify-content: center;
+      margin-top: 15px;
       margin-bottom: 50px;
     }
   }
