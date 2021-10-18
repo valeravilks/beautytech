@@ -287,6 +287,20 @@
   @include media-breakpoint-only("s") {
     margin-bottom: 50px;
   }
+  
+  &__container{
+    margin-bottom: 100px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    @include media-breakpoint-only("s") {
+      margin-bottom: 30px;
+    }
+  }
 
   &__block-1 {
     display: flex;
@@ -294,7 +308,7 @@
     justify-content: space-between;
 
     @include media-breakpoint-only("s") {
-      margin-bottom: 35px;
+      margin-bottom: 0;
       margin-top: 20px;
     }
   }
@@ -316,9 +330,18 @@
 .news-1 {
   background-size: cover;
   background-position: center center;
+  text-decoration: none;
+  display: block;
+
+  border: 1px solid rgba(255,255,255,0);
+  transition: .3s;
+  
+  &:hover {
+    border: 1px solid #A9A9AC;
+  }
 
   &__overlay {
-    background: $color__liner-video;
+    background: linear-gradient(359.32deg, rgba(39, 39, 39, 0.3) 0.56%, rgba(39, 39, 39, 0.18) 49.14%, rgba(39, 39, 39, 0.15) 99.39%);
     padding: 30px;
     height: 600px;
     display: flex;
@@ -331,8 +354,15 @@
     }
   }
 
+  &__tags {
+    display: flex;
+    margin-bottom: auto;
+
+  }
+
   &__tag {
     @extend .tag;
+    margin-right: 10px;
   }
 
   &__date {
@@ -349,12 +379,29 @@
 }
 
 .news-2 {
+  text-decoration: none;
+  display: block;
+
+  border: 1px solid rgba(255,255,255,0);
+  transition: .3s;
+  
+  &:hover {
+    border: 1px solid #A9A9AC;
+  }
+
   &__hr {
     margin-bottom: 25px;
   }
 
+  &__tags {
+    display: flex;
+    margin-bottom: auto;
+
+  }
+
   &__tag {
     @extend .tag;
+    margin-right: 10px;
   }
 
   &__date {
@@ -372,6 +419,10 @@
     @extend .h4;
     color: $color__gray-darker-text; 
     margin-bottom: 10px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 20px;
+    }  
   }
 
   &__img {
