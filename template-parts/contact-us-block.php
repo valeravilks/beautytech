@@ -20,7 +20,7 @@
     </div>
     <div class="row">
       <div class="col-12 col-l-6">
-        <form action="" class="contact-form <?php echo $args['class']?>">
+        <form action="" class="contact-form js-contact-page-form <?php echo $args['class']?>">
           <div class="row">
             <div class="col-12">
               <label class="contact-form__label">
