@@ -1,6 +1,6 @@
 .events-page {
   &__full {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 
     @include media-breakpoint-only("s") {
       display: none;

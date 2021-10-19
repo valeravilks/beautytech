@@ -1,7 +1,16 @@
 .soc-link {
   display: flex;
+  transition: .3s;
+  background-color: rgba(255,255,255,0);
+
   &__link {
     display: block;
     margin-right: 15px;
+  }
+
+  img {
+    &:hover{
+      background-color: $color__white;
+    }
   }
 }

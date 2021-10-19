@@ -16,7 +16,7 @@
 
 	<?php beautytech_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content single-content">
 		<?php
 		the_content();
 

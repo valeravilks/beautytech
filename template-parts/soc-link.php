@@ -1,6 +1,6 @@
 <?php 
-  $facebookLink = get_field('facebook-link', 'option');
-  $instagramLink = get_field('instagtam-link', 'option');
+  $facebookLink = get_field('fm_facebook', 'option');
+  $instagramLink = get_field('fm_instagram', 'option');
   $additionalClass = $args['class'];
 ?>
 

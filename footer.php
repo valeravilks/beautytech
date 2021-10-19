@@ -39,21 +39,23 @@
 									Support service schedule
 								</div>
 								<div class="f-contact__text">
-									Mon-Fri: 10:00AM - 6:00PM
+									<?php the_field('fm_support', 'option'); ?>
 								</div>
 								<hr class="f-contact__hr">
 								<div class="f-contact__header">
 									Phone
 								</div>
 								<div class="f-contact__text">
-									+49 (0) 2373 395 30 21
+									<a href="tel:<?php the_field('fm_phone', 'option'); ?>" class="f-contact__phone">
+										<?php the_field('fm_phone', 'option'); ?>
+									</a>
 								</div>
 								<hr class="f-contact__hr">
 								<div class="f-contact__header">
 									Address
 								</div>
 								<div class="f-contact__text">
-									Schwitterberg 111 58708 Menden, Germany
+									<?php the_field('fm_address', 'option'); ?>
 								</div>
 							</div>
 							<?php get_template_part('template-parts/soc-link', '', array('class' => 'f-contact__soc')); ?>
@@ -65,13 +67,17 @@
 			<div class="footer__bottom footer-bottom">
 				<div class="footer-bottom__container container">
 						<div class="footer-bottom__text">
-							© Beauty Tech
+							<?php the_field('f_copyright', 'option'); ?>
 						</div>
 						<div class="footer-bottom__text">
-							Privacy Policy
+							<a href="<?php echo get_field('f_privacy_policy_link', 'option')['url']; ?>" class="footer-bottom__link">
+								<?php echo get_field('f_privacy_policy_link', 'option')['title']; ?>
+							</a>
 						</div>
 						<div class="footer-bottom__text">
-							Site map
+							<a href="<?php echo get_field('f_site_map', 'option')['url']; ?>" class="footer-bottom__link">
+								<?php echo get_field('f_site_map', 'option')['title']; ?>
+							</a>
 						</div>
 				</div>
 			</div>

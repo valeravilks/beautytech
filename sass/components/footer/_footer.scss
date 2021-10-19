@@ -121,6 +121,16 @@
         }
     }
 
+    &__phone {
+        color: #383838;
+        text-decoration-color: rgba(0, 0, 0, 0);
+        transition: .3s;
+
+        &:hover {
+            text-decoration-color: #383838;
+        }
+    }
+
     &__hr {
         margin-bottom: 10px;
     }
@@ -158,5 +168,15 @@
         font-size: 12px;
         line-height: 12px;
         color: $color__gray-darker-text;
+    }
+    
+    &__link {
+        color: #383838;
+        text-decoration-color: rgba(0, 0, 0, 0);
+        transition: .3s;
+
+        &:hover {
+            text-decoration-color: #383838;
+        }
     }
 }
