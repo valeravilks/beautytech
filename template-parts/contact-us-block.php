@@ -79,23 +79,25 @@
             Address
           </div>
           <div class="c-info__text">
-            Schwitterberg 111
-            58708 Menden
-            Germany
+            <?php the_field('con_address', 'option'); ?>
           </div>
           <hr class="c-info__hr">
           <div class="c-info__header">
             Phone
           </div>
           <div class="c-info__text">
-            +49 (0) 2373 395 30 21
+            <a href="tel:<?php the_field('con_phone', 'option'); ?>" class="c-info__link">
+              <?php the_field('con_phone', 'option'); ?>
+            </a>
           </div>
           <hr class="c-info__hr">
           <div class="c-info__header">
             Email
           </div>
           <div class="c-info__text">
-            info@beauty-tech.de
+            <a href="mailto:<?php the_field('con_email_contact', 'option'); ?>" class="c-info__link">
+              <?php the_field('con_email_contact', 'option'); ?>
+            </a>
           </div>
         </div>
       </div>

@@ -115,6 +115,7 @@
   }
 
   &__submit {
+    align-self: center;
     @include media-breakpoint-only('s') {
       width: 100%;
       text-align: center;
@@ -192,5 +193,15 @@
 
   &__hr {
     margin-bottom: 20px;
+  }
+
+  &__link {
+    color: #383838;
+    text-decoration-color: rgba(0, 0, 0, 0);
+    transition: .3s;
+
+    &:hover {
+        text-decoration-color: #383838;
+    }
   }
 }
