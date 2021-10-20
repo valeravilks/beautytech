@@ -41,7 +41,7 @@ $field = $args['data'];
             <div class="b2">
               <img src="<?php echo $field['items']['image']?>" alt="img" class="img-1">
             </div>
-            <div class="bl">
+            <div class="bll">
               <div class="text-1">
                 <?php echo $field['items']['title_2']?>
               </div>
@@ -68,7 +68,7 @@ $field = $args['data'];
             <div class="b2">
               <img src="<?php echo $field['items_2']['image']?>" alt="img" class="img-1">
             </div>
-            <div class="bl">
+            <div class="bll">
               <div class="text-1">
                 <?php echo $field['items_2']['title_2']?>
               </div>
@@ -95,7 +95,7 @@ $field = $args['data'];
             <div class="b2">
               <img src="<?php echo $field['items_3']['image']?>" alt="img" class="img-1">
             </div>
-            <div class="bl">
+            <div class="bll">
               <div class="text-1">
                 <?php echo $field['items_3']['title_2']?>
               </div>
