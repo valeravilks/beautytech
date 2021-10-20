@@ -77,6 +77,7 @@ get_header();
 			</div>
 
 			<?php get_template_part('template-parts/contact-us-block'); ?>
+			<?php get_template_part('template-parts/company-list'); ?>
 	</main><!-- #main -->
 <?php
 get_footer();

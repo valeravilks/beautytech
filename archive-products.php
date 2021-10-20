@@ -23,8 +23,8 @@ get_header();
       'type' => 'products',
       'active' => 'all'
       )); ?>
-    <div class="container produc__mb">
       <div class="row">
+        <div class="container produc__mb">
         <?php
         $args = array(  
           'post_type' => 'products',
@@ -95,8 +95,8 @@ get_header();
 
 
 
-    <?php get_template_part('template-parts/company-list'); ?>
     <?php get_template_part('template-parts/contact-us-block'); ?>
+    <?php get_template_part('template-parts/company-list'); ?>
 	</main><!-- #main -->
 
 <?php

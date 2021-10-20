@@ -55,10 +55,10 @@ get_header();
 
     
 
+</main><!-- #main -->
 
-
-    <?php get_template_part('template-parts/contact-us-block'); ?>
-	</main><!-- #main -->
+<?php get_template_part('template-parts/contact-us-block'); ?>
+<?php get_template_part('template-parts/company-list'); ?>
 
 <?php
 get_footer();
