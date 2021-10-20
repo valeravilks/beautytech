@@ -53,6 +53,10 @@ const swiperResult = new Swiper('.product-result__slider', {
   // effect: "fade",
   autoHeight: true,
   // Navigation arrows
+  navigation: {
+    nextEl: '.product-result__next',
+    prevEl: '.product-result__prev',
+  },
 
 });
 
