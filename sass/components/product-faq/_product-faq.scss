@@ -1,8 +1,8 @@
 .product-faq {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 
   @include media-breakpoint-only('s') {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   &__container {
