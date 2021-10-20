@@ -29,7 +29,7 @@ $field = $args['data'];
   <div class="t5__block2">
     <div class="container">
       <div class="row">
-        <div class="col-12 offset-l-1 col-l-5">
+        <div class="col-12 col-l-6">
           <div class="t5__block2-subtitle">
             <?php echo $field['t5_block-2']['subtitle']?>
           </div>
