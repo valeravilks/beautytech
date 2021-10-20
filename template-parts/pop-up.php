@@ -1,17 +1,17 @@
 <div class="pop-up js-pop-up">
   <div class="pop-up__block1 js-pop-up-bl-1">
     <div class="pop-up__title">
-      Consultation request
+      <?php the_field('pop_title', 'option'); ?>
     </div>
     <div class="pop-up__text">
-      Please fill out the form and we will contsct you shortly 
+      <?php the_field('pop_subtitle', 'option'); ?>
     </div>
     <div class="pop-up__close js-pop-up-close">
       <div class="pop-up__bt">
-
+        
+        </div>
       </div>
-    </div>
-    <form action="" class="contact-form js-pop-up-forms">
+      <form action="" class="contact-form js-pop-up-forms">
         <div class="row">
           <div class="col-12">
             <label class="contact-form__label">
@@ -23,19 +23,19 @@
           </div>
           <div class="col-12 col-l-6">
             <label class="contact-form__label">
-                <div class="contact-form__text">
-                  Email﹡
-                </div>
-                <input class="contact-form__input" required type="email" placeholder="Type your email">
-              </label>
+              <div class="contact-form__text">
+                Email﹡
+              </div>
+              <input class="contact-form__input" required type="email" placeholder="Type your email">
+            </label>
           </div>
           <div class="col-12 col-l-6">
             <label class="contact-form__label">
-                <div class="contact-form__text">
-                  Phone﹡
-                </div>
-                <input class="contact-form__input" required type="tel" placeholder="Type your phone">
-              </label>
+              <div class="contact-form__text">
+                Phone﹡
+              </div>
+              <input class="contact-form__input" required type="tel" placeholder="Type your phone">
+            </label>
           </div>
           <div class="col-12">
             <label class="contact-form__label">
@@ -47,35 +47,21 @@
           </div>
           <div class="col-12">
             <div class="contact-form__text2">
-              Select a product for which consultation is required
+              <?php the_field('pop_text'); ?>
             </div>
           </div>
           <div class="contact-form__sel">
             <div class="row">
-              <div class="col-6 col-l-4">
-                <label class="contact-form__rl">
-                  <input type="radio" name="contact" class="contact-form__input contact-form__radio">
-                    ULTRAcel Q+
-                </label>
-              </div>
-              <div class="col-6 col-l-4">
-                <label class="contact-form__rl">
-                  <input type="radio" name="contact" class="contact-form__input contact-form__radio">
-                    ULTRAcel Q+
-                </label>
-              </div>
-              <div class="col-6 col-l-4">
-                <label class="contact-form__rl">
-                  <input type="radio" name="contact" class="contact-form__input contact-form__radio">
-                    ULTRAcel Q+
-                </label>
-              </div>
-              <div class="col-6 col-l-4">
-                <label class="contact-form__rl">
-                  <input type="radio" name="contact" class="contact-form__input contact-form__radio">
-                    ULTRAcel Q+
-                </label>
-              </div>
+              <?php if(have_rows('pop_product_item', 'option')): ?>
+                <?php while(have_rows('pop_product_item', 'option')): the_row();?>
+                  <div class="col-6 col-l-4">
+                    <label class="contact-form__rl">
+                      <input type="radio" name="contact" class="contact-form__input contact-form__radio">
+                        <?php the_sub_field('name'); ?>
+                    </label>
+                  </div>
+                <?php endwhile;?>
+              <?php endif;?>
             </div>
           </div>
           <div class="col-12">

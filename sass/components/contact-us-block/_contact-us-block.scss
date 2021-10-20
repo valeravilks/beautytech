@@ -143,9 +143,9 @@
 
   &__rl {
     display: flex;
-
     @extend .text-body;
     color: #383838;
+    margin-bottom: 10px;
   }
 
   &__radio {
