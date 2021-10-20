@@ -34,6 +34,7 @@
     text-transform: uppercase;
     color: $color__gray-darker-text;
     margin-bottom: 20px;
+    min-height: 30px;
 
     @include media-breakpoint-only("s") {
       font-weight: 500;
