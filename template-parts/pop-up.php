@@ -47,7 +47,7 @@
           </div>
           <div class="col-12">
             <div class="contact-form__text2">
-              <?php the_field('pop_text'); ?>
+              <?php the_field('pop_text', 'option'); ?>
             </div>
           </div>
           <div class="contact-form__sel">
