@@ -4,7 +4,7 @@ $title = get_the_title();
 $description = get_field('products-description');
 $logoUrl = get_field('products-logo');
 $imageUrl = get_field('products-image-product');
-$brochureUrl = 'https://broshure';
+$brochureUrl = get_field('products-file');
 $transformImage = '';
 
 $desktopImageSetting = get_field('products-image-desktop-setting');
