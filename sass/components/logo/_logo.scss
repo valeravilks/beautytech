@@ -1,5 +1,5 @@
 .logo {
-    display: flex;
+    display: block;
 
     @include media-breakpoint-only('s'){
         width: 127px;
