@@ -21,7 +21,6 @@ get_header();
     <?php get_template_part('template-parts/cat-menu', '', array(
       'taxonomy' => 'category',
       'type' => 'post',
-      'active' => 'all'
       )); ?>
     <div class="container">
       <div class="row">

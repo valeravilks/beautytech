@@ -21,7 +21,6 @@ get_header();
     <?php get_template_part('template-parts/cat-menu', '', array(
       'taxonomy' => 'events-categories',
       'type' => 'events',
-      'active' => 'all'
       )); ?>
       
     <div class="container">
