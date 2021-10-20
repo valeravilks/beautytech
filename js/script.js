@@ -366,3 +366,17 @@ function generateURL(id) {
 }
 
 findVideos();
+
+// Header sticky
+
+( function( $ ) {
+
+  $(window).on('scroll', function() {
+    if($(window).scrollTop() > 200) {
+      $('.site-header').addClass('sticky');
+    } else {
+      $('.site-header').removeClass('sticky');
+    }
+  })
+
+}( jQuery ) );
