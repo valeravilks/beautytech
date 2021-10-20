@@ -1163,7 +1163,7 @@
     &-text3 {
       @extend .text-body;
       color: #383838;
-      margin-bottom: 200px;
+      // margin-bottom: 200px;
 
       @include media-breakpoint-only("s") {
         margin-bottom: 20px;
@@ -1891,7 +1891,12 @@
     &-text {
       @extend .text-body;
       color: #383838;
-      margin-bottom: 30px;
+      margin-bottom: 0;
+
+      @include media-breakpoint-only("s") {
+        margin-bottom: 30px;
+    
+      }
     }
   }
 
@@ -2464,7 +2469,7 @@
     margin-bottom: 100px;
 
     @include media-breakpoint-only("s") {
-      margin-bottom: 50px;
+      margin-bottom: 0;
     }
 
     &-img1{
