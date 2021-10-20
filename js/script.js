@@ -232,6 +232,7 @@ const swiperResult = new Swiper('.product-result__slider', {
          setTimeout(function(){
            $('.js-pop-up').fadeOut();
            $('.js-pop-up-bl-2').fadeOut();
+           $('body').css('overflow',  'auto');
            $(submitButton).prop('disabled', false);
            form.reset();
          }, 7000);
@@ -281,6 +282,7 @@ $('.js-pop-up-forms').on('submit', function(e) {
        setTimeout(function(){
          $('.js-pop-up').fadeOut();
          $('.js-pop-up-bl-2').fadeOut();
+         $('body').css('overflow',  'auto');
          $(submitButton).prop('disabled', false);
          form.reset();
        }, 7000);

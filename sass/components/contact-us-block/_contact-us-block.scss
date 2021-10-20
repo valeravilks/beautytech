@@ -146,12 +146,17 @@
     @extend .text-body;
     color: #383838;
     margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 15px;
+
   }
 
   &__radio {
     width: auto;
     margin-right: 10px;
     margin-top: 6px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
   &__sel {

@@ -56,7 +56,13 @@
                 <?php while(have_rows('pop_product_item', 'option')): the_row();?>
                   <div class="col-6 col-l-4">
                     <label class="contact-form__rl">
-                      <input type="radio" name="contact" class="contact-form__input contact-form__radio">
+                      <?php 
+                      $checked = '';
+                      if(strpos(get_the_title(), get_sub_field('name')) !== false) {
+                        $checked = 'checked';
+                      }
+                      ?>
+                      <input type="radio" name="contact" class="contact-form__input contact-form__radio" <?php echo $checked;?>>
                         <?php the_sub_field('name'); ?>
                     </label>
                   </div>
