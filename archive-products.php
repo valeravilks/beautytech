@@ -23,7 +23,7 @@ get_header();
       'type' => 'products',
       'active' => 'all'
       )); ?>
-    <div class="container">
+    <div class="container produc__mb">
       <div class="row">
         <?php
         $args = array(  

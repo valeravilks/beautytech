@@ -71,3 +71,11 @@
 .privacy-policy .entry-content{
   margin-bottom: 100px;
 }
+
+.produc__mb {
+  margin-bottom: 40px;
+
+  @include media-breakpoint-only("s") {
+    margin-bottom: 20px;
+  }
+}
