@@ -23,7 +23,7 @@ get_header();
       'type' => 'events',
       )); ?>
       
-    <div class="container">
+    <div class="container produc__mb">
       <div class="row">
        <?php  $index = 1; ?>
       <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
