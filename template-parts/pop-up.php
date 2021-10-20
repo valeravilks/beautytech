@@ -96,10 +96,10 @@
       </div>
     </div>
     <div class="pop-up__title5">
-      Thank you for your request
+      <?php the_field('pop_successful_submission_title', 'option'); ?>
     </div>
     <div class="pop-up__text5">
-      Thank you for your request
+      <?php the_field('pop_successful_submission_text', 'option'); ?>
     </div>
   </div>
   <div class="pop-up__block3 js-pop-up-bl-3">
@@ -109,7 +109,7 @@
       </div>
     </div>
     <div class="pop-up__title5">
-      Failed to submit the form. Email us.
+      <?php the_field('pop_error_title', 'option'); ?>
     </div>
   </div>
 </div>
