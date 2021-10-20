@@ -41,7 +41,7 @@
         <div class="product-indications__col-3">
           <hr class="product-indications__hr-4">
         <?php 
-          foreach($args['items'] as $item):?>
+          foreach($args['text-list'] as $item):?>
                 <div class="product-indications__text-4-3">
                   <?php echo $item['text']; ?>
                 </div>
