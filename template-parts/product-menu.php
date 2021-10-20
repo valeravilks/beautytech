@@ -7,7 +7,7 @@
           while(have_rows('products-menu')) : the_row() ?>
             <li class="product-menu__item">
               <a 
-                href="<?php echo esc_url('#'.get_sub_field('link-name')); ?>" 
+                href="<?php echo '#'.str_replace(' ', '_', get_sub_field('link-name')); ?>" 
                 class="product-menu__link" 
                 data-link="<?php the_sub_field('text-header'); ?>">
                 <?php the_sub_field('link-name'); ?>
