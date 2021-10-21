@@ -63,6 +63,10 @@ textarea {
 	@extend .text-form-label;
 	color: $color__gray-body-text;
 
+	&-m0 {
+		margin-left: 0!important;
+	}
+
 	@include media-breakpoint-only('s') {
 		font-weight: normal;
     font-size: 13px;

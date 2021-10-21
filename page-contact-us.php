@@ -21,6 +21,7 @@ get_header();
   <?php get_template_part('template-parts/breadcrumbs'); ?>
     <?php get_template_part('template-parts/page-title', '', array('title' => 'Contact')); ?>
 		<?php get_template_part('template-parts/contact-us-block', '', array('isTitle' => 'no', 'class' => 'js-contact-page-form')); ?>
+		<?php get_template_part('template-parts/company-list'); ?>
 	</main><!-- #main -->
 <?php
 get_footer();

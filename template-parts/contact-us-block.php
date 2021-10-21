@@ -64,6 +64,16 @@
               </label>
               </div>
             </div>
+            <div class="col-12">
+              <div class="contact-form__checkbox">
+                <label class="contact-form__check check option check-m0">
+                  <input class="check__input" name="whatsapp" type="checkbox">
+                  <span class="check__box"></span>
+                  I agree to the  
+                  <a class="pr-po" href="<?php echo bloginfo('url');?>/privacy-policy">Privacy Policy </a>
+              </label>
+              </div>
+            </div>
           </div>
           <div class="contact-form__bottom">
             <div class="contact-form__recaptcha" id="js-recaptcha">
