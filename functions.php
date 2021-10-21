@@ -361,11 +361,11 @@ function cform_callback() {
 	wp_die();
 }
 
-// Remove slug events in custom post type
+//Remove slug products in custom post type
 
 function na_remove_slug( $post_link, $post, $leavename ) {
 
-	if ( 'events' != $post->post_type || 'publish' != $post->post_status ) {
+	if ( 'products' != $post->post_type || 'publish' != $post->post_status ) {
 			return $post_link;
 	}
 
@@ -382,7 +382,7 @@ function na_parse_request( $query ) {
 	}
 
 	if ( ! empty( $query->query['name'] ) ) {
-			$query->set( 'post_type', array( 'post', 'events', 'page' ) );
+			$query->set( 'post_type', array( 'post', 'products', 'page' ) );
 	}
 }
 add_action( 'pre_get_posts', 'na_parse_request' );
