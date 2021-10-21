@@ -233,9 +233,24 @@ const swiperResult = new Swiper('.product-result__slider', {
     formData.append('action', 'cform');
     formData.append('id', 1);
 
-    let rez = grecaptcha.getResponse(widgetId1);
+    let policy = $('.js-policy').is(':checked');
+
+    if(!policy) {
+      alert('You agree to the privacy policy to submit the form.');
+    }
+
     
-    if(rez) {
+    let rez = grecaptcha.getResponse(widgetId1);
+    if(!rez) {
+      alert('Enter the captcha.');
+    }
+    console.log(!rez);
+
+    if(!rez) {
+      alert('Enter the captcha.');
+    }
+    
+    if(rez && policy) {
       $.ajax({
         type: 'POST',
         data: formData,
@@ -243,6 +258,7 @@ const swiperResult = new Swiper('.product-result__slider', {
         processData: false,
         contentType: false,
         success: function(r){
+          console.log('success send message');
          $('.js-pop-up').fadeIn();
          $('.js-pop-up-bl-2').fadeIn();
          setTimeout(function(){
@@ -254,6 +270,7 @@ const swiperResult = new Swiper('.product-result__slider', {
          }, 7000);
         },
         error: function(r){
+          console.log('error send message');
          $('.js-pop-up').fadeIn();
          $('.js-pop-up-bl-3').fadeIn();
          setTimeout(function(){
@@ -264,7 +281,6 @@ const swiperResult = new Swiper('.product-result__slider', {
         }
       });
     } else {
-      alert('Enter the captcha.');
       $(submitButton).prop('disabled', false);
     }
   }
@@ -283,9 +299,24 @@ $('.js-pop-up-forms').on('submit', function(e) {
   formData.append('action', 'cform');
   formData.append('id', 1);
 
+  let policy = $('.js-policy').is(':checked');
+
+  if(!policy) {
+    alert('You agree to the privacy policy to submit the form.');
+  }
+
   let rez = grecaptcha.getResponse(widgetId2);
+
+  if(!rez) {
+    alert('Enter the captcha.');
+  }
+
+  console.log('policy:' + policy);
+  console.log('rez:' + rez);
+  console.log('result bool' + Boolean(rez) && policy);
+
   
-  if(rez) {
+  if(rez && policy) {
     $.ajax({
       type: 'POST',
       data: formData,
@@ -293,6 +324,7 @@ $('.js-pop-up-forms').on('submit', function(e) {
       processData: false,
       contentType: false,
       success: function(r){
+        console.log('success send message');
        $('.js-pop-up-bl-1').fadeOut();
        $('.js-pop-up-bl-2').fadeIn();
        setTimeout(function(){
@@ -304,6 +336,7 @@ $('.js-pop-up-forms').on('submit', function(e) {
        }, 7000);
       },
       error: function(r){
+       console.log('error send message');
        $('.js-pop-up-bl-1').fadeOut();
        $('.js-pop-up-bl-3').fadeIn();
        setTimeout(function(){
@@ -314,7 +347,6 @@ $('.js-pop-up-forms').on('submit', function(e) {
       }
     });
   } else {
-    alert('Enter the captcha.');
     $(submitButton).prop('disabled', false);
   }
 })
