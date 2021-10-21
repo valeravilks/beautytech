@@ -246,9 +246,6 @@ const swiperResult = new Swiper('.product-result__slider', {
     }
     console.log(!rez);
 
-    if(!rez) {
-      alert('Enter the captcha.');
-    }
     
     if(rez && policy) {
       $.ajax({
