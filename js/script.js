@@ -409,3 +409,69 @@ findVideos();
   })
 
 }( jQuery ) );
+
+// Work with map
+
+let map;
+let map2;
+
+function initMap() {
+  console.log('')
+  if($('.js-map-set').eq(0).attr('data-coor-1')) {
+
+    let lat = $('.js-map-set').eq(0).attr('data-coor-1');
+    let lng = $('.js-map-set').eq(0).attr('data-coor-2');
+  
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { 
+        lat: +lat, 
+        lng: +lng 
+      },
+      zoom: 14,
+      disableDefaultUI: true,
+      streetViewControl: false,
+    });
+  
+    map.setOptions({ styles: styles["hide"] });
+  }
+
+  map2 = new google.maps.Map(document.getElementById("map-contact"), {
+    center: { 
+      lat: +$('#map-contact').attr('data-coor-1'), 
+      lng: +$('#map-contact').attr('data-coor-2') 
+    },
+    zoom: 14,
+    disableDefaultUI: true,
+    streetViewControl: false,
+  });
+
+  map2.setOptions({ styles: styles["hide"] });
+
+}
+const styles = {
+  default: [],
+  hide: [
+    {
+      featureType: "poi.business",
+      stylers: [{ visibility: "off" }],
+    },
+    {
+      featureType: "transit",
+      elementType: "labels.icon",
+      stylers: [{ visibility: "off" }],
+    },
+  ],
+};
+
+$('.js-map-set').on('click', function(){
+  // if(map) {
+    let lat = $(this).attr('data-coor-1');
+    let lng = $(this).attr('data-coor-2');
+
+    // map.setCenter(parseFloat(lon), parseFloat(lat), 14);
+    map.setCenter({lat: +lat, lng: +lng}, 14);
+    map.setZoom(14);
+  // }
+})
+
+

@@ -21,6 +21,13 @@ get_header();
   <?php get_template_part('template-parts/breadcrumbs'); ?>
     <?php get_template_part('template-parts/page-title', '', array('title' => 'Contact')); ?>
 		<?php get_template_part('template-parts/contact-us-block', '', array('isTitle' => 'no', 'class' => 'js-contact-page-form')); ?>
+		<div class="content-page__maps">
+			<div 
+				id="map-contact" 
+				data-coor-1="<?php the_field('contact_coordinate_1'); ?>"
+				data-coor-2="<?php the_field('contact_coordinate_2'); ?>"
+			></div>
+		</div>
 		<?php get_template_part('template-parts/company-list'); ?>
 	</main><!-- #main -->
 <?php

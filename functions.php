@@ -154,6 +154,7 @@ function beautytech_scripts() {
 	wp_enqueue_script( 'beautytech-recaptcha', 'https://www.google.com/recaptcha/api.js?onload=onloadCallback', array(), _S_VERSION, true );
 	wp_enqueue_script( 'beautytech-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'beautytech-script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'beautytech-gmaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Rzk8Au7af8rc4AbXRcwJS5fccSEGmso&callback=initMap', array(), _S_VERSION, true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

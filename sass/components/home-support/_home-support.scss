@@ -40,4 +40,10 @@
       display: none;
     }
   }
+
+  &__mn {
+    @include media-breakpoint-only("s") {
+      display: none;
+    }
+  }
 }
