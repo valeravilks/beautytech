@@ -2,7 +2,7 @@
 
 ?>
 
-<div class="contact-us-block" style="padding: <?php if($args['isTitle'] == 'no') { echo '20px 0 200px'; } ?>">
+<div class="contact-us-block" style="padding: <?php if($args['isTitle'] == 'no' && !is_page('contact-us')) { echo '20px 0 200px'; } ?>">
   <div class="container">
     <?php if($args['isTitle'] !== 'no'):?>
     <h2 class="contact-us-block__h2">
