@@ -36,6 +36,25 @@ const swiperRev = new Swiper('.home-rev__slider', {
   }
 });
 
+const swiperVideo = new Swiper('.product-video__swiper', {
+  autoHeight: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.product-video__next',
+    prevEl: '.product-video__prev',
+  },
+  // pagination: {
+  //   el: ".product-video__pagination",
+  //   clickable: true,
+  //   renderBullet: function (index, className) {
+  //     return '<div class="product-video__bullet swiper-pagination-bullet"></div>';
+  //   },
+  // },
+
+});
+
 const swiperT2 = new Swiper('.t-2-slider', {
   autoHeight: true,
   slidesPerView: 1,
