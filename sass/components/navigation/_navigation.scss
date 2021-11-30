@@ -6,9 +6,14 @@
 	@include media-breakpoint-only('s'){
 		position: absolute;
 		background: #F8F8F8;
-		width: 265px;
-		padding: 86px 25px 15px 25px;
-		top: 0;
+		// width: 265px;
+		padding: 0 40px!important;
+		top: 31px;
+		height: calc(100vh - 31px);
+		left: 0;
+		right: 0;
+		border-top: 1px solid #E5E5E5;
+
 		z-index: 100;
 		display: none;
 	}	
@@ -23,6 +28,8 @@
 		@include media-breakpoint-only('s'){
 			display: flex;
 			flex-direction: column;
+			border-bottom: 1px solid #E5E5E5;
+			padding: 10px 0;
 		}	
 
 		ul {
@@ -82,7 +89,7 @@
 			padding: 15px 0;
 
 			&:not(:last-child) {
-				border-bottom: 1px solid #ECECEC;
+				// border-bottom: 1px solid #ECECEC;
 			}
 		}	
 

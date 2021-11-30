@@ -28,12 +28,8 @@
 		<div class="site-header__container">
 			<?php get_template_part('template-parts/logo', '', array('class' => 'site-header__logo'))?>
 			<img class="site-header__mobile-menu js-menu-open"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-menu.svg" alt="icon-menu">
+			<img class="site-header__mobile-menu js-menu-close"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-close.svg" alt="icon-menu">
 			<nav id="site-navigation" class="site-header__menu main-navigation js-main-menu">
-			<div class="menu-close__close menu-close-close js-menu-close">
-				<div class="menu-close__bt">
-
-				</div>
-			</div>
 				<?php
 				wp_nav_menu(
 					array(
@@ -42,6 +38,9 @@
 					)
 				);
 				?>
+				<div class="site-header__soc">
+					<?php get_template_part('template-parts/soc-link'); ?>
+				</div>
 			</nav>
 			<?php 
 			$link = get_field('contact-page-link', 'option');

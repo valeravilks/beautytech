@@ -184,14 +184,17 @@ const swiperResult = new Swiper('.product-result__slider', {
 
 ( function( $ ) {
   $('.js-menu-open').on('click' ,function(e){
-    $('.js-main-menu').fadeIn();
+    $('.js-main-menu').show();
+    $('.js-menu-open').hide();
+    $('.js-menu-close').show();
   })
   
   $('.js-menu-close').on('click', function() {
     // if($(window).width() < 1173.98) {
-      $('.js-main-menu').fadeOut(function(){
-        $('.js-main-menu').css('display', '');
-      });
+      $('.js-main-menu').hide();
+      $('.js-main-menu').css('display', '');
+      $('.js-menu-close').hide();
+      $('.js-menu-open').show();
     // }
   })
 
@@ -200,9 +203,16 @@ const swiperResult = new Swiper('.product-result__slider', {
   $(window).on('resize', function() {
     console.log('res');
       if($(window).width() !== windowWidth ) {
-          $('.js-main-menu').fadeOut(function(){
-            $('.js-main-menu').css('display', '');
-          });
+        $('.js-main-menu').hide();
+        $('.js-main-menu').css('display', '');
+        $('.js-menu-close').hide();
+        $('.js-menu-open').show();
+      } 
+      
+      if($(window).width() > 1280) {
+        $('.js-menu-close').hide();
+        $('.js-menu-open').hide();
+        console.log('resize w');
       }
   })
 
@@ -492,5 +502,8 @@ $('.js-map-set').on('click', function(){
     map.setZoom(14);
   // }
 })
+
+
+// Add icon in mobile menu 
 
 

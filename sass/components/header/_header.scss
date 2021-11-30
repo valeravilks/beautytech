@@ -1,4 +1,7 @@
 .site-header {
+    @include media-breakpoint-only('s'){
+        position: relative;
+    }
 
     &.sticky {
         position: fixed;
@@ -25,11 +28,11 @@
         position: relative;
 
         @include media-breakpoint-only('s'){
-            position: relative;
             padding-top: 3px;
             padding-bottom: 3px;
             justify-content: space-between;
             height: 31px;
+            position: initial;
         }
     }
 
@@ -43,8 +46,7 @@
         padding-left: 90px;
 
         @include media-breakpoint-only('s'){
-            
-            padding-left: 25px;
+            // padding-left: 0;
         }
     }
 
@@ -78,6 +80,15 @@
         @include media-breakpoint-only('s'){
             display: block;
             order: 2;
+        }
+    }
+
+    &__soc {
+        display: none;
+
+        @include media-breakpoint-only('s'){
+            display: block;
+            margin-top: 20px;
         }
     }
 }
