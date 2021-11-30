@@ -1,7 +1,7 @@
 .logo {
     display: block;
 
-    @include media-breakpoint-only('s'){
-        width: 127px;
+    img {
+        height: 100%;
     }
 }

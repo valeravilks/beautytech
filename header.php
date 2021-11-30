@@ -27,6 +27,7 @@
 	<header id="masthead" class="site-header">
 		<div class="site-header__container">
 			<?php get_template_part('template-parts/logo', '', array('class' => 'site-header__logo'))?>
+			<img class="site-header__mobile-menu js-menu-open"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-menu.svg" alt="icon-menu">
 			<nav id="site-navigation" class="site-header__menu main-navigation js-main-menu">
 			<div class="menu-close__close menu-close-close js-menu-close">
 				<div class="menu-close__bt">
@@ -53,7 +54,6 @@
 				<?php echo esc_html($link['title'])?>
 			</a>	
 			
-			<img class="site-header__mobile-menu js-menu-open"src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-menu.svg" alt="icon-menu">
 			<a href="<?php echo esc_url($link['url']) ?>" class="site-header__mobile-contact">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/svg/icon-mobile-menu.svg" alt="icon-menu">
 			</a>

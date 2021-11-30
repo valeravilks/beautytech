@@ -10,24 +10,26 @@
         border-bottom: 1px solid #ECECEC;
 
         .site-header__container {
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding-top: 3px;
+            padding-bottom: 3px;
         }
     }
 
     &__container {
         @extend .container;
         
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         display: flex;
         align-items: center;
         position: relative;
 
         @include media-breakpoint-only('s'){
-            padding-top: 20px;
-            padding-bottom: 20px;
+            position: relative;
+            padding-top: 3px;
+            padding-bottom: 3px;
             justify-content: space-between;
+            height: 31px;
         }
     }
 
@@ -51,7 +53,13 @@
         display: block;
 
         @include media-breakpoint-only('s'){
-            order: 1
+            order: 1;
+            flex-grow: 1;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 
