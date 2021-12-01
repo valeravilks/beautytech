@@ -2,83 +2,66 @@
 
 ?>
 
-<div class="contact-us-block" style="padding: <?php if($args['isTitle'] == 'no' && !is_page('contact-us')) { echo '20px 0 200px'; } ?>">
+<div class="contact-us-block">
   <div class="container">
-    <?php if($args['isTitle'] !== 'no'):?>
-    <h2 class="contact-us-block__h2">
-      Contact us
-    </h2>
-    <?php endif; ?>
-    <div class="row">
-      <div class="col-12 col-l-6">
-        <div class="contact-us-block__back">
-          <div class="contact-us-block__desc">
-            Please fill out the form and we will contsct you shortly 
-          </div>
-        </div> 
-      </div>
-    </div>
     <div class="row">
       <div class="col-12 col-l-6">
         <form action="" class="contact-form js-contact-page-form <?php echo $args['class']?>">
           <div class="row">
             <div class="col-12">
+              <h1 class="contact-us-block__h2">
+                Contact
+              </h1>
+              <div class="contact-us-block__back">
+                <div class="contact-us-block__desc">
+                  Please fill out the form and we will contsct you shortly 
+                </div>
+              </div> 
+            </div>
+            <div class="col-12">
               <label class="contact-form__label">
-                <div class="contact-form__text">
+                <!-- <div class="contact-form__text">
                   Name *
-                </div>
-                <input class="contact-form__input"  required name="name" type="text" placeholder="Type your name">
+                </div> -->
+                <input class="contact-form__input"  required name="name" type="text" placeholder="Name *">
               </label>
             </div>
             <div class="col-12 col-l-6">
               <label class="contact-form__label">
-                  <div class="contact-form__text">
+                  <!-- <div class="contact-form__text">
                     Email﹡
-                  </div>
-                  <input class="contact-form__input" required name="email" type="email" placeholder="Type your email">
+                  </div> -->
+                  <input class="contact-form__input" required name="email" type="email" placeholder="Email﹡">
                 </label>
             </div>
             <div class="col-12 col-l-6">
               <label class="contact-form__label">
-                  <div class="contact-form__text">
+                  <!-- <div class="contact-form__text">
                     Phone﹡
-                  </div>
-                  <input class="contact-form__input" required type="tel" name="phone" placeholder="Type your phone">
+                  </div> -->
+                  <input class="contact-form__input" required type="tel" name="phone" placeholder="Phone﹡">
                 </label>
             </div>
             <div class="col-12">
               <label class="contact-form__label">
-                <div class="contact-form__text">
+                <!-- <div class="contact-form__text">
                   Message
-                </div>
-                <textarea class="contact-form__input contact-form__textarea" name="messege" placeholder="Type your message here..."></textarea>
+                </div> -->
+                <textarea class="contact-form__input contact-form__textarea" name="messege" placeholder="Message"></textarea>
               </label>
-            </div>
-            <div class="col-12">
-              <div class="contact-form__checkbox">
-                <img src="<?php echo get_template_directory_uri();?>/img/svg/icon-whatsapp.svg" alt=""> 
-                <label class="contact-form__check check option">
-                  <input class="check__input" name="whatsapp" type="checkbox">
-                  <span class="check__box"></span>
-                  Please contact me by Whatsapp
-              </label>
-              </div>
             </div>
             <div class="col-12">
               <div class="contact-form__checkbox">
                 <label class="contact-form__check check option check-m0">
                   <input class="check__input js-policy" name="whatsapp" type="checkbox">
                   <span class="check__box"></span>
-                  I agree to the  
-                  <a class="pr-po" href="<?php echo bloginfo('url');?>/privacy-policy">Privacy Policy </a>
+                  I authorize the processing of the 
+                  <a class="pr-po" href="<?php echo bloginfo('url');?>/privacy-policy">personal data</a>
               </label>
               </div>
             </div>
           </div>
           <div class="contact-form__bottom">
-            <div class="contact-form__recaptcha" id="js-recaptcha">
-              
-            </div>
             <input class="contact-form__submit" type="submit" value="SEND">
           </div>
         </form>

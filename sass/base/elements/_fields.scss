@@ -14,11 +14,15 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__gray-darker-text;
-	border: 1px solid $color__gray-line;
-	border-radius: 5px;
-	padding: 12px 15px;
-	@extend .text-form-placeholder;
+	border: none;
+	border-bottom: 1px solid #E6E6E6;
+	padding: 12px 0;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #969797;
 	transition: .3s;
 
 	::placeholder {
@@ -27,7 +31,7 @@ textarea {
 
 	&:hover {
 		color: $color__gray-body-text;
-		outline: 1px solid $color__gray-body-text;
+		// outline: 1px solid $color__gray-body-text;
 
 		&::placeholder {
 			color: $color__gray-body-text;
@@ -36,7 +40,8 @@ textarea {
 
 	&:focus {
 		color: $color__gray-body-text;
-		outline: 1px solid $color__gray-body-text;
+		outline: none;
+		// outline: 1px solid $color__gray-body-text;
 	}
 }
 
@@ -46,6 +51,10 @@ select {
 
 textarea {
 	width: 100%;
+	resize: none;
+	overflow: hidden;
+	min-height: 50px;
+	max-height: 100px;
 }
 
 /* Option */

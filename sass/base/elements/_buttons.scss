@@ -3,26 +3,34 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	padding: 12px 41px;
-	background: #5E95BF;
-	border-radius: 3px;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 15px;
-	letter-spacing: 0.01em;
-	text-transform: uppercase;
-	color: #FEFEFE;
 	border: none;
 	cursor: pointer;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 150%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	padding: 20px 60px;
+	border-radius: 12px;
+	text-decoration: none;
+	background: #64A9C6;
 	transition: .3s;
 
+
+	@include media-breakpoint-only('s') {
+			font-size: 10px;
+			padding: 12px 40px;
+			align-self: stretch;
+			text-align: center;
+	}
+
 	&:hover {
-		background: #69A9DB;
-		box-shadow: 5px 5px 30px rgba(94, 149, 191, 0.3);
+		opacity: .8;
 	}
 
 	&:active {
-		background: #4E81A9;
+		// background: #4E81A9;
 		outline: none;
 	}
 }
