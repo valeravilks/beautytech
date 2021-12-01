@@ -10,7 +10,7 @@
   display: none;
 
   @include media-breakpoint-only("s") {
-    padding: 0 20px;
+    padding: 0;
   } 
 
   &__block1 {
@@ -19,7 +19,7 @@
     padding: 150px 0;
     background: #FEFEFE;
     box-shadow: 0px 0px 30px rgba(97, 97, 97, 0.25);
-    border-radius: 10px;
+    // border-radius: 10px;
     margin-top: 150px;
     margin-bottom: 150px;
     padding: 70px 195px;
@@ -27,20 +27,24 @@
     display: none;
 
     @include media-breakpoint-only("s") {
-      margin-top: 30px;
+      margin-top: 0;
       padding: 50px 15px;
-      margin-bottom: 30px;
+      margin-bottom: 0;
     } 
   }
 
   &__title {
-    @extend .h3;
-    color: #505050;
-    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #303034;
+    margin-bottom: 40px;
     text-align: center;
 
     @include media-breakpoint-only("s") {
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin-top: 40px;
     } 
   }
 
@@ -131,9 +135,9 @@
 
 
     @include media-breakpoint-only("s") {
-      margin-top: 30px;
+      margin-top: 0;
       padding: 100px 15px;
-      margin-bottom: 30px;
+      margin-bottom: 0;
     } 
   }
 

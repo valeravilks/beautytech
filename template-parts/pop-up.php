@@ -3,9 +3,6 @@
     <div class="pop-up__title">
       <?php the_field('pop_title', 'option'); ?>
     </div>
-    <div class="pop-up__text">
-      <?php the_field('pop_subtitle', 'option'); ?>
-    </div>
     <div class="pop-up__close js-pop-up-close">
       <div class="pop-up__bt">
         
@@ -13,72 +10,20 @@
       </div>
       <form action="" class="contact-form js-pop-up-forms">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 col-l-6">
             <label class="contact-form__label">
-              <div class="contact-form__text">
-                Name *
-              </div>
-              <input class="contact-form__input" required type="text" placeholder="Type your name">
+              <input class="contact-form__input" required type="text" placeholder="Name *">
             </label>
           </div>
           <div class="col-12 col-l-6">
             <label class="contact-form__label">
-              <div class="contact-form__text">
-                Email﹡
-              </div>
-              <input class="contact-form__input" required type="email" placeholder="Type your email">
-            </label>
-          </div>
-          <div class="col-12 col-l-6">
-            <label class="contact-form__label">
-              <div class="contact-form__text">
-                Phone﹡
-              </div>
-              <input class="contact-form__input" required type="tel" placeholder="Type your phone">
+              <input class="contact-form__input" required type="tel" placeholder="Phone﹡">
             </label>
           </div>
           <div class="col-12">
             <label class="contact-form__label">
-              <div class="contact-form__text">
-                Message
-              </div>
-              <textarea class="contact-form__input contact-form__textarea" placeholder="Type your message here..."></textarea>
+              <input class="contact-form__input" required type="email" placeholder="Email﹡">
             </label>
-          </div>
-          <div class="col-12">
-            <div class="contact-form__text2">
-              <?php the_field('pop_text', 'option'); ?>
-            </div>
-          </div>
-          <div class="contact-form__sel">
-            <div class="row">
-              <?php if(have_rows('pop_product_item', 'option')): ?>
-                <?php while(have_rows('pop_product_item', 'option')): the_row();?>
-                  <div class="col-6 col-l-4">
-                    <label class="contact-form__rl">
-                      <?php 
-                      $checked = '';
-                      if(strpos(get_the_title(), get_sub_field('name')) !== false) {
-                        $checked = 'checked';
-                      }
-                      ?>
-                      <input type="radio" name="contact" class="contact-form__input contact-form__radio" <?php echo $checked;?>>
-                        <?php the_sub_field('name'); ?>
-                    </label>
-                  </div>
-                <?php endwhile;?>
-              <?php endif;?>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="contact-form__checkbox">
-              <img src="<?php echo get_template_directory_uri();?>/img/svg/icon-whatsapp.svg" alt=""> 
-              <label class="contact-form__check check option">
-                <input class="check__input" type="checkbox">
-                <span class="check__box"></span>
-                Please contact me by Whatsapp
-            </label>
-            </div>
           </div>
           <div class="col-12">
             <div class="contact-form__checkbox">
@@ -91,11 +36,8 @@
             </div>
           </div>
         </div>
-        <div class="contact-form__bottom">
-          <div class="contact-form__recaptcha" id="js-recaptcha-2">
-           
-          </div>
-          <input class="contact-form__submit" type="submit" value="SEND">
+        <div class="contact-form__bottom contact-form__bottom-2">
+          <input class="contact-form__submit contact-form__submit-2" type="submit" value="Request a consultation">
         </div>
       </form>
   </div>

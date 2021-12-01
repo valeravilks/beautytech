@@ -7,7 +7,7 @@
 						<div class="footer-top__text">
 							<?php the_field('fm_text', 'option');?>
 						</div>
-						<a href="#" class="footer-top__link">
+						<a href="#" class="footer-top__link js-consultation">
 							<?php the_field('fm_btn', 'option');?>
 						</a>
 				</div>

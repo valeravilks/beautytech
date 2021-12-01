@@ -119,6 +119,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    &-2 {
+      justify-content: center;
+    }
   }
 
   &__recaptcha {
@@ -137,6 +141,14 @@
 			text-align: center;
       width: 100%;
 	  }
+
+    &-2 {
+      padding: 20px 60px!important;
+
+      @include media-breakpoint-only('s') {
+        padding: 12px 40px!important;
+      }
+    }
   } 
 
 
