@@ -104,12 +104,13 @@
 
 .text-body {
     font-weight: normal;
-    font-size: 17px;
-    line-height: 27px;
+    font-size: 18px;
+    line-height: 150%;
+    color: #65656C;
     
      @include media-breakpoint-only("s") {
-         font-size: 15px;
-         line-height: 27px;
+        font-size: 16px;
+        line-height: 150%;
      }
 }
 
@@ -218,4 +219,29 @@
     @include media-breakpoint-only("s") {
       padding: 1px 5px;
     }
+}
+
+.text-large {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 120%;
+    color: #303034;
+    
+    @include media-breakpoint-only("s") {
+        font-size: 24px;
+        line-height: 120%;
+    }
   }
+
+    .text-sub {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #969797;
+
+        @include media-breakpoint-only("s") {
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }

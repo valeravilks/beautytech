@@ -17,7 +17,7 @@ get_header();
 
 ?>
 
-	<main id="primary" class="site-main contact-page">
+	<main id="primary" class="site-main contact-page for-">
 		<section class="d-cover">
 			<div class="d-cover__back">
 				<div class="d-cover__bg1" style="background-image: url('<?php echo get_field('d-background')['url'];?>')"></div>
@@ -36,6 +36,110 @@ get_header();
 					'h2' => get_field('d-how_it_works'),
 				));
 		?>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 offset-l-4 col-l-8">
+					<div class="doctors__bl1">
+						<div class="doctors__text1">
+							<?php the_field('d-text-2');?>
+						</div>
+						<div class="doctors__text2">
+							<?php the_field('d-text-3');?>
+						</div>
+						<div class="doctors__bl2">
+							<img src="<?php echo get_field('d-img')['url'];?>" alt="img" class="doctors__img1">	
+							<div class="doctors__bl3">
+								<div class="doctors__text3">
+									<?php the_field('d-text-33');?>
+								</div>
+								<hr class="doctors__hr1">
+							</div>
+							<div class="doctors__bl3">
+								<div class="doctors__text3">
+									<?php the_field('d-text-4');?>
+								</div>
+								<hr class="doctors__hr2">
+							</div>
+							<div class="doctors__bl3">
+								<div class="doctors__text3">
+									<?php the_field('d-text-5');?>
+								</div>
+								<hr class="doctors__hr3">
+							</div>
+							<div class="doctors__bl3">
+								<div class="doctors__text3">
+									<?php the_field('d-text-6');?>
+								</div>
+								<hr class="doctors__hr4">
+							</div>
+							<div class="doctors__bl3">
+								<div class="doctors__text3">
+									<?php the_field('d-text-7');?>
+								</div>
+								<hr class="doctors__hr5">
+							</div>
+						</div>
+						<div class="doctors__text4">
+							<?php the_field('d-text-8');?>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-l-4">
+					<div class="doctors__text5">
+						<?php the_field('d-subtitle-1');?>
+					</div>
+				</div>
+				<div class="col-12 col-l-8">
+					<div class="doctors__text6">
+						<?php the_field('d-text-9');?>
+					</div>
+					<div class="row doctors__bl5">
+						<div class="col-12 col-l-6">
+							<div class="doctors__bl4">
+								<img src="<?php echo get_field('d-img-2')['url'];?>" alt="img" class="doctors__img2">
+								<div class="doctors__cap">
+									<?php the_field('d-caption-1');?>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-l-6">
+							<div class="doctors__bl4">
+								<img src="<?php echo get_field('d-img-3')['url'];?>" alt="img" class="doctors__img2">
+								<div class="doctors__cap">
+									<?php the_field('d-caption-2');?>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="doctors__text7">
+						<?php the_field('d-text-10');?>
+					</div>
+				</div>
+				<div class="col-12 col-l-3">
+					<div class="doctors__text5">
+						<?php the_field('d-subtitle-2');?>
+					</div>
+				</div>
+				<div class="col-12 offset-l-1 col-l-8">
+					<div class="doctors__text8">
+						<?php the_field('d-text-11');?>
+					</div>
+				</div>
+				<div class="col-12 offset-l-4 col-l-5">
+					<img src="<?php echo get_field('d-img-4')['url'];?>" alt="img" class="doctors__img3">
+				</div>
+			</div>
+		</div>
+		
 	</main><!-- #main -->
 <?php
 get_footer();
+
+// Subtitle
+// d-subtitle-2Text
+// 23
+// Text
+// d-text-11Text Area
+// 24
+// Image
+// d-img-4
