@@ -146,14 +146,20 @@
     &__col-2 {
         display: flex;
         align-items: center;
+        flex-direction: row-reverse;
 
         @include media-breakpoint-only('s') {
             align-items: flex-start;
-            flex-direction: row-reverse;
         }
     }
 
     &__soc {
+
+        .soc-link__link {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+
         @include media-breakpoint-only('s') {
             .soc-link {
                 flex-direction: column;
@@ -163,9 +169,6 @@
                 margin-bottom: 10px;
             }
 
-            .soc-link__link {
-                margin-right: 0;
-            }
         }
     }
 }
