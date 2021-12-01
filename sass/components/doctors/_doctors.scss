@@ -1,0 +1,81 @@
+.doctors {
+
+}
+
+.d-cover {
+  height: 715px;
+  margin-bottom: 150px;
+  position: relative;
+
+  @include media-breakpoint-only('s') {
+    height: 537px;
+    margin-bottom: 50px;
+  }
+
+  &__h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    color: #303034;
+    margin-bottom: 40px;
+    max-width: 860px;
+    padding-top: 127px;
+    margin-top: 0;
+
+    @include media-breakpoint-only('s') {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 20px;
+      padding-top: 25px;
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #65656C;
+    max-width: 495px;
+
+    @include media-breakpoint-only('s') {
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+
+  &__back {
+    position: absolute;
+    right: 0;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    @include media-breakpoint-only('s') {
+      left: 0;
+    }
+  }
+
+  &__bg1 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    @include media-breakpoint-only('s') {
+      display: none;
+    }
+  }
+  
+  &__bg2 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: none;
+    background-position: bottom;
+
+    @include media-breakpoint-only('s') {
+      display: block;
+    }
+  }
+
+}
