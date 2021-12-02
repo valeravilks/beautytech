@@ -130,6 +130,7 @@ get_header();
 				</div>
 			</div>
 		</div>
+		<?php echo get_template_part('template-parts/product-video');?>
 		
 	</main><!-- #main -->
 <?php
