@@ -1,0 +1,44 @@
+.result {
+  margin-bottom: 150px;
+
+  @include media-breakpoint-only('s') {
+    margin-bottom: 100px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-only('s') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__button {
+    margin-right: 30px;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #303034;
+    background: none;
+    border: 1px solid #303034;  
+    padding: 5px 30px;
+    text-transform: initial;
+    letter-spacing: 0;
+    
+    @include media-breakpoint-only('s') {
+      margin-bottom: 20px;
+      padding: 5px 20px;
+      font-size: 12px;
+      margin-right: 20px;
+    }
+    
+    &-active{
+      color: #FFFFFF;
+      background: #303034;
+      
+    }
+  }
+}

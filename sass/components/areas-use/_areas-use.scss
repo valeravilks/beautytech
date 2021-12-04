@@ -22,7 +22,10 @@
   }
 
   &__image {
+    width: 100%;
+
     @include media-breakpoint-only('s') {
+      width: auto;
       height: 580px;
       max-width: fit-content;
     }

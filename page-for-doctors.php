@@ -182,7 +182,25 @@ get_header();
 				</div>
 			</div>
 		</section>
-		
+		<section class="result">
+			<?php get_template_part('template-parts/h2-block', '', array(
+						'h2' => get_field('adv-title'),
+					));
+			?>
+			<div class="result__block1">
+				<div class="container">
+					<div class="result__buttons">
+						<button class="result__button result__button-active">
+							Face
+						</button>
+						<button class="result__button">
+							Body
+						</button>
+					</div>
+				</div>
+			</div>
+			
+		</section>
 	</main><!-- #main -->
 <?php
 get_footer();
