@@ -131,6 +131,24 @@ get_header();
 			</div>
 		</div>
 		<?php echo get_template_part('template-parts/product-video');?>
+		<section class="areas-use">
+			<div class="areas-use__block2">
+				<img src="<?php echo get_field('area-use-image')['url'];?>" alt="img" class="areas-use__image">
+			</div>
+			<div class="areas-use__block">
+				<div class="container">
+					<div class="areas-use__title">
+						<?php the_field('area-use-title');?>
+					</div>
+					<div class="areas-use__scroll">
+						Skroll
+						<svg width="50" height="6" viewBox="0 0 50 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M50 3L45 0.113249V5.88675L50 3ZM0 3.5H45.5V2.5H0V3.5Z" fill="white"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
 		
 	</main><!-- #main -->
 <?php

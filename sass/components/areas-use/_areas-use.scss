@@ -1,0 +1,57 @@
+.areas-use {
+  margin-bottom: 200px;
+  position: relative;
+
+  @include media-breakpoint-only('s') {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-top: 100px;
+
+    @include media-breakpoint-only('s') {
+      margin-top: 20px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  &__image {
+    @include media-breakpoint-only('s') {
+      height: 580px;
+      max-width: fit-content;
+    }
+  }
+
+  &__block {
+    position: absolute;
+    top: 0;
+    z-index: 11;
+    width: 100%;
+  }
+
+  &__block2 {
+    @include media-breakpoint-only('s') {
+      overflow-x: scroll;
+    }
+  }
+
+  &__scroll {
+    display: none;
+
+    @include media-breakpoint-only('s') {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      text-align: end;
+    }
+  }
+}
