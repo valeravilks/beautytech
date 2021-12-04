@@ -149,6 +149,39 @@ get_header();
 				</div>
 			</div>
 		</section>
+		<section class="adv">
+			<?php get_template_part('template-parts/h2-block', '', array(
+						'h2' => get_field('adv-title'),
+					));
+			?>
+			<div class="container">
+				<div class="row">
+					<?php 
+						$index = 0;
+						if(have_rows('adv-items')) :?>
+							<?php while(have_rows('adv-items')) : the_row(); ?>
+							<div class="col-12 col-l-3">
+								<div class="adv__block">
+									<div class="adv__sub">
+										<?php the_sub_field('subtitle');?>
+									</div>
+									<div class="adv__text">
+										<?php the_sub_field('text');?>
+									</div>
+									<hr class="adv__hr <?php 
+									if($index > 3){
+										echo 'adv__hr2';
+									}
+									?>">
+								</div>
+							</div>
+							<?php 
+							$index++;
+							endwhile?>
+						<?php endif; ?>
+				</div>
+			</div>
+		</section>
 		
 	</main><!-- #main -->
 <?php
