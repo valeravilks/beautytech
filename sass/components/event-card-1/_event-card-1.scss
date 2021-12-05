@@ -66,6 +66,7 @@
     color: #303034;
     margin-bottom: 30px;
     flex-grow: 1;
+    height: 400px;
 
     @include media-breakpoint-only("s") {
       font-size: 16px;

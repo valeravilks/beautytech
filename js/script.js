@@ -10,6 +10,24 @@ const swiper = new Swiper('.home-slider', {
   },
 });
 
+const swiperEvents = new Swiper('.js-event-list', {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.events-page-next',
+    prevEl: '.events-page-prev',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    1157: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1
+    },
+  }
+});
+
 const swiperRev = new Swiper('.home-rev__slider', {
   autoHeight: true,
   slidesPerView: 1,

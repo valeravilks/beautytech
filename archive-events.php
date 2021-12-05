@@ -16,7 +16,16 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main events-page">
-
+    <div class="container">
+			<div class="events-page__title">
+				Events
+			</div>
+		</div>  
+    <?php get_template_part('template-parts/cat-menu', '', array(
+      'taxonomy' => 'events-categories',
+      'type' => 'events',
+      'active' => 'all'
+      )); ?>
     <div class="container produc__mb">
       <div class="row">
        <?php  $index = 1; ?>

@@ -16,48 +16,36 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main events-page">
-    <?php get_template_part('template-parts/breadcrumbs'); ?>
-    <?php get_template_part('template-parts/page-title', '', array('title' => 'Events')); ?>
-    <?php get_template_part('template-parts/cat-menu', '', array(
-      'taxonomy' => 'events-categories',
-      'type' => 'events',
-      )); ?>
-      
+    <div class="container">
+			<div class="events-page__title">
+				Events
+			</div>
+		</div> 
+    <div class="events-page__top">
+      <?php get_template_part('template-parts/cat-menu', '', array(
+        'taxonomy' => 'events-categories',
+        'type' => 'events',
+        )); ?>
+    </div> 
     <div class="container produc__mb">
-      <div class="row">
-       <?php  $index = 1; ?>
-      <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
+      <div class="swiper js-event-list">
+        <div class="swiper-wrapper">
+        <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
+            <div class="swiper-slide events-page__item">
+              <?php get_template_part('template-parts/event', 'card-1');?>
+            </div>
 
-      <?php if($index == 1) :?>
-                <div class="col-12 events-page__full">
-                  <?php get_template_part('template-parts/event', 'card-2');?>
-                </div>
-              <?php endif;?>
-
-              <div class="col-12 col-l-4 events-page__item <?php if($index == 1){ echo 'events-page__entry'; }?>">
-                <?php get_template_part('template-parts/event', 'card-1');?>
-              </div>
-
-        <?php $index++;} } else { ?>
-        <p>No events</p>
-        <?php }   
-      ?>
-
+            <?php $index++;} } else { ?>
+            <p>No events</p>
+            <?php }   
+            ?>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
 		</div>
-		
-<?php get_template_part('template-parts/pagination');?>
-
-   
 
 
-
-    
-
-
-  </main><!-- #main -->
-<?php get_template_part('template-parts/company-list'); ?>
-<?php get_template_part('template-parts/contact-us-block'); ?>
+</main><!-- #main -->
 
 <?php
 get_footer();
