@@ -1,10 +1,4 @@
 .single-event {
-  &__header {
-    display: flex;
-    height: 34px;
-    margin-bottom: 20px;
-  }
-
   &__tag {
     @extend .tag;
     display: inline-block;
@@ -12,12 +6,37 @@
   }
 
   &__title {
-    @extend .h2;
-    color: #505050;
-    margin: 0 0 50px 0;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    letter-spacing: -0.02em;
+    color: #303034;
+    margin: 50px 0;
 
     @include media-breakpoint-only("s") {
-      margin: 0 0 30px 0;
+      margin: 30px 0;
+      font-size: 36px;
+      line-height: 100%;
+    } 
+  }
+
+  &__content {
+    @extend .text-body;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__cover {
+    padding: 100px 0 150px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-only("s") {
+      padding: 20px 0;
+      margin-bottom: 30px;
     } 
   }
 
@@ -27,6 +46,46 @@
 
     @include media-breakpoint-only("s") {
       padding: 20px;
+    } 
+  }
+
+  &__num {
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 174px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @include media-breakpoint-only("s") {
+      font-weight: normal;
+      font-size: 56px;
+      margin-bottom: 5px;
+      line-height: 68px;
+    } 
+  }
+
+  &__mounth {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @include media-breakpoint-only("s") {
+      font-size: 16px;
+      line-height: 150%;
+    } 
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 25px;
     } 
   }
 
@@ -41,6 +100,25 @@
       font-size: 13px;
       margin-bottom: 0;
     } 
+  }
+
+  &__header {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+    max-width: 600px;
+
+    @include media-breakpoint-only("s") {
+      font-size: 19px;
+      line-height: 23px;
+    } 
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__item {
@@ -65,10 +143,30 @@
   }
 
   &__hr {
-    margin: 20px 0;
+    margin: 30px 0;
 
     @include media-breakpoint-only("s") {
-      display: none;
+      margin: 20px 0;
+    } 
+  }
+
+  &__time, &__place {
+    font-size: 14px;
+    line-height: 150%;
+    color: #303034;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-only("s") {
+      font-size: 14px;
+      line-height: 150%;
+    } 
+  }
+  
+  &__bl2 {
+    margin-bottom: 100px;
+
+    @include media-breakpoint-only("s") {
+      margin-bottom: 50px;
     } 
   }
 

@@ -164,6 +164,126 @@
       margin-bottom: 100px;
     }
   }
+
+  &__text9 {
+    @extend .text-body;
+    margin-bottom: 100px;
+
+    @include media-breakpoint-only('s') {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text10 {
+    @extend .text-sub;
+    margin-bottom: 15px;
+    max-width: 290px;
+  }
+
+  &__img4 {
+    @include media-breakpoint-only('s') {
+      margin-bottom: 20px;
+    }
+  }
+  
+  &__bl6 {
+    position: relative;
+    margin-bottom: 200px;
+    
+    @include media-breakpoint-only('s') {
+      margin-bottom: 100px;
+    }  
+  }
+
+  &__text11 {
+    @extend .text-body;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 376px;
+    color: #303034;
+
+    @include media-breakpoint-only('s') {
+      position: initial;
+      color: #65656C;
+    }
+  }
+  
+  &__text12 {
+    @extend .text-body;
+  }
+  
+  &__hr6 {
+    margin: 50px 0;
+
+    @include media-breakpoint-only('s') {
+      margin: 30px 0;
+    }
+  }
+
+  &__bl7 {
+    margin-bottom: 150px;
+
+    @include media-breakpoint-only('s') {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__bl8 {
+    padding: 60px 75px;
+    background: #F5F5F7;
+    display: grid;
+    row-gap: 30px;
+    column-gap: 27px;
+    grid-template-columns: fit-content 1fr;
+    grid-template-rows: repeat(fit-content);
+    grid-template-areas: 'text1 title' 'text1 text2';
+    margin-bottom: 200px;
+
+
+    @include media-breakpoint-only('s') {
+      padding: 40px 20px;
+      row-gap: 10px;
+      grid-template-rows: repeat(3, fit-content);
+      grid-template-columns: 1fr;
+      grid-template-areas: 'title' 'text1' 'text2';
+      margin-bottom: 100px;
+    }
+  }
+  
+  &__title10 {
+    grid-area: title;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    color: #303034;
+    max-width: 230px;
+    
+    @include media-breakpoint-only('s') {
+      font-size: 28px;
+      line-height: 120%;
+      max-width: 250px;
+    }
+  }
+  
+  &__text13 {
+    grid-area: text1;
+    font-size: 145px;
+    line-height: 220px;
+    -webkit-text-stroke: 1px #969797;
+    text-stroke: 1px #969797;
+    color: rgba(0,0,0,0);
+    
+    @include media-breakpoint-only('s') {
+      font-size: 120px;
+      line-height: 145px;
+    }
+  }
+  
+  &__text14{
+    grid-area: text2;
+    @extend .text-body;
+  }
 }
 
 .d-cover {
