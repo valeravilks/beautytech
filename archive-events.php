@@ -16,24 +16,12 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main events-page">
-    <?php get_template_part('template-parts/breadcrumbs'); ?>
-    <?php get_template_part('template-parts/page-title', '', array('title' => 'Events')); ?>
-    <?php get_template_part('template-parts/cat-menu', '', array(
-      'taxonomy' => 'events-categories',
-      'type' => 'events',
-      'active' => 'all'
-      )); ?>
-      
+
     <div class="container produc__mb">
       <div class="row">
        <?php  $index = 1; ?>
       <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
 
-      <?php if($index == 1) :?>
-                <div class="col-12 events-page__full">
-                  <?php get_template_part('template-parts/event', 'card-2');?>
-                </div>
-              <?php endif;?>
 
               <div class="col-12 col-l-4 events-page__item <?php if($index == 1){ echo 'events-page__entry'; }?>">
                 <?php get_template_part('template-parts/event', 'card-1');?>
@@ -46,8 +34,7 @@ get_header();
 
       </div>
 		</div>
-		
-<?php get_template_part('template-parts/pagination');?>
+
 
 </main><!-- #main -->
 
