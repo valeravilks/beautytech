@@ -18,7 +18,7 @@
               <div class="contact-form__text">
                 Name *
               </div>
-              <input class="contact-form__input" required type="text" placeholder="Type your name">
+              <input class="contact-form__input" name="name" required type="text" placeholder="Type your name">
             </label>
           </div>
           <div class="col-12 col-l-6">
@@ -26,7 +26,7 @@
               <div class="contact-form__text">
                 Email﹡
               </div>
-              <input class="contact-form__input" required type="email" placeholder="Type your email">
+              <input class="contact-form__input" required name="email" type="email" placeholder="Type your email">
             </label>
           </div>
           <div class="col-12 col-l-6">
@@ -34,7 +34,7 @@
               <div class="contact-form__text">
                 Phone﹡
               </div>
-              <input class="contact-form__input" required type="tel" placeholder="Type your phone">
+              <input class="contact-form__input" required name="phone" type="tel" placeholder="Type your phone">
             </label>
           </div>
           <div class="col-12">
@@ -42,7 +42,7 @@
               <div class="contact-form__text">
                 Message
               </div>
-              <textarea class="contact-form__input contact-form__textarea" placeholder="Type your message here..."></textarea>
+              <textarea class="contact-form__input contact-form__textarea" name="messege" placeholder="Type your message here..."></textarea>
             </label>
           </div>
           <div class="col-12">
@@ -83,7 +83,7 @@
           <div class="col-12">
             <div class="contact-form__checkbox">
               <label class="contact-form__check check option check-m0">
-                <input class="check__input js-policy" name="whatsapp" type="checkbox">
+                <input class="check__input js-policy" name="policy" type="checkbox">
                 <span class="check__box"></span>
                 I agree to the  
                 <a class="pr-po" href="<?php echo bloginfo('url');?>/privacy-policy">Privacy Policy </a>

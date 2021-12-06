@@ -30,7 +30,6 @@
     line-height: 37px;
     text-transform: uppercase;
     color: $color__blue-heading;
-    max-width: 400px;
     margin-bottom: 10px;
 
     @include media-breakpoint-only('s') {

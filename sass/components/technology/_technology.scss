@@ -2121,10 +2121,10 @@
 
 .t9 {
   &__block1 {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 
     @include media-breakpoint-only("s") {
-      margin-bottom: 50px;
+      margin-bottom: 100px;
     }
 
     &-title {
@@ -2197,7 +2197,7 @@
     &-text2 {
       @extend .text-body;
       color: #383838;
-      padding: 10px 0;
+      padding: 20px 0;
     }
 
     &-hr4 {
@@ -2241,6 +2241,42 @@
 
       @include media-breakpoint-only("s") {
         display: block;
+      }
+    }
+
+    &-sub {
+      @extend .h3;
+      color: #505050;
+      margin-bottom: 10px;
+    }
+
+    &-hr3 {
+      margin-bottom: 30px;
+
+      @include media-breakpoint-only("s") {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-t1 {
+      @extend .text-body;
+      color: #383838;
+
+    }
+
+    &-mb1 {
+      margin-bottom: 26px;
+
+      @include media-breakpoint-only("s") {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-rowmb {
+      margin-bottom: 100px;
+
+      @include media-breakpoint-only("s") {
+        margin-bottom: 40px;
       }
     }
   }

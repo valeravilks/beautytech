@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.5' );
+	define( '_S_VERSION', '1.0.9' );
 }
 
 add_image_size( 'event-thumbnail', 400, 200, true );
@@ -354,11 +354,22 @@ function myajax_data(){
 add_action( 'wp_ajax_cform', 'cform_callback' );
 add_action( 'wp_ajax_nopriv_cform', 'cform_callback' );
 function cform_callback() {
-	
+		if(get_field('con_email', 'option')) {
 
-	var_dump($_POST);
 
-	// выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+			$content = 'Name: ' . $_POST['name'] . "\r\n" . 
+								 'Email: ' . $_POST['email'] . "\r\n" . 
+								 'Phone: ' . $_POST['phone'] . "\r\n" .
+								 'Message: ' . $_POST['messege'] . "\r\n" .
+								 'Product: ' . $_POST['prod'] . "\r\n" .
+								 'Whatsapp: ' . $_POST['what'];
+
+			$headers = 'From: BeautyTech <info@beautytech.com>' . "\r\n";
+			wp_mail(get_field('con_email', 'option'), 'Bewerbungsformular BeautyTech', $content, $headers);
+			echo $content;
+		}
+
+
 	wp_die();
 }
 

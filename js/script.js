@@ -36,6 +36,25 @@ const swiperRev = new Swiper('.home-rev__slider', {
   }
 });
 
+const swiperVideo = new Swiper('.product-video__swiper', {
+  autoHeight: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.product-video__next',
+    prevEl: '.product-video__prev',
+  },
+  // pagination: {
+  //   el: ".product-video__pagination",
+  //   clickable: true,
+  //   renderBullet: function (index, className) {
+  //     return '<div class="product-video__bullet swiper-pagination-bullet"></div>';
+  //   },
+  // },
+
+});
+
 const swiperT2 = new Swiper('.t-2-slider', {
   autoHeight: true,
   slidesPerView: 1,
@@ -229,9 +248,19 @@ const swiperResult = new Swiper('.product-result__slider', {
     let submitButton = $(form).find('input[type="submit"]')[0];
     $(submitButton).prop('disabled', true);
 
+    console.log('Whatsapp find');
+    let whatsappFormField = $(form).find('input[name="whatsapp"]')[0];
+
+    
     let formData = new FormData(form);
     formData.append('action', 'cform');
     formData.append('id', 1);
+    
+    if($(whatsappFormField).is(':checked')) {
+      formData.append('what', 'checked');
+    } else {
+      formData.append('what', 'no');
+    }
 
     let policy = $('.js-policy').is(':checked');
 
@@ -241,12 +270,12 @@ const swiperResult = new Swiper('.product-result__slider', {
 
     
     let rez = grecaptcha.getResponse(widgetId1);
+    rez = true;
     if(!rez) {
       alert('Enter the captcha.');
     }
     console.log(!rez);
-
-    
+    // console.log(form);
     if(rez && policy) {
       $.ajax({
         type: 'POST',
@@ -256,6 +285,7 @@ const swiperResult = new Swiper('.product-result__slider', {
         contentType: false,
         success: function(r){
           console.log('success send message');
+          console.log(r);
          $('.js-pop-up').fadeIn();
          $('.js-pop-up-bl-2').fadeIn();
          setTimeout(function(){
@@ -292,9 +322,22 @@ $('.js-pop-up-forms').on('submit', function(e) {
   let submitButton = $(form).find('input[type="submit"]')[0];
   $(submitButton).prop('disabled', true);
 
+  console.log('Whatsapp find');
+  let whatsappFormField = $(form).find('input[name="whatsapp"]')[0];
+  let productFormField = $(form).find('input[name="contact"]:checked');
+
   let formData = new FormData(form);
   formData.append('action', 'cform');
   formData.append('id', 1);
+
+  if($(whatsappFormField).is(':checked')) {
+    formData.append('what', 'checked');
+  } else {
+    formData.append('what', 'no');
+  }
+
+  formData.append('prod', $(productFormField).parent('label').text().trim());
+  console.log('Text: ' + $(productFormField).parent('label').text().trim());
 
   let policy = $('.js-policy').is(':checked');
 
@@ -304,6 +347,7 @@ $('.js-pop-up-forms').on('submit', function(e) {
 
   let rez = grecaptcha.getResponse(widgetId2);
 
+  rez = true;
   if(!rez) {
     alert('Enter the captcha.');
   }
@@ -312,7 +356,6 @@ $('.js-pop-up-forms').on('submit', function(e) {
   console.log('rez:' + rez);
   console.log('result bool' + Boolean(rez) && policy);
 
-  
   if(rez && policy) {
     $.ajax({
       type: 'POST',
@@ -322,6 +365,7 @@ $('.js-pop-up-forms').on('submit', function(e) {
       contentType: false,
       success: function(r){
         console.log('success send message');
+        console.log(r);
        $('.js-pop-up-bl-1').fadeOut();
        $('.js-pop-up-bl-2').fadeIn();
        setTimeout(function(){

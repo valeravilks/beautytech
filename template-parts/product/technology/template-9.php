@@ -18,15 +18,15 @@ $field = $args['data'];
             <?php echo $field['t9_block-1']['block_1']['title_1']?>
           </div>
           <hr class="t9__block1-hr3">
-          <div class="t9__block1-t1">
+          <div class="t9__block1-t1 t9__block1-mb">
             <?php echo $field['t9_block-1']['block_1']['text_1']?>
           </div>
           <div class="t9__block1-sub">
-            <?php echo $field['t9_block-1']['block_1']['title_1']?>
+            <?php echo $field['t9_block-1']['block_1']['title_2']?>
           </div>
           <hr class="t9__block1-hr3">
           <div class="t9__block1-t1">
-            <?php echo $field['t9_block-1']['block_1']['text_1']?>
+            <?php echo $field['t9_block-1']['block_1']['text_2']?>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ $field = $args['data'];
             <div class="t9__block1-text2">
               <?php echo $item['text']?>
             </div>
-            <hr class="t9__block1-hr4">
+            <hr class="t9__block1-hr2">
           <?php endforeach;?>
         </div>
         <div class="col-12 col-l-6">
@@ -55,12 +55,12 @@ $field = $args['data'];
           <div class="t9__block1-sub">
             <?php echo $field['t9_block-1']['block_3']['title']?>
           </div>
-          <hr class="t9__block1-hr4">
+          <hr class="t9__block1-hr2">
           <?php foreach($field['t9_block-1']['block_3']['items'] as $item) :?>
             <div class="t9__block1-text2">
               <?php echo $item['text']?>
             </div>
-            <hr class="t9__block1-hr4">
+            <hr class="t9__block1-hr2">
           <?php endforeach;?>
         </div>
       </div>
@@ -69,13 +69,20 @@ $field = $args['data'];
           <div class="t9__block1-sub">
             <?php echo $field['t9_block-1']['block_4']['title']?>
           </div>
-          <hr class="t9__block1-hr2">
-          <?php foreach($field['t9_block-1']['block_4']['items'] as $item) :?>
-            <div class="t9__block1-text2">
-              <?php echo $item['text']?>
-            </div>
-            <hr class="t9__block1-hr4">
-          <?php endforeach;?>
+          <hr class="t9__block1-hr3">
+          <div class="t9__block1-t1 t9__block1-mb1">
+            <?php echo $field['t9_block-1']['block_4']['text']?>
+          </div>
+          <div class="row">
+            <?php foreach($field['t9_block-1']['block_4']['items'] as $item) :?>
+              <div class="col-6">
+                <div class="t9__block1-text2">
+                  <?php echo $item['text']?>
+                </div>
+                <hr class="t9__block1-hr2">
+              </div>
+            <?php endforeach;?>
+          </div>
         </div>
         <div class="col-12 col-l-6">
           <img src="<?php echo $field['t9_block-1']['block_4']['image']?>" alt="img" class="t9__block1-img">
@@ -123,7 +130,7 @@ $field = $args['data'];
                 </div>
                 <hr class="t9__block1-hr3">
                 <div class="t9__block1-text2">
-                <?php echo $item['text']?>ss
+                <?php echo $item['text']?>
                 </div>
                 <hr class="t9__block1-hr4">
           <?php 

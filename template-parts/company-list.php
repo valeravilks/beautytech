@@ -9,10 +9,12 @@ $index = 1;
     <?php if( $imageList ): ?>
       <?php foreach( $imageList as $image ): ?>
           <div class="col-6 col-l-2">
-            <img 
-              class="company-list__img" 
-              src="<?php echo esc_url($image); ?>"
-              alt="company nane" />
+            <a href="<?php echo esc_url($image['link'])?>" class="company-list__link">
+              <img 
+                class="company-list__img" 
+                src="<?php echo esc_url($image['image']['url']); ?>"
+                alt="company name" />
+            </a>
           </div>
           <?php if($index % 6 === 0 and count($imageList) != $index) :?>
             <div class="col-12 company-list__hr-1">

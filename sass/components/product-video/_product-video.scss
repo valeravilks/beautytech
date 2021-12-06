@@ -13,7 +13,50 @@
     width: 100%;
   }
 
+  &__swiper {
+    max-width: 1000px;
+  }
 
+  &__nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-only("s") {
+      left: -20px;
+      right: -20px;
+    }
+
+    & > * {
+      padding: 30px 12px;
+      background: $color__blue-heading;
+      border: 1px solid $color__blue-heading;
+      cursor: pointer;
+      transition: .3s;
+      color: $color__white;
+      font-weight: 600;
+
+      &:hover {
+        background: $color__white;
+        color: $color__blue-heading;
+      }
+
+      &.swiper-button-disabled {
+        background: $color__gray-gray;
+        border: 1px solid $color__gray-gray;
+      }
+
+      @include media-breakpoint-only("s") {
+        padding: 16px 6px;
+        font-size: 13px;
+      }
+    }
+  }
 }
 
 .video {
