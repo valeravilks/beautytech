@@ -124,6 +124,71 @@ $bl20 = get_field('pr-block20');
 			</div>
 		</div>
 	</section>
+	<section>
+		<?php get_template_part('template-parts/h2-block', '', array(
+			'h2' => $bl4['title'],
+		));
+		?>
+		<div class="pp-b4">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 offset-l-4 col-l-8">
+							<div class="pp-b4-bl1">
+								<div class="pp-b4-text1">
+									<?php echo $bl4['subtitle'];?>
+								</div>
+								<div class="pp-b4-text2">
+									<?php echo $bl4['text'];?>
+								</div>
+								<div class="pp-b4-text4">
+									<?php echo $bl4['subtitle-2'];?>
+								</div>
+								<div class="pp-b4-text5">
+									<?php echo $bl4['text-2'];?>
+								</div>
+								<div class="pp-b4-bl2">
+									<img src="<?php echo $bl4['image']['url'];?>" alt="img" class="pp-b4-img1">	
+									<div class="pp-b4-bl3">
+										<div class="pp-b4-text3">
+											<?php echo $bl4['list']['text1'];?>
+										</div>
+										<hr class="pp-b4-hr1">
+									</div>
+									<div class="pp-b4-bl3">
+										<div class="pp-b4-text3">
+											<?php echo $bl4['list']['text2'];?>
+										</div>
+										<hr class="pp-b4-hr2">
+									</div>
+									<div class="pp-b4-bl3">
+										<div class="pp-b4-text3">
+											<?php echo $bl4['list']['text3'];?>
+										</div>
+										<hr class="pp-b4-hr3">
+									</div>
+									<div class="pp-b4-bl3">
+										<div class="pp-b4-text3">
+											<?php echo $bl4['list']['text4'];?>
+										</div>
+										<hr class="pp-b4-hr4">
+									</div>
+									<div class="pp-b4-bl3">
+										<div class="pp-b4-text3">
+											<?php echo $bl4['list']['text5'];?>
+										</div>
+										<hr class="pp-b4-hr5">
+									</div>
+								</div>
+								<div class="pp-b4-text4">
+									<?php the_field('d-text-8');?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main><!-- #main -->
 <?php
 get_footer();
