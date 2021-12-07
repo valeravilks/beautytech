@@ -192,7 +192,7 @@ $bl20 = get_field('pr-block20');
 			<div class="container">
 				<div class="row">
 					<div class="col-12 offset-l-4 col-l-8">
-						<div class="pp-slider__main">
+						<div class="pp-slider__main pp-b5__slider">
 							<div class="swiper pp-slider-text">
 								<div class="swiper-wrapper">
 									<?php 
@@ -235,8 +235,45 @@ $bl20 = get_field('pr-block20');
 								</div>
 							</div>
 						</div>
+						<div class="pp-b5__text3">
+							<?php echo $bl5['title-2'];?>
+						</div>
+						<div class="pp-b5__text4">
+							<?php echo $bl5['text'];?>
+						</div>
+						<div class="pp-b5__text5">
+							<?php echo $bl5['title-3'];?>
+						</div>
+						<div class="pp-b5__items">
+							<div class="row">
+								<?php
+								$index = 0;
+								$num = 2;
+								// var_dump($bl3['items']);
+								foreach ($bl5['items'] as $element) : ?>
+									<div class="col-12 col-l-6">
+										<div class="pp-b5__block">
+											<div class="pp-b5__text6">
+												<?php echo $element['text']; ?>
+											</div>
+											<hr class="pp-b5__hr <?php
+																						if ($index > count($bl5['items']) - 1 - $num) {
+																							echo 'pp-b3__hr2';
+																						}
+																						if ($index == count($bl5['items']) - 1) {
+																							echo ' pp-b3__hr3';
+																						}
+																						?>">
+										</div>
+									</div>
+									<?php
+									$index++; ?>
+								<?php endforeach; ?>
+							</div>
+						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>
