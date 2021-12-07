@@ -932,4 +932,81 @@
             }
         }
     }
+    &-b16 {
+        // margin-bottom: 100px;
+        // @include media-breakpoint-only('s') {
+        //     margin-bottom: 70px;
+        // }
+        &__slider {
+            margin-bottom: 200px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 100px;
+            }
+        }
+        &__text3 {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: -0.02em;
+            margin-bottom: 40px;
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 20px;
+            }
+        }
+        &__text4 {
+            @extend .text-body;
+            margin-bottom: 100px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 50px;
+            }
+        }
+        &__text5 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            /* Black */
+            color: #303034;
+            margin-bottom: 40px;
+            max-width: 353px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 30px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+        &__text6 {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 150%;
+            /* identical to box height, or 27px */
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 16px;
+                line-height: 150%;
+            }
+        }
+        &__hr {
+            margin: 20px 0;
+        }
+        &__text7 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            /* identical to box height */
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #E6E6E6;
+            }
+        }
+    }
 }

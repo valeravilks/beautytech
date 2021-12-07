@@ -642,6 +642,62 @@ $bl20 = get_field('pr-block20');
 			</div>
 		</div>
 	</section>
+	<section class="pp-b16 slider-bl">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-l-4">
+					<div class="pp-b16__text7">
+						<?php echo $bl16['title']?>
+					</div>
+				</div>	
+				<div class="col-12 col-l-8">
+					<div class="pp-slider__main pp-b16__slider">
+						<div class="swiper pp-slider-text">
+							<div class="swiper-wrapper">
+								<?php 
+								foreach($bl16['items'] as $element): ?>
+									<div class="swiper-slide pp-slider-text__slide">
+										<div class="pp-slider-text__text">
+											<?php echo $element['text']; ?>
+										</div>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						</div>
+						<div class="pp-slider-text__prev">
+							<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 1L1 11L11 21" stroke="#65656C" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</div>
+						<div class="pp-slider-text__next">
+							<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 21L11 11L1 0.999999" stroke="#65656C" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</div>
+						<div class="swiper pp-slider">
+							<div class="swiper-wrapper">
+								<?php 
+								foreach($bl16['items'] as $element): ?>
+									<div class="swiper-slide">
+										<div class="pp-slider__block">
+											<div class="row">
+												<div class="col-12 col-l-6 pp-slider__margin">
+													<img src="<?php echo $element['image_1']['url']?>" alt="" class="pp-slider__img">
+												</div>
+												<div class="col-12 col-l-6">
+													<img src="<?php echo $element['image_2']['url']?>" alt="" class="pp-slider__img">
+												</div>
+											</div>
+										</div>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main><!-- #main -->
 <?php
 get_footer();
