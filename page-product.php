@@ -429,6 +429,83 @@ $bl20 = get_field('pr-block20');
 			</div>
 		</div>
 	</section>
+	<section class="pp-b11">
+		<?php get_template_part('template-parts/h2-block', '', array(
+			'h2' => $bl11['title'],
+		));
+		?>
+		<div class="pp-b11__block">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 offset-l-4 col-l-8">
+						<div class="pp-b11__text1">
+							<?php echo $bl11['text'];?>
+						</div>
+						<img src="<?php echo $bl11['image']['url']?>" alt="img" class="pp-b11__img">
+					</div>
+					<div class="col-12 col-l-4">
+						<div class="pp-b11__text2">
+							<?php echo $bl11['subtitle'];?>
+						</div>
+					</div>
+					<div class="col-12 col-l-8">
+						<div class="pp-b11__text3">
+							<?php echo $bl11['text-2'];?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pp-b12">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-l-4">
+					<div class="pp-b12__block">
+						<img src="<?php echo $bl12['image-1']['url']?>" alt="" class="pp-b12__img">
+						<div class="pp-b12__text1">
+							<?php echo $bl12['title_1']?>
+						</div>
+						<div class="pp-b12__text2">
+							<?php echo $bl12['text_1']?>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-l-4">
+					<div class="pp-b12__block">
+						<img src="<?php echo $bl12['image-2']['url']?>" alt="" class="pp-b12__img">
+						<div class="pp-b12__text1">
+							<?php echo $bl12['title_2']?>
+						</div>
+						<div class="pp-b12__text2">
+							<?php echo $bl12['text_2']?>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-l-4">
+					<div class="pp-b12__block">
+						<img src="<?php echo $bl12['image-3']['url']?>" alt="" class="pp-b12__img">
+						<div class="pp-b12__text1">
+							<?php echo $bl12['title_3']?>
+						</div>
+						<div class="pp-b12__text2">
+							<?php echo $bl12['text_3']?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 offset-l-4 col-l-8">
+					<div class="pp-b12__text3">
+						<?php echo $bl12['subtitle'];?>
+					</div>
+					<div class="pp-b12__text4">
+						<?php echo $bl12['text_4'];?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main><!-- #main -->
 <?php
 get_footer();

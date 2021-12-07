@@ -641,4 +641,103 @@
             }
         }
     }
+    &-b11 {
+        margin-bottom: 100px;
+        @include media-breakpoint-only('s') {
+            margin-bottom: 50px;
+        }
+        &__text1 {
+            @extend .text-body;
+            margin-bottom: 40px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 30px;
+            }
+        }
+        &__img {
+            margin-bottom: 100px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 50px;
+            }
+        }
+        &__text2 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            /* identical to box height */
+            letter-spacing: -0.02em;
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 30px;
+            }
+        }
+        &__text3 {
+            font-weight: normal;
+            font-size: 48px;
+            line-height: 120%;
+            /* or 58px */
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 24px;
+                line-height: 120%;
+            }
+        }
+    }
+    &-b12 {
+        margin-bottom: 100px;
+        @include media-breakpoint-only('s') {
+            margin-bottom: 50px;
+        }
+        &__block {
+            margin-bottom: 100px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 40px;
+            }
+        }
+        &__img {
+            margin-bottom: 30px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 20px;
+                border: 1px solid #E6E6E6;
+            }
+        }
+        &__text1 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 150%;
+            /* identical to box height, or 27px */
+            /* Black */
+            color: #303034;
+            margin-bottom: 10px;
+            @include media-breakpoint-only('s') {
+                font-size: 14px;
+                line-height: 150%;
+                margin-bottom: 5px;
+            }
+        }
+        &__text2 {
+            @extend .text-body;
+        }
+        &__text3 {
+            max-width: 330px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            /* Black */
+            color: #303034;
+            margin-bottom: 30px;
+            @include media-breakpoint-only('s') {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 20px;
+                margin-top: 10px;
+            }
+        }
+        &__text4 {
+            @extend .text-body;
+        }
+    }
 }
