@@ -609,4 +609,36 @@
             }
         }
     }
+    &-b10 {
+        margin-bottom: 200px;
+        @include media-breakpoint-only('s') {
+            margin-bottom: 70px;
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            /* identical to box height */
+            letter-spacing: -0.02em;
+            /* Black */
+            color: #303034;
+            margin-bottom: 50px;
+            @include media-breakpoint-only('s') {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 30px;
+            }
+        }
+        &__text {
+            @extend .text-body;
+            border-top: 1px solid #E6E6E6;
+            padding-top: 20px;
+        }
+        &__block {
+            margin-bottom: 50px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 30px;
+            }
+        }
+    }
 }

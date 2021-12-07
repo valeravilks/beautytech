@@ -410,6 +410,25 @@ $bl20 = get_field('pr-block20');
 			</div>
 		</div>
 	</section>
+	<section class="pp-b10">
+		<div class="container">
+			<div class="pp-b10__title">
+				<?php echo $bl10['title'];?>
+			</div>
+			<div class="row">
+				<?php
+				foreach ($bl10['items'] as $element) : ?>
+					<div class="col-12 col-l-4">
+						<div class="pp-b10__block">
+							<div class="pp-b10__text">
+								<?php echo $element['text']; ?>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
 </main><!-- #main -->
 <?php
 get_footer();
