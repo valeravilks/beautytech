@@ -522,54 +522,64 @@ $('.js-map-set').on('click', function() {
 
 // Product slider
 
-const swiperProductText = new Swiper('.pp-slider-text', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    freeMode: false,
-    allowTouchMove: false,
-    breakpoints: {
-        1157: {
-            slidesPerView: 'auto',
-            spaceBetween: 30,
-            allowTouchMove: true,
+// const swiperProductText = new Swiper('.pp-slider-text', {
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     freeMode: false,
+//     allowTouchMove: false,
+//     breakpoints: {
+//         1157: {
+//             slidesPerView: 'auto',
+//             spaceBetween: 30,
+//             allowTouchMove: true,
+//         },
+//     },
+// });
+
+// const swiperProduct = new Swiper('.pp-slider', {
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     navigation: {
+//         nextEl: '.pp-slider-text__next',
+//         prevEl: '.pp-slider-text__prev',
+//     },
+//     controller: {
+//         by: 'container',
+//         control: swiperProductText,
+//     },
+//     thumbs: {
+//         swiper: swiperProductText
+//     }
+// });
+
+document.querySelectorAll('.slider-bl').forEach(n => {
+    let swiperProductText = new Swiper(n.querySelector('.pp-slider-text'), {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        freeMode: false,
+        allowTouchMove: false,
+        breakpoints: {
+            1157: {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                allowTouchMove: true,
+            },
         },
-    },
-});
+    });
 
-const swiperProduct = new Swiper('.pp-slider', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    navigation: {
-        nextEl: '.pp-slider-text__next',
-        prevEl: '.pp-slider-text__prev',
-    },
-    controller: {
-        by: 'container',
-        control: swiperProductText,
-    },
-    thumbs: {
-        swiper: swiperProductText
-    }
-});
-
-document.querySelectorAll('.pp-b7').forEach(n => {
-    const slider = new Swiper(n.querySelector('.product-top'), {
+    let swiperProduct = new Swiper(n.querySelector('.pp-slider'), {
+        slidesPerView: 1,
+        spaceBetween: 30,
         navigation: {
-            nextEl: n.querySelector('.swiper-button-next'),
-            prevEl: n.querySelector('.swiper-button-prev'),
+            nextEl: n.querySelector('.pp-slider-text__next'),
+            prevEl: n.querySelector('.pp-slider-text__prev'),
         },
-        spaceBetween: 10,
+        controller: {
+            by: 'container',
+            control: swiperProductText,
+        },
+        thumbs: {
+            swiper: swiperProductText
+        }
     });
-
-    const thumbs = new Swiper(n.querySelector('.product-thumbs'), {
-        spaceBetween: 10,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        touchRatio: 0.2,
-        slideToClickedSlide: true,
-        slidesPerView: 3,
-    });
-
-    slider.controller.control = thumbs;
-    thumbs.controller.control = slider;
 });
