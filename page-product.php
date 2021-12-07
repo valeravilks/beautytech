@@ -67,6 +67,27 @@ $bl20 = get_field('pr-block20');
 				</div>
 			</div>
 		</section>
+		<section class="pp-b2">
+			<div class="container">
+				<div class="row g-0">
+					<div class="col-12 col-l-6 pp-b2-5">
+						<div class="pp-b2-1">
+							<?php echo $bl2['name'];?>
+						</div>
+						<img src="<?php echo $bl2['image']['url'];?>" class="pp-b2-2">
+					</div>
+					<div class="col-12 col-l-6">
+						<div class="pp-b2-3">
+							<?php echo $bl2['title'];?>
+						</div>
+						<div class="pp-b2-4">
+							<?php echo $bl2['text'];?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
 	</main><!-- #main -->
 <?php
 get_footer();
