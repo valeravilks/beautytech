@@ -377,6 +377,39 @@ $bl20 = get_field('pr-block20');
 			</div>
 		</div>
 	</section>
+	<section class="pp-b8">
+			<?php get_template_part('template-parts/h2-block', '', array(
+				'h2' => $bl8['title'],
+			));
+			?>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 offset-l-4 col-l-8">
+					<div class="pp-b8__text2">
+						<?php echo $bl8['text']?>
+					</div>
+					<div class="pp-b8__text3">
+						<?php echo $bl8['text-2']?>
+					</div>
+					<img src="<?php echo $bl8['image']['url']?>" alt="img" class="pp-b8__img">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pp-b9">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-l-4">
+					<div class="pp-b9__text">
+						<?php echo $bl9['title'];?>
+					</div>
+				</div>
+				<div class="col-12 col-l-8">
+					<img src="<?php echo $bl9['image']['url']?>" alt="img" class="pp-b9__img">
+				</div>
+			</div>
+		</div>
+	</section>
 </main><!-- #main -->
 <?php
 get_footer();
