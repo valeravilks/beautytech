@@ -791,6 +791,47 @@ $bl20 = get_field('pr-block20');
 			</div>
 		</div>
 	</section>
+  <section class="pp-b19">
+		<?php get_template_part('template-parts/h2-block', '', array(
+			'h2' => $bl19['title'],
+		));
+		?>
+		<div class="container">
+			<div class="pp-b19__block">
+				<div class="pp-b19__img-list">
+					<?php $index = 1;?>
+					<?php foreach($bl19['color_items'] as $el):?>
+						<img src="<?php echo $el['image']['url']?>" alt="img" class="pp-b19__img <?php if($index == 1){echo ' active';}?>">
+						<?php $index++;?>
+					<?php endforeach;?>
+				</div>
+				<div class="pp-19__title">
+					<?php echo $bl19['name']?>
+				</div>
+				<div class="pp-19__text">
+					<?php echo $bl19['text']?>
+				</div>
+				<div class="pp-19__color-name">
+					
+				</div>
+				<div class="pp-b19__color-list">
+					<?php $index = 1;?>
+					<?php foreach($bl19['color_items'] as $el):?>
+						<div class="pp-b19__color <?php if($index == 1){echo ' active';}?>" 
+								 data-border="<?php echo $el['color'];?>"
+								 data-color-name="<?php echo $el['color_name'];?>">
+								 <div class="pp-b19__color-help"
+								 			style="background-color: <?php echo $el['color'];?>; "
+								 >
+
+								 </div>
+						</div>
+						<?php $index++;?>
+					<?php endforeach;?>
+				</div>
+			</div>
+		</div>
+	</section>
 </main><!-- #main -->
 <?php
 get_footer();
