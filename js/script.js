@@ -527,33 +527,18 @@ const swiperProductText = new Swiper('.pp-slider-text', {
     spaceBetween: 30,
     freeMode: false,
     allowTouchMove: false,
-    // noSwiping: false,
-    // Navigation arrows
-    // navigation: {
-    //     nextEl: '.pp-slider-text__next',
-    //     prevEl: '.pp-slider-text__prev',
-    // },
     breakpoints: {
         1157: {
             slidesPerView: 'auto',
             spaceBetween: 30,
             allowTouchMove: true,
-            // freeMode: true,
         },
     },
-    // controller: {
-    //     inverse: true,
-    // },
 });
 
 const swiperProduct = new Swiper('.pp-slider', {
     slidesPerView: 1,
     spaceBetween: 30,
-    // Navigation arrows
-    // navigation: {
-    // nextEl: '.home-slider__next',
-    // prevEl: '.home-slider__prev',
-    // },
     navigation: {
         nextEl: '.pp-slider-text__next',
         prevEl: '.pp-slider-text__prev',
@@ -561,12 +546,30 @@ const swiperProduct = new Swiper('.pp-slider', {
     controller: {
         by: 'container',
         control: swiperProductText,
-        // inverse: true,
     },
     thumbs: {
         swiper: swiperProductText
     }
 });
 
-// swiperProduct.controller.control = swiperProductText;
-// swiperProductText.controller.control = swiperProduct;
+document.querySelectorAll('.pp-b7').forEach(n => {
+    const slider = new Swiper(n.querySelector('.product-top'), {
+        navigation: {
+            nextEl: n.querySelector('.swiper-button-next'),
+            prevEl: n.querySelector('.swiper-button-prev'),
+        },
+        spaceBetween: 10,
+    });
+
+    const thumbs = new Swiper(n.querySelector('.product-thumbs'), {
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
+        slidesPerView: 3,
+    });
+
+    slider.controller.control = thumbs;
+    thumbs.controller.control = slider;
+});
