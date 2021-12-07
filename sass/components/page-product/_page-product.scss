@@ -429,5 +429,57 @@
         &__hr {
             margin: 20px 0;
         }
+        &__text7 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            /* identical to box height */
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #E6E6E6;
+            }
+        }
+    }
+    &-b6 {
+        margin-bottom: 100px;
+        @include media-breakpoint-only('s') {
+            margin-bottom: 50px;
+        }
+        &__text1 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            /* identical to box height */
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 30px;
+            }
+        }
+        &__text2 {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 150%;
+            /* identical to box height, or 27px */
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 16px;
+                line-height: 150%;
+            }
+        }
+        &__hr {
+            margin: 30px 0;
+            @include media-breakpoint-only('s') {
+                margin: 20px 0;
+            }
+        }
     }
 }
