@@ -506,6 +506,32 @@ $bl20 = get_field('pr-block20');
 			</div>
 		</div>
 	</section>
+	<section class="pp-b13">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-l-4">
+					<div class="pp-b13__text">
+						<?php echo $bl13['title'];?>
+					</div>
+				</div>
+				<div class="col-12 col-l-8">
+					<div class="pp-b13__block">
+						<div class="row">
+							<?php foreach($bl13['items'] as $el) :?>
+								<div class="col-12 col-l-6">
+									<div class="pp-b13__bl">
+										<div class="pp-b13__text2">
+											<?php echo $el['text']?>
+										</div>
+									</div>
+								</div>
+								<?php endforeach;?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main><!-- #main -->
 <?php
 get_footer();

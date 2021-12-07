@@ -740,4 +740,34 @@
             @extend .text-body;
         }
     }
+    &-b13 {
+        margin-bottom: 40px;
+        @include media-breakpoint-only('s') {
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            /* identical to box height */
+            letter-spacing: -0.02em;
+            /* Black */
+            color: #303034;
+            @include media-breakpoint-only('s') {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 30px;
+            }
+        }
+        &__text2 {
+            @extend .text-body;
+            padding-top: 20px;
+            margin-bottom: 60px;
+            border-top: 1px solid #E6E6E6;
+            @include media-breakpoint-only('s') {
+                padding-top: 10px;
+                margin-bottom: 30px;
+            }
+        }
+    }
 }
