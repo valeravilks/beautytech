@@ -378,8 +378,8 @@ $bl20 = get_field('pr-block20');
 		</div>
 	</section>
 	<section class="pp-b8">
-			<?php get_template_part('template-parts/h2-block', '', array(
-				'h2' => $bl8['title'],
+			<?php get_template_part('template-parts/h3-block', '', array(
+				'h3' => $bl8['title'],
 			));
 			?>
 		<div class="container">
@@ -430,8 +430,8 @@ $bl20 = get_field('pr-block20');
 		</div>
 	</section>
 	<section class="pp-b11">
-		<?php get_template_part('template-parts/h2-block', '', array(
-			'h2' => $bl11['title'],
+		<?php get_template_part('template-parts/h3-block', '', array(
+			'h3' => $bl11['title'],
 		));
 		?>
 		<div class="pp-b11__block">
@@ -589,8 +589,8 @@ $bl20 = get_field('pr-block20');
 		</div>
 	</section>
 	<section class="pp-b15">
-		<?php get_template_part('template-parts/h2-block', '', array(
-			'h2' => $bl15['title'],
+		<?php get_template_part('template-parts/h3-block', '', array(
+			'h3' => $bl15['title'],
 		));
 		?>
 		<div class="container">
@@ -695,6 +695,99 @@ $bl20 = get_field('pr-block20');
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pp-b17">
+		<?php get_template_part('template-parts/h3-block', '', array(
+			'h3' => $bl17['title'],
+		));
+		?>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 offset-l-4 col-l-8">
+					<div class="pp-b17__text1">
+						<?php echo $bl17['subtitle']?>
+					</div>
+					<div class="pp-b17__text2">
+						<?php echo $bl17['text']?>
+					</div>
+					<div class="pp-b17__text3">
+						<?php echo $bl17['subtitle-2']?>
+					</div>
+					<div class="pp-b17__block">
+						<?php 
+						$index = 0;
+							foreach($bl17['items'] as $el) :?>
+								<div class="pp-b17__text7">
+									<?php echo $el['title'];?>
+								</div>
+								<div class="pp-b17__text4">
+									<?php echo $el['text'];?>
+								</div>
+								<?php if(count($bl17['items']) > $index + 1) :?>
+									<hr class="pp-b17__hr">
+								<?php endif; $index++;?>
+
+						<?php endforeach;?>
+					</div>
+					<div class="row">
+						<div class="col-12 col-l-6 pp-b17__el">
+							<img src="<?php echo $bl17['image_1']['url']?>" alt="image" class="pp-b17__img">
+							<div class="pp-b17__text5">
+								<?php echo $bl17['caption_1']?>
+							</div>
+							<div class="pp-b17__text6">
+								<?php echo $bl17['text_1']?>
+							</div>
+						</div>
+						<div class="col-12 col-l-6">
+							<img src="<?php echo $bl17['image_2']['url']?>" alt="image" class="pp-b17__img">
+							<div class="pp-b17__text5">
+								<?php echo $bl17['caption_2']?>
+							</div>
+							<div class="pp-b15__text6">
+								<?php echo $bl17['text_2']?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pp-b18">
+		<?php get_template_part('template-parts/h3-block', '', array(
+			'h3' => $bl18['title'],
+		));
+		?>
+		<div class="container">
+			<div class="row">
+				<?php
+				$index = 0;
+				$num = 3;
+				// var_dump($bl18['items']);
+				foreach ($bl18['items'] as $element) : ?>
+					<div class="col-12 col-l-4">
+						<div class="pp-b18__block">
+							<div class="pp-b18__sub">
+								<?php echo $element['title']; ?>
+							</div>
+							<div class="pp-b18__text">
+								<?php echo $element['text']; ?>
+							</div>
+							<hr class="pp-b18__hr <?php
+																		if ($index > count($bl18['items']) - 1 - $num) {
+																			echo 'pp-b18__hr2';
+																		}
+																		if ($index == count($bl18['items']) - 1) {
+																			echo ' pp-b18__hr3';
+																		}
+																		?>">
+						</div>
+					</div>
+					<?php
+					$index++; ?>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>
