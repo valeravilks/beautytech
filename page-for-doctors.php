@@ -184,7 +184,7 @@ get_header();
 		</section>
 		<section class="">
 			<?php get_template_part('template-parts/h2-block', '', array(
-						'h2' => get_field('adv-title'),
+						'h2' => 'Before - after results',
 					));
 			?>
 			<div class="result__block1">

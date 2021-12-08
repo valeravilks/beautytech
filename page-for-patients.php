@@ -175,24 +175,148 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="result">
+		<section class="">
 			<?php get_template_part('template-parts/h2-block', '', array(
-						'h2' => get_field('adv-title'),
+						'h2' => 'Before - after results',
 					));
 			?>
 			<div class="result__block1">
 				<div class="container">
 					<div class="result__buttons">
-						<button class="result__button result__button-active">
+						<button class="result__button result__button-active" data-v="Face">
 							Face
 						</button>
-						<button class="result__button">
+						<button class="result__button" data-v="Body">
 							Body
 						</button>
 					</div>
 				</div>
+				<?php 
+				$arr = get_field('rez_slider_1');
+				$arr2 = get_field('rez_slider_2');
+				?>
+				<section class="result slider-bl result__sl1">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="pp-slider__main result__slider">
+									<div class="swiper pp-slider-text">
+										<div class="swiper-wrapper">
+											<?php 
+											foreach($arr as $element): ?>
+												<div class="swiper-slide pp-slider-text__slide">
+													<div class="pp-slider-text__text">
+														<?php echo $element['text']; ?>
+													</div>
+												</div>
+											<?php endforeach; ?>
+										</div>
+									</div>
+									<div class="pp-slider-text__prev">
+										<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 1L1 11L11 21" stroke="#65656C" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="pp-slider-text__next">
+										<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 21L11 11L1 0.999999" stroke="#65656C" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="swiper pp-slider">
+										<div class="swiper-wrapper">
+											<?php 
+											foreach($arr as $element): ?>
+												<div class="swiper-slide">
+													<div class="pp-slider__block">
+														<div class="row">
+															<div class="col-12 col-l-6 pp-slider__margin">
+																<img src="<?php echo $element['image_1']['url']?>" alt="" class="pp-slider__img">
+															</div>
+															<div class="col-12 col-l-6">
+																<img src="<?php echo $element['image_2']['url']?>" alt="" class="pp-slider__img">
+															</div>
+														</div>
+													</div>
+												</div>
+											<?php endforeach; ?>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="result slider-bl result__sl2 result__none">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="pp-slider__main result__slider">
+									<div class="swiper pp-slider-text">
+										<div class="swiper-wrapper">
+											<?php 
+											foreach($arr2 as $element): ?>
+												<div class="swiper-slide pp-slider-text__slide">
+													<div class="pp-slider-text__text">
+														<?php echo $element['text']; ?>
+													</div>
+												</div>
+											<?php endforeach; ?>
+										</div>
+									</div>
+									<div class="pp-slider-text__prev">
+										<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 1L1 11L11 21" stroke="#65656C" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="pp-slider-text__next">
+										<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 21L11 11L1 0.999999" stroke="#65656C" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="swiper pp-slider">
+										<div class="swiper-wrapper">
+											<?php 
+											foreach($arr2 as $element): ?>
+												<div class="swiper-slide">
+													<div class="pp-slider__block">
+														<div class="row">
+															<div class="col-12 col-l-6 pp-slider__margin">
+																<img src="<?php echo $element['image_1']['url']?>" alt="" class="pp-slider__img">
+															</div>
+															<div class="col-12 col-l-6">
+																<img src="<?php echo $element['image_2']['url']?>" alt="" class="pp-slider__img">
+															</div>
+														</div>
+													</div>
+												</div>
+											<?php endforeach; ?>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
-			
+		</section>
+		<section class="brosh">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 offset-l-4 col-l-8">
+						<div class="brosh__text">
+							<?php the_field('br-text');?>
+						</div>
+						<a href="<?php echo get_field('br-file')['url']?>" download class="brosh__download">
+							download <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2 17H16" stroke="white" stroke-width="2"/>
+							<path d="M9 9.5V13L12 9.5H9Z" fill="white"/>
+							<path d="M6 9.5L9 13V9.5H6Z" fill="white"/>
+							<path d="M9 1V9.5M9 13L12 9.5H9M9 13L6 9.5H9M9 13V9.5" stroke="white" stroke-width="2"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main><!-- #main -->
 <?php

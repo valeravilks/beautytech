@@ -230,40 +230,40 @@ add_action( 'init', 'true_register_cpt' );
 // 	register_post_type( 'products', $args );
 // }
 
-add_action( 'init', 'register_post_types' );
-function register_post_types(){
-	register_post_type( 'products', [
-		'label'  => null,
-		'labels' => [
-			'menu_name' => 'Products'
-		],
-		'menu_icon' => 'dashicons-cart',
-		'description'         => '',
-		'public'              => true,
-		// 'publicly_queryable'  => null, // зависит от public
-		// 'exclude_from_search' => null, // зависит от public
-		// 'show_ui'             => null, // зависит от public
-		// 'show_in_nav_menus'   => null, // зависит от public
-		'show_in_menu'        => null, // показывать ли в меню адмнки
-		// 'show_in_admin_bar'   => null, // зависит от show_in_menu
-		'show_in_rest'        => null, // добавить в REST API. C WP 4.7
-		'rest_base'           => null, // $post_type. C WP 4.7
-		'menu_position'       => null,
-		'menu_icon'           => null,
-		//'capability_type'   => 'post',
-		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
-		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
-		'hierarchical'        => false,
-		'supports'            => [ 'title', 'editor' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-		'taxonomies'          => ['product-categories'],
-		'has_archive'         => true,
-		'rewrite'	      	=> array( 
-			'slug' => 'products',
-			'with_front' => false
-		),
-		'query_var'           => true,
-	] );
-}
+// add_action( 'init', 'register_post_types' );
+// function register_post_types(){
+// 	register_post_type( 'products', [
+// 		'label'  => null,
+// 		'labels' => [
+// 			'menu_name' => 'Products'
+// 		],
+// 		'menu_icon' => 'dashicons-cart',
+// 		'description'         => '',
+// 		'public'              => true,
+// 		// 'publicly_queryable'  => null, // зависит от public
+// 		// 'exclude_from_search' => null, // зависит от public
+// 		// 'show_ui'             => null, // зависит от public
+// 		// 'show_in_nav_menus'   => null, // зависит от public
+// 		'show_in_menu'        => null, // показывать ли в меню адмнки
+// 		// 'show_in_admin_bar'   => null, // зависит от show_in_menu
+// 		'show_in_rest'        => null, // добавить в REST API. C WP 4.7
+// 		'rest_base'           => null, // $post_type. C WP 4.7
+// 		'menu_position'       => null,
+// 		'menu_icon'           => null,
+// 		//'capability_type'   => 'post',
+// 		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+// 		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+// 		'hierarchical'        => false,
+// 		'supports'            => [ 'title', 'editor' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+// 		'taxonomies'          => ['product-categories'],
+// 		'has_archive'         => true,
+// 		'rewrite'	      	=> array( 
+// 			'slug' => 'products',
+// 			'with_front' => false
+// 		),
+// 		'query_var'           => true,
+// 	] );
+// }
 
 /**
  * Create post type - elements
@@ -355,8 +355,23 @@ add_action( 'wp_ajax_cform', 'cform_callback' );
 add_action( 'wp_ajax_nopriv_cform', 'cform_callback' );
 function cform_callback() {
 	
+	if(get_field('con_email', 'option')) {
 
-	var_dump($_POST);
+
+		$content = 'Name: ' . $_POST['name'] . "\r\n" . 
+							 'Email: ' . $_POST['email'] . "\r\n" . 
+							 'Phone: ' . $_POST['phone'] . "\r\n" .
+							 'Message: ' . $_POST['messege'] . "\r\n" .
+							//  'Product: ' . $_POST['prod'] . "\r\n" .
+							//  'Whatsapp: ' . $_POST['what'];
+
+		$headers = 'From: Endolift <info@beautytech.com>' . "\r\n";
+		wp_mail(get_field('con_email', 'option'), 'Bewerbungsformular BeautyTech', $content, $headers);
+		echo $content;
+	}
+
+
+wp_die();
 
 	// выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 	wp_die();

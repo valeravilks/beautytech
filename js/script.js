@@ -258,15 +258,15 @@ const swiperResult = new Swiper('.product-result__slider', {
 var widgetId1;
 var widgetId2;
 var onloadCallback = function() {
-    widgetId1 = grecaptcha.render('js-recaptcha', {
-        'sitekey': '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
-        'theme': 'light'
-    });
+    // widgetId1 = grecaptcha.render('js-recaptcha', {
+    //     'sitekey': '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
+    //     'theme': 'light'
+    // });
 
-    widgetId2 = grecaptcha.render('js-recaptcha-2', {
-        'sitekey': '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
-        'theme': 'light'
-    });
+    // widgetId2 = grecaptcha.render('js-recaptcha-2', {
+    //     'sitekey': '6Leu3NccAAAAAODLGu-w6ZJY35kflMhhkMSb6eBt',
+    //     'theme': 'light'
+    // });
 }
 
 $('.js-contact-page-form').on('submit', function(e) {
@@ -287,7 +287,8 @@ $('.js-contact-page-form').on('submit', function(e) {
     }
 
 
-    let rez = grecaptcha.getResponse(widgetId1);
+    // let rez = grecaptcha.getResponse(widgetId1);
+    let rez = true;
     if (!rez) {
         alert('Enter the captcha.');
     }
@@ -348,7 +349,8 @@ $('.js-pop-up-forms').on('submit', function(e) {
         alert('You agree to the privacy policy to submit the form.');
     }
 
-    let rez = grecaptcha.getResponse(widgetId2);
+    // let rez = grecaptcha.getResponse(widgetId2);
+    let rez = true;
 
     if (!rez) {
         alert('Enter the captcha.');
