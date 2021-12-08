@@ -40,8 +40,39 @@ get_header();
 					</div>
 				</div>
 			</div>
+			<div class="ph-cover__block4">
+				<div class="container">
+					<div class="ph-cover__block5">
+						<div class="ph-cover__block6">
+							<div class="ph-cover__title3">
+								<?php the_field('h-title1');?>
+							</div>
+							<div class="ph-cover__text3">
+								<?php the_field('h-text1');?>
+							</div>
+						</div>
+						<div class="ph-cover__hr3"></div>
+						<div class="ph-cover__block6">
+							<div class="ph-cover__title3">
+								<?php the_field('h-title2');?>
+							</div>
+							<div class="ph-cover__text3">
+								<?php the_field('h-text2');?>
+							</div>
+						</div>
+						<div class="ph-cover__hr3"></div>
+						<div class="ph-cover__block6">
+							<div class="ph-cover__title3">
+								<?php the_field('h-title3');?>
+							</div>
+							<div class="ph-cover__text3">
+								<?php the_field('h-text3');?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-
 	</main><!-- #main -->
 <?php
 get_footer();
