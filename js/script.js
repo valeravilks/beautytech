@@ -620,6 +620,7 @@ $('.pp-b20__btn').on('click', function() {
 let swiperHomeEvent = new Swiper('.ph-events__slider', {
     slidesPerView: 1,
     slidesPerGroup: 1,
+    spaceBetween: 30,
     // Navigation arrows
 
     breakpoints: {
@@ -631,3 +632,25 @@ let swiperHomeEvent = new Swiper('.ph-events__slider', {
         },
     }
 });
+
+let swiperHomeTesti = new Swiper('.ph-t__slider', {
+    // slidesPerView: 1,
+    // slidesPerGroup: 1,
+    // Navigation arrows
+    spaceBetween: 30,
+
+    breakpoints: {
+        // when window width is >= 320px
+        1157: {
+            slidesPerView: "auto",
+            // freeMode: false,
+            spaceBetween: 30,
+            // slidesPerGroup: 1
+        },
+    }
+});
+
+$('.ph-t-s__more').on('click', function() {
+    $(this).prev().removeClass('ph-t-s__hide');
+    $(this).hide();
+})

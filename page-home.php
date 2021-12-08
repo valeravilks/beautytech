@@ -124,13 +124,62 @@ get_header();
 
 											<?php get_template_part('template-parts/event-card-1'); ?>
 										</div>
-								<?php 
+								<?php wp_reset_postdata();
 								$index++;
 							endforeach;?>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="ph-t">
+			<div class="container">
+				<div class="ph-t__block">
+					<div class="ph-t__title">
+						Testimonials
+					</div>
+				</div>
+				<div class="swiper ph-t__slider">
+					<div class="swiper-wrapper">
+						<?php if(have_rows('h-t-items')) :?>
+							<?php while(have_rows('h-t-items')) : the_row();?>
+								<div class="swiper-slide">
+									<div class="ph-t-s">
+										<div class="ph-t-s__b1">
+											<img src="<?php echo get_sub_field('image')['url'];?>" alt="img" class="ph-t-s__img">
+											<div class="ph-t-s__b2">
+												<div class="ph-t-s__text1">
+													<?php the_sub_field('name');?>
+												</div>
+												<div class="ph-t-s__text2">
+													<?php the_sub_field('text1');?>
+												</div>
+												<div class="ph-t-s__text3">
+													<?php the_sub_field('text2');?>
+												</div>
+											</div>
+										</div>
+										<div class="ph-t-s__b3">
+											<div class="ph-t-s__text4 ph-t-s__hide">
+												<?php the_sub_field('text3');?>
+											</div>
+											<div class="ph-t-s__more">
+												Read more 
+												<span class="ph-t-s__span">
+													<svg class="ph-t-s__icon" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M1 1L4.5 4L8 1" stroke="#303034" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							<?php endwhile;?>
+						<?php endif;?> 
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</main><!-- #main -->
