@@ -73,6 +73,66 @@ get_header();
 				</div>
 			</div>
 		</div>
+		<div class="ph-b2">
+			<div class="ph-b2__bl1">
+				<div class="ph-b2__bl2" style="background-image: url('<?php echo get_field('h-card_image1')['url'];?>')">
+					<div class="ph-b2__title">
+						<?php the_field('h-card_title1');?>
+					</div>
+					<div class="ph-b2__text">
+						<?php the_field('h-card_text1');?>
+					</div>
+					<a href="<?php echo get_field('h-card_link1')['url']?>" class="ph-b2__link">
+						<?php echo get_field('h-card_link1')['title']?>
+					</a>
+				</div>
+				<div class="ph-b2__bl3" style="background-image: url('<?php echo get_field('h-card_image2')['url'];?>')">
+					<div class="ph-b2__title">
+						<?php the_field('h-card_title2');?>
+					</div>
+					<div class="ph-b2__text">
+						<?php the_field('h-card_text2');?>
+					</div>
+					<a href="<?php echo get_field('h-card_link2')['url']?>" class="ph-b2__link">
+						<?php echo get_field('h-card_link2')['title']?>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="ph-events">
+			<div class="container">
+				<div class="ph-events__block">
+					<div class="ph-events__title">
+						Events
+					</div>
+					<a href="<?php echo bloginfo( 'url' );?>/events" class="ph__events__link">See all ></a>
+				</div>
+						<div class="swiper ph-events__slider">
+							<div class="swiper-wrapper">
+							<?php 
+							$posts = get_posts( array(
+								'numberposts' => 3,
+								'category'    => 0,
+								'orderby'     => 'date',
+								'order'       => 'DESC',
+								'post_type'   => 'events',
+							) );
+							$index = 1;
+							foreach( $posts as $post ) :
+								setup_postdata($post); ?>
+										<div class="swiper-slide">
+
+											<?php get_template_part('template-parts/event-card-1'); ?>
+										</div>
+								<?php 
+								$index++;
+							endforeach;?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main><!-- #main -->
 <?php
 get_footer();

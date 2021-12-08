@@ -616,3 +616,18 @@ $('.pp-b20__btn').on('click', function() {
     $('.pp-b20__bl2 *').show();
     $(this).hide();
 })
+
+let swiperHomeEvent = new Swiper('.ph-events__slider', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    // Navigation arrows
+
+    breakpoints: {
+        // when window width is >= 320px
+        1157: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 1
+        },
+    }
+});

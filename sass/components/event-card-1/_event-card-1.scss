@@ -1,146 +1,126 @@
 .event-card-1 {
-  padding: 20px 20px 30px 20px;
-  border: 1px solid #E6E6E6;
-  display: block;
-  position: relative;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-
-  @include media-breakpoint-only("s") {
-    padding: 10px 10px 20px 10px;
-  } 
-
-  &__date {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-
-    @include media-breakpoint-only("s") {
-      top: 30px;
-      left: 30px;
-    } 
-  }
-
-  &__num {
-    font-weight: normal;
-    font-size: 56px;
-    line-height: 68px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin-bottom: 5px;
-
-    @include media-breakpoint-only("s") {
-      font-size: 36px;
-      line-height: 44px;
-      margin-bottom: 0;
-    } 
-  }
-
-  &__mounth {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-
-    @include media-breakpoint-only("s") {
-      font-size: 10px;
-      line-height: 150%;
-    } 
-  }
-
-  &__block {
-    margin-bottom: 30px;
-
-    @include media-breakpoint-only("s") {
-      margin-bottom: 20px;
-    } 
-  }
-
-  &__title {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 150%;
-    color: #303034;
-    margin-bottom: 30px;
-    flex-grow: 1;
-    height: 400px;
-
-    @include media-breakpoint-only("s") {
-      font-size: 16px;
-      line-height: 150%;
-    } 
-  }
-
-  &__hr {
-    margin-bottom: 10px;
-  }
-
-  &__place {
-    font-size: 14px;
-    line-height: 150%;
-    color: #65656C;
-    margin-bottom: 10px;
-
-    @include media-breakpoint-only("s") {
-      margin-bottom: 5px;
-      font-size: 12px;
-      line-height: 150%;
-    } 
-  }
-
-  &__time {
-    font-size: 14px;
-    line-height: 150%;
-    color: #65656C;
-
-    @include media-breakpoint-only("s") {
-      font-size: 12px;
-      line-height: 150%;
-    } 
-  }
-
-  &__block3 {
-    display: flex;
-    align-items: center;
-  }
-
-  &__block2 {
-    flex-grow: 1;
-  }
-
-  &__link  {
-    text-decoration: none;
-
-    &:hover {
-      div {
-        background: #64A9C6;
-        color: white;
-      }
-    }
-  }
-  
-  &__content {
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    display: block;
+    padding: 20px 20px 30px 20px;
     border: 1px solid #E6E6E6;
-    border-radius: 100%;
-    text-align: center;
-    color: #969797;;
-    justify-content: center;
-    line-height: 36px;
-    font-size: 25px;
-    transition: .3s;
-
+    display: block;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    background: white;
     @include media-breakpoint-only("s") {
-      height: 25px;
-      width: 25px;
-      font-size: 18px;
-      line-height: 22px;
-    } 
-  }
+        padding: 10px 10px 20px 10px;
+    }
+    &__date {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        @include media-breakpoint-only("s") {
+            top: 30px;
+            left: 30px;
+        }
+    }
+    &__num {
+        font-weight: normal;
+        font-size: 56px;
+        line-height: 68px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+        @include media-breakpoint-only("s") {
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 0;
+        }
+    }
+    &__mounth {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        @include media-breakpoint-only("s") {
+            font-size: 10px;
+            line-height: 150%;
+        }
+    }
+    &__block {
+        margin-bottom: 30px;
+        @include media-breakpoint-only("s") {
+            margin-bottom: 20px;
+        }
+    }
+    &__title {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 150%;
+        color: #303034;
+        margin-bottom: 30px;
+        flex-grow: 1;
+        // height: 400px;
+        @include media-breakpoint-only("s") {
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+    &__hr {
+        margin-bottom: 10px;
+    }
+    &__place {
+        font-size: 14px;
+        line-height: 150%;
+        color: #65656C;
+        margin-bottom: 10px;
+        @include media-breakpoint-only("s") {
+            margin-bottom: 5px;
+            font-size: 12px;
+            line-height: 150%;
+        }
+    }
+    &__time {
+        font-size: 14px;
+        line-height: 150%;
+        color: #65656C;
+        @include media-breakpoint-only("s") {
+            font-size: 12px;
+            line-height: 150%;
+        }
+    }
+    &__block3 {
+        display: flex;
+        align-items: center;
+    }
+    &__block2 {
+        flex-grow: 1;
+    }
+    &__link {
+        text-decoration: none;
+        &:hover {
+            div {
+                background: #64A9C6;
+                color: white;
+            }
+        }
+    }
+    &__content {
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        display: block;
+        border: 1px solid #E6E6E6;
+        border-radius: 100%;
+        text-align: center;
+        color: #969797;
+        ;
+        justify-content: center;
+        line-height: 36px;
+        font-size: 25px;
+        transition: .3s;
+        @include media-breakpoint-only("s") {
+            height: 25px;
+            width: 25px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
 }
