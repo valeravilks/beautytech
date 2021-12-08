@@ -611,3 +611,8 @@ function changeColorName() {
     let color = $('.pp-b19__color.swiper-slide-thumb-active').attr('data-color-name');
     $('.pp-b19__color-name').text(color);
 }
+
+$('.pp-b20__btn').on('click', function() {
+    $('.pp-b20__bl2 *').show();
+    $(this).hide();
+})

@@ -842,6 +842,43 @@ $bl20 = get_field('pr-block20');
 			</div>
 		</div>
 	</section>
+	<section class="pp-b20">
+		<?php get_template_part('template-parts/h2-block', '', array(
+			'h2' => $bl20['title'],
+		));
+		?>
+		<div class="container">
+			<div class="pp-b20__bl2">
+				<?php $index = 0;?>
+				<?php foreach($bl20['items'] as $el):?>
+					<div class="pp-b20__line">
+						<div class="pp-b20__text1">
+							<?php echo $el['text_1'];?>
+						</div>
+						<div class="pp-b20__text2"><?php echo $el['text_2'];?></div>
+					</div>
+					<?php if(count($bl20['items']) !== $index + 1) :?>
+						<hr class="pp-b20__hr">
+					<?php endif; ?>
+					<?php $index++;?>
+				<?php endforeach;?>
+			</div>
+			<div class="pp-b20__add">
+				<hr class="pp-b20__hr2">
+				<div class="pp-b20__btn">
+					<span class="pp-b20__add2">
+						See all features
+					</span>
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="10" cy="10" r="9.5" stroke="#64A9C6"/>
+						<path d="M10 7V13" stroke="#64A9C6" stroke-linecap="round"/>
+						<path d="M7 10L13 10" stroke="#64A9C6" stroke-linecap="round"/>
+					</svg>
+				</div>
+				<hr class="pp-b20__hr2">
+			</div>
+		</div>
+	</section>
 </main><!-- #main -->
 <?php
 get_footer();
