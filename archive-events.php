@@ -20,27 +20,28 @@ get_header();
 			<div class="events-page__title">
 				Events
 			</div>
-		</div>  
-    <?php get_template_part('template-parts/cat-menu', '', array(
-      'taxonomy' => 'events-categories',
-      'type' => 'events',
-      'active' => 'all'
-      )); ?>
+		</div> 
+    <div class="events-page__top">
+      <?php get_template_part('template-parts/cat-menu', '', array(
+        'taxonomy' => 'events-categories',
+        'type' => 'events',
+        'active' => 'all'
+        )); ?>
+    </div> 
     <div class="container produc__mb">
-      <div class="row">
-       <?php  $index = 1; ?>
-      <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
+      <div class="swiper js-event-list">
+        <div class="swiper-wrapper">
+        <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
+            <div class="swiper-slide events-page__item">
+              <?php get_template_part('template-parts/event', 'card-1');?>
+            </div>
 
-
-              <div class="col-12 col-l-4 events-page__item <?php if($index == 1){ echo 'events-page__entry'; }?>">
-                <?php get_template_part('template-parts/event', 'card-1');?>
-              </div>
-
-        <?php $index++;} } else { ?>
-        <p>No events</p>
-        <?php }   
-      ?>
-
+            <?php $index++;} } else { ?>
+            <p>No events</p>
+            <?php }   
+            ?>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
 		</div>
 

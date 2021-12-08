@@ -654,3 +654,20 @@ $('.ph-t-s__more').on('click', function() {
     $(this).prev().removeClass('ph-t-s__hide');
     $(this).hide();
 })
+
+$('.result__button').on('click', function() {
+    // $('.slider-bl').hide;
+    console.log('sdf');
+    if ($(this).attr('data-v') == 'Face') {
+        $('.result__sl1').show();
+        $('.result__sl2').hide();
+        $('.result__button').removeClass('result__button-active');
+        $(this).addClass('result__button-active');
+    }
+    if ($(this).attr('data-v') == 'Body') {
+        $('.result__sl2').show();
+        $('.result__sl1').hide();
+        $('.result__button').removeClass('result__button-active');
+        $(this).addClass('result__button-active');
+    }
+})
