@@ -596,7 +596,8 @@ let swiperB19Thumb = new Swiper('.pp-b19__color-list', {
 let swiperB19 = new Swiper('.pp-b19__slider', {
     effect: "fade",
     autoHeight: true,
-    allowTouchMove: false,
+    slidesPerView: 1,
+    allowTouchMove: true,
     thumbs: {
         swiper: swiperB19Thumb
     },

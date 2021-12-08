@@ -812,31 +812,31 @@ $bl20 = get_field('pr-block20');
 					</div>
 				</div>
 				<div class="pp-b19__title">
-					<?php echo $bl19['name']?>
+					<?php echo $bl19['name'];?>
 				</div>
-				<div class="pp-b19__text">
-					<?php echo $bl19['text']?>
-				</div>
-				<div class="pp-b19__color-name">
-					
-				</div>
-				<div class="swiper pp-b19__color-list">
-					<div class="swiper-wrapper">
-						<?php $index = 1;?>
-						<?php foreach($bl19['color_items'] as $el):?>
-							<!-- <div class="swiper-slide"> -->
-								<div class="swiper-slide pp-b19__color <?php if($index == 1){echo ' active';}?>" 
-										 style="border-color: <?php echo $el['color'];?>"
-										 data-color-name="<?php echo $el['color_name'];?>">
-										 <div class="pp-b19__color-help"
-													 style="background-color: <?php echo $el['color'];?>; "
-										 >
-		
-										 </div>
-								<!-- </div> -->
-							</div>
-							<?php $index++;?>
-						<?php endforeach;?>
+				<div class="pp-b19__text"><?php echo $bl19['text'];?></div>
+				<div class="pp-b19__color-list-bl">
+					<div class="pp-b19__color-name">
+						
+					</div>
+					<div class="swiper pp-b19__color-list">
+						<div class="swiper-wrapper">
+							<?php $index = 1;?>
+							<?php foreach($bl19['color_items'] as $el):?>
+								<!-- <div class="swiper-slide"> -->
+									<div class="swiper-slide pp-b19__color <?php if($index == 1){echo ' active';}?>" 
+											 style="border-color: <?php echo $el['color'];?>"
+											 data-color-name="<?php echo $el['color_name'];?>">
+											 <div class="pp-b19__color-help"
+														 style="background-color: <?php echo $el['color'];?>; "
+											 >
+			
+											 </div>
+									<!-- </div> -->
+								</div>
+								<?php $index++;?>
+							<?php endforeach;?>
+						</div>
 					</div>
 				</div>
 			</div>
