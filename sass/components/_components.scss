@@ -1,35 +1,42 @@
 /* Navigation
 --------------------------------------------- */
+
 @import "navigation/navigation";
 
 /* Posts and pages
 --------------------------------------------- */
+
 @import "content/posts-and-pages";
 
 /* Header
 --------------------------------------------- */
+
 @import "header/header";
 
 /* Comments
 --------------------------------------------- */
+
 @import "comments/comments";
 
 /* Widgets
 --------------------------------------------- */
+
 @import "widgets/widgets";
 
 /* Media
 --------------------------------------------- */
+
 @import "media/media";
 
 /* Captions
 --------------------------------------------- */
+
 @import "media/captions";
 
 /* Galleries
 --------------------------------------------- */
-@import "media/galleries";
 
+@import "media/galleries";
 @import "logo/logo";
 @import "footer/footer";
 @import "text/text";
@@ -72,63 +79,59 @@
 @import "advantages/advantages";
 @import "result/result";
 @import "page-product/page-product";
-
-.privacy-policy .entry-content{
-  margin-bottom: 100px;
+@import "page-home/page-home";
+.privacy-policy .entry-content {
+    margin-bottom: 100px;
 }
 
 .produc__mb {
-  margin-bottom: 40px;
-
-  @include media-breakpoint-only("s") {
-    margin-bottom: 20px;
-  }
+    margin-bottom: 40px;
+    @include media-breakpoint-only("s") {
+        margin-bottom: 20px;
+    }
 }
 
 .error-404 {
-  text-align: center;
-  padding: 200px 0;
-
-  @include media-breakpoint-only("s") {
-    padding: 50px 0;
-  }
+    text-align: center;
+    padding: 200px 0;
+    @include media-breakpoint-only("s") {
+        padding: 50px 0;
+    }
 }
 
 .cli-tab-footer .wt-cli-privacy-accept-btn {
-  background-color: #5e95bf;
+    background-color: #5e95bf;
 }
 
-.cli-switch input:checked + .cli-slider {
-  background-color: #5e95bf;
+.cli-switch input:checked+.cli-slider {
+    background-color: #5e95bf;
 }
 
 .pr-po {
-  margin-left: 5px;
-  color: #000000;
+    margin-left: 5px;
+    color: #000000;
 }
- #map {
-   width: 100%;
-   height: 400px;
-   filter: grayscale(99);
-   transition: .5s;
 
-   &:hover {
-     filter: grayscale(0);
-   }
- }
- 
- #map-contact {
-   width: 100%;
-   height: 400px;
-   filter: grayscale(99);
-   transition: .5s;
+#map {
+    width: 100%;
+    height: 400px;
+    filter: grayscale(99);
+    transition: .5s;
+    &:hover {
+        filter: grayscale(0);
+    }
+}
 
-   &:hover {
-     filter: grayscale(0);
-   }
- }
+#map-contact {
+    width: 100%;
+    height: 400px;
+    filter: grayscale(99);
+    transition: .5s;
+    &:hover {
+        filter: grayscale(0);
+    }
+}
 
- .contact-page .contact-us-block {
-  //  margin-bottom: 50px!important;
- }
- 
+.contact-page .contact-us-block {
+    //  margin-bottom: 50px!important;
+}
