@@ -583,3 +583,30 @@ document.querySelectorAll('.slider-bl').forEach(n => {
         }
     });
 });
+
+// B19 slider
+
+let swiperB19Thumb = new Swiper('.pp-b19__color-list', {
+    // effect: "fade",
+    // autoHeight: true,
+    slidesPerView: 'auto',
+    freeMode: false,
+});
+
+let swiperB19 = new Swiper('.pp-b19__slider', {
+    effect: "fade",
+    autoHeight: true,
+    allowTouchMove: false,
+    thumbs: {
+        swiper: swiperB19Thumb
+    },
+    on: {
+        slideChange: changeColorName,
+        init: changeColorName,
+    },
+});
+
+function changeColorName() {
+    let color = $('.pp-b19__color.swiper-slide-thumb-active').attr('data-color-name');
+    $('.pp-b19__color-name').text(color);
+}
