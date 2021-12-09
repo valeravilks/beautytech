@@ -640,6 +640,17 @@
                 margin-bottom: 30px;
             }
         }
+        &__img {
+            @include media-breakpoint-only('s') {
+                margin-bottom: 10px;
+            }
+        }
+        &__block3 {
+            margin-bottom: 50px;
+            @include media-breakpoint-only('s') {
+                margin-bottom: 30px;
+            }
+        }
     }
     &-b11 {
         margin-bottom: 100px;

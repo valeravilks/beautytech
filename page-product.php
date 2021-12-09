@@ -415,7 +415,7 @@ $bl20 = get_field('pr-block20');
 			<div class="pp-b10__title">
 				<?php echo $bl10['title'];?>
 			</div>
-			<div class="row">
+			<div class="row pp-b10__block3">
 				<?php
 				foreach ($bl10['items'] as $element) : ?>
 					<div class="col-12 col-l-4">
@@ -426,6 +426,16 @@ $bl20 = get_field('pr-block20');
 						</div>
 					</div>
 				<?php endforeach; ?>
+			</div>
+			<div class="pp-b10__block2">
+				<div class="row">
+					<div class="col-12 col-l-6">
+						<img src="<?php echo $bl10['image1']['url']?>" alt="img" class="pp-b10__img">
+					</div>
+					<div class="col-12 col-l-6">
+						<img src="<?php echo $bl10['image2']['url']?>" alt="img" class="pp-b10__img">
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>

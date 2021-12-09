@@ -149,7 +149,7 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="adv">
+		<section class="advantages">
 			<?php get_template_part('template-parts/h2-block', '', array(
 						'h2' => get_field('adv-title'),
 					));
@@ -161,16 +161,16 @@ get_header();
 						if(have_rows('adv-items')) :?>
 							<?php while(have_rows('adv-items')) : the_row(); ?>
 							<div class="col-12 col-l-3">
-								<div class="adv__block">
-									<div class="adv__sub">
+								<div class="advantages__block">
+									<div class="advantages__sub">
 										<?php the_sub_field('subtitle');?>
 									</div>
-									<div class="adv__text">
+									<div class="advantages__text">
 										<?php the_sub_field('text');?>
 									</div>
-									<hr class="adv__hr <?php 
+									<hr class="advantages__hr <?php 
 									if($index > 3){
-										echo 'adv__hr2';
+										echo 'advantages__hr2';
 									}
 									?>">
 								</div>
