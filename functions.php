@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.5' );
+	define( '_S_VERSION', '1.0.6' );
 }
 
 add_image_size( 'event-thumbnail', 400, 200, true );
